@@ -1,0 +1,31 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.venv/
+venv/
+
+# ---- 运行时产物（随时可重新生成）----
+data/login_state.json
+data/results.jsonl
+data/perf_*.json
+data/logs/practice_*.json
+
+# 注意：data/logs/formal_*.{log,json} 与 data/robot_logs/*.jsonl 是正式测试留档，
+# 属于论文支撑材料，**不忽略**。
+
+# ---- 编辑器 / 系统 ----
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp
+
+# ---- 临时输出 ----
+output/
+tmp/

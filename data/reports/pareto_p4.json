@@ -1,0 +1,41 @@
+{
+ "problem": 4,
+ "seeds": [
+  9500,
+  9799
+ ],
+ "n": 300,
+ "deploy": true,
+ "candidates": [
+  {
+   "n": 300,
+   "ratio": 1.0,
+   "cleared": 3935,
+   "total": 3935,
+   "full": 300,
+   "avg_clear": 1819.7972457390817,
+   "moved": 95240.6577995219,
+   "measures": 508.74333333333334,
+   "label": "全清档 (默认)",
+   "gate": 0.0
+  },
+  {
+   "n": 300,
+   "ratio": 0.9997458703939008,
+   "cleared": 3934,
+   "total": 3935,
+   "full": 299,
+   "avg_clear": 1340.2313482869295,
+   "moved": 70494.90959041473,
+   "measures": 313.0366666666667,
+   "label": "极速档 (无边界环)",
+   "gate": 0.0
+  }
+ ],
+ "frontier": [
+  1,
+  0
+ ],
+ "knee": 0,
+ "generality": false
+}
