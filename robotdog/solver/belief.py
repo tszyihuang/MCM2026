@@ -93,23 +93,6 @@ class ChannelTrack:
         self.no_pts: List[Tuple[float, float]] = []
         self.last_t = -1e9
         self.meas_pts: List[Tuple[float, float]] = []
-        # --- 问题4 (定向源) 的两个可选旋钮 -------------------------------------------
-        # 默认值 = 问题3 的行为, 逐位不变 (乘 1.0 / 地板 0.0 都是恒等变换)。
-        # 只有「方位扇扫」方案 (:mod:`robotdog.solver.sweeper4_az`) 会打开它们。
-        #: 方向性因子 ρ ∈ (0,1]。源为**定向源**时, 即使距离在有效半径内, 也只有
-        #: 观察点落在「定向方向两侧各 90°」的扇区内才收得到信号。扇区半角恰为
-        #: 90° ⇒ 扇区是一个**半平面**; 定向方向 φ ~ U(0,360) 时, 对**任意**观察点
-        #: 位置, 落入扇区的概率都恰为 180°/360° = **1/2**(与距离无关)。若每个源
-        #: 以 1/2 概率是定向源, 则
-        #:     P(收到) = 1/2·P(d≤R) + 1/2·(1/2)·P(d≤R) = **0.75·P(d≤R)**
-        #: 因此 ρ = 0.75 就完整刻画了定向性 —— 这正是该方案**不必推断定向方向
-        #: 本身**的原因, 也是它与 :mod:`robotdog.solver.belief4` (ψ 分箱) 的分野。
-        self.dir_factor = 1.0
-        #: 存在概率 π 的下限。定向源**不存在保证发现的检测点集**(贴边源的可布点
-        #: 方位跨度上界 →180°, 恰好等于扇区宽度), 因此一串 ``no_signal`` 证明不了
-        #: 「该频道为空」; 独立连乘会把 π 打塌到 0(实测 48 个漏失源的 π 全部 < 0.05,
-        #: 其中 29 个其实已被测到过)。给 π 一个地板即可。
-        self.pi_floor = 0.0
 
     # ---------------- 统计量 ----------------
     def std_max(self) -> float:
@@ -164,13 +147,13 @@ class ChannelTrack:
             if kernel is None:
                 d = np.hypot(grid_pts[:, 0] - q[0], grid_pts[:, 1] - q[1])
                 kernel = np.clip((RADIUS_MAX_M - d) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
-            return float(self.dir_factor * np.dot(self.grid, kernel))
+            return float(np.dot(self.grid, kernel))
         if self.mode == 1:
             d = np.hypot(self.ray_x[:, 0] - q[0], self.ray_x[:, 1] - q[1])
             k = np.clip((RADIUS_MAX_M - d) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
-            return float(self.dir_factor * np.dot(self.ray_w, k))
+            return float(np.dot(self.ray_w, k))
         # mode 2: 高斯近似
-        return float(self.dir_factor * self._gauss_detect_prob(q))
+        return float(self._gauss_detect_prob(q))
 
     def _gauss_detect_prob(self, q: Tuple[float, float]) -> float:
         if self.est is None or self.cov is None:
@@ -190,8 +173,7 @@ class ChannelTrack:
         grid = np.linspace(max(lo - 3 * s, d - 3 * s), min(hi + 3 * s, d + 3 * s), 9)
         w = np.exp(-0.5 * ((grid - d) / s) ** 2)
         # 网格点全部下溢 (距离远超 R 区间) 时权重和为 0, 不做归一化会得到 NaN。
-        # 问题3 走不到这里 (上面两个提前返回已覆盖该情形), 但问题4 的调用口径更宽,
-        # 因此把它做成显式契约而不是靠调用方各自兜底。
+        # 这里做成显式契约而不是靠调用方各自兜底。
         if w.sum() <= 1e-12:
             return 0.0
         w /= w.sum()
@@ -261,15 +243,10 @@ class ChannelTrack:
             self.cov = self._ray_cov()
         elif self.mode == 2 and self.est is not None:
             d = math.hypot(self.est[0] - q[0], self.est[1] - q[1])
-            if self.dir_factor >= 1.0:
-                # 问题3: 收不到 ⇒ 该点超出有效接收半径, 故 R < d。
-                self.r_hi = min(self.r_hi, d)
-            # 问题4 (ρ<1): 收不到**也可能只是站在扇区外**, 不能推出 R < d,
-            # 否则会把 R 的后验区间压塌, 进而误判源不存在。
+            # 收不到 ⇒ 该点超出有效接收半径, 故 R < d
+            self.r_hi = min(self.r_hi, d)
         p = self.pi
         post = p * L / (p * L + (1.0 - p)) if (p * L + 1.0 - p) > 0 else 0.0
-        if post < self.pi_floor:
-            post = self.pi_floor
         self.pi = float(min(max(post, 1e-12), 1.0 - 1e-12))
 
     def apply_clear_miss(self, q: Tuple[float, float]) -> None:
@@ -462,8 +439,7 @@ def _line_intersection(o1, o2) -> Optional[Tuple[float, float]]:
 class Belief:
     """20 个频道的联合信念。"""
 
-    def __init__(self, prior_pi: float = 13.0 / 20.0, seed: int = 20260911,
-                 dir_factor: float = 1.0, pi_floor: float = 0.0) -> None:
+    def __init__(self, prior_pi: float = 13.0 / 20.0, seed: int = 20260911) -> None:
         self.pts = build_grid()
         w = np.full(self.pts.shape[0], 1.0, dtype=np.float32)
         w /= w.sum()
@@ -471,15 +447,9 @@ class Belief:
         # 这样"同一案例 + 同一策略"每次跑出来逐位一致, 评测/回归才有意义。
         rng = np.random.default_rng(int(seed))
         self.tracks: List[ChannelTrack] = [ChannelTrack(i, w, rng) for i in range(N_CHANNELS)]
-        #: 问题4 的两个可选旋钮, 见 ``ChannelTrack.dir_factor`` / ``pi_floor``。
-        #: 默认 (1.0, 0.0) 即问题3 的行为, 逐位不变。
-        self.dir_factor = float(dir_factor)
-        self.pi_floor = float(pi_floor)
         for t in self.tracks:
             t.pi = prior_pi
             t.grid_pts = self.pts
-            t.dir_factor = self.dir_factor
-            t.pi_floor = self.pi_floor
 
     # ---------- 观测更新 ----------
     def on_measure(self, mx: float, my: float, channel: int, kind: str,
@@ -492,34 +462,16 @@ class Belief:
             tr.add_near(mx, my, t)
             return
         # no_signal: 所有未清除频道都获得信息 (该点收不到该频道的信号)
-        rho = tr.dir_factor
         dg = np.hypot(self.pts[:, 0] - mx, self.pts[:, 1] - my)
         F = np.clip((dg - RADIUS_MIN_M) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
-        if rho >= 1.0:
-            kernel = F.astype(np.float32)
-        else:
-            # **问题4 的关键修正**: 定向源在扇区外收不到信号, 所以 no_signal
-            # 不再等价于「该点超出有效半径」。
-            #     P(no_signal | 源在 d 处) = 1 - ρ·P(d≤R) = 1 - ρ·(1-F)
-            # ρ=0.75 时即使 d≪1000 m(F≈0), 一次 no_signal 也只把权重压到 0.25,
-            # 而不是像问题3 那样压到 ~0 —— 后者会把依然存在的定向源的存在概率 π
-            # 打到 0, 那正是「漏源」的直接来源。
-            kernel = (1.0 - rho * (1.0 - F)).astype(np.float32)
+        kernel = F.astype(np.float32)
         L = float(np.dot(tr.grid, kernel)) if (tr.mode == 0 and tr.grid is not None) else \
             tr.detect_prob((mx, my), self.pts, None)
         # 注意: P(no_signal|存在) = 1 - P(检测) , 当 mode2 时用高斯近似
         if tr.mode == 2:
-            # 已按 R 的后验区间计算。**必须与 mode 1 一样乘 ρ**: ρ 的定义就是
-            # "P(收到) = ρ·P(d≤R)", 三个 mode 用同一个似然模型是这套建模的前提。
-            # 漏掉 ρ 会得到一个病态结论 —— d 落在 [lo,hi] 内时 _gauss_detect_prob
-            # 提前返回 1.0, 于是 L = 1-1 = 0, 后验里的 p·L 项归零、π 被 p 的地板
-            # 或 1e-12 直接压死: 一次"站在扇区外的空测"就把已经定位的定向源判成
-            # 不存在, 之后任何 pursue 都会在 `pi < min_pi` 处立刻退出。
-            # (溯源: MCMRL2 原版只改了 mode 1 分支, mode 2 漏了; 实测证据见
-            #  ``sweeper4_az`` 模块 docstring 的"与 MCMRL2 原版的差异"。)
-            L = 1.0 - rho * tr._gauss_detect_prob((mx, my))
+            L = 1.0 - tr._gauss_detect_prob((mx, my))
         elif tr.mode == 1:
-            L = 1.0 - rho * float(np.dot(tr.ray_w, np.clip(
+            L = 1.0 - float(np.dot(tr.ray_w, np.clip(
                 (RADIUS_MAX_M - np.hypot(tr.ray_x[:, 0] - mx, tr.ray_x[:, 1] - my))
                 / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)))
         tr.apply_no_signal((mx, my), L, self.pts, kernel)

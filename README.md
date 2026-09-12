@@ -5,12 +5,12 @@
 | 层 | 目录 | 说明 |
 | --- | --- | --- |
 | **环境** | `simulator/` | 严格按题目正文、附件1《模拟器使用说明》、附件2《模拟器通信接口说明及编程指南》实现的自建模拟器，可本地复现四个测试模块与全部协议细节 |
-| **策略** | `robotdog/solver/` | 问题3 求解器 **`sweeper`**；问题4 求解器 **`sweeper4`** |
+| **策略** | `robotdog/solver/` | 问题3 求解器 **`sweeper`** |
 | **通信** | `robotdog/` | `RobotClient`：HTTP+JSON 客户端（重试 / 幂等 / 现实预算 / 行为日志） |
 | **验证** | `tests/`、`tools/`、`docs/` | 自动化用例、冒烟测试、独立赛题符合性审计、验收与实测报告 |
 
-> **每题只有一条策略**：问题3 = `sweeper`，问题4 = `sweeper4`。
-> 历史基线与已淘汰的路线已从工程中移除，代码与文档不再区分"版本"或"路线"。
+> **本工程只提供问题3 的求解器**（`sweeper`）。问题4 的解法及其全部历史遗留已移除；
+> 模拟器仍按附件1 完整实现问题3 / 问题4 两个环境（含定向源规则），作为独立复现保留。
 
 ---
 
@@ -54,16 +54,14 @@ robotdog/                 机器狗程序
   consts.py               题目物理常量（唯一来源）
   geometry.py             方位角 / 交会 / 加权残差拟合
   client.py               RobotClient: HTTP 客户端（重试 / 幂等 / 现实预算 / 行为日志）
-  solver/                 问题3 / 问题4 求解器 (见 solver/README.md)  [需 numpy]
-    world.py              进程内精确复刻环境 (真值与可观测信息严格分离; problem=3/4)
-    belief.py             问题3 信念（网格 / 射线样本 / Gauss-Newton 三表示）
-    belief4.py            问题4 信念（位置三表示 + 源型 λ + 定向方向 36 分箱）
+  solver/                 问题3 求解器 (见 solver/README.md)  [需 numpy]
+    world.py              进程内精确复刻环境 (真值与可观测信息严格分离)
+    belief.py             信念（网格 / 射线样本 / Gauss-Newton 三表示）
     ops.py                动作原语: pursue / probe / 候选点 / 收益评估
-    sweeper.py            【问题3】"清除即探测"规划器
-    sweeper4.py           【问题4】集合覆盖补扫 + 锚点射线盲清 + 贴边补扫环
-    deploy.py             机器狗程序部署入口: python -m robotdog.solver.deploy --problem 3|4
-    eval.py               问题3 进程内评测入口: python -m robotdog.solver.eval
-    e2e_test.py           真实进程 + HTTP 端到端验收 --problem 3|4
+    sweeper.py            "清除即探测"规划器
+    deploy.py             机器狗程序部署入口: python -m robotdog.solver.deploy --problem 3
+    eval.py               进程内评测入口: python -m robotdog.solver.eval
+    e2e_test.py           真实进程 + HTTP 端到端验收
     oracle_route.py       已知路线下界探针（论文取数）
 
 tests/                    自动化测试套件
@@ -71,40 +69,34 @@ tests/                    自动化测试套件
   test_protocol.py        协议层：状态码/方法/请求体校验/幂等/并发 409/时间预算
   test_physics.py         物理规则与虚拟计时（附件1 表2、附件2 第 10 节的完整时序示例）
   test_scenario.py        四个测试模块、倒计时、日志导出与加密、正式测试真值屏蔽
-  test_acceptance.py      真实进程端到端：问题3/问题4 演练 + 正式测试真值屏蔽与加密日志
+  test_acceptance.py      真实进程端到端：问题3 演练 + 正式测试真值屏蔽与加密日志
   test_solver_equiv.py    求解器与 simulator.core 的逐动作物理等价性
-  test_q4.py              问题4：案例生成逐位一致、动作等价、求解器不变量回归
 
 tools/                    工程与验收工具（不被策略导入）
   smoke_test.py           一键冒烟测试（协议/计时/并发/保密/真实进程端到端）
   spec_audit.py           独立赛题符合性审计（不依赖 tests/ 既有用例；失败退出码非 0）
   candidates.py           批量评测（进程内口径 knows_total=True）
   eval_deploy.py          批量评测（**部署口径** knows_total=False，正式测试口径）
-  eval_q4.py              问题4 统一评测 / 参数扫描（双口径 + 独立测试集）
-  profile_run.py          问题3 阶段剖析：每个阶段的动作数/秒/移动（--deploy 切口径）
+  profile_run.py          阶段剖析：每个阶段的动作数/秒/移动（--deploy 切口径）
   move_bound.py           移动下界：真值精确 TSP vs 策略实际移动
   verify_candidate.py     交付验收：确定性 + 双口径成绩
-  pareto_front.py         帕累托前沿：清除比例 vs 平均定位清除时间 (问题3/4)
+  pareto_front.py         帕累托前沿：清除比例 vs 平均定位清除时间
   make_paper_figures.py   论文插图生成 (中文, 全部可复现)
   run_batch.py            演练/正式测试批处理（导出日志与统计表，支持 --jobs 多核并行）
   bench_cases.py          小批量多核对局基准（--serve 常驻模式，反复回归用）
   perf_bench.py           模拟器性能基准（微基准 + 多核对局 + 行为指纹对比）
   decision_fingerprint.py 逐动作决策指纹（重构安全网）
   oracle.py               清除个数上界估计（虚拟时间口径，见 docs/验收报告.md §4.3）
-  probes/                 论文取数用的一次性数值探针（不参与回归）
-    verify_q4_theory4.py  问题4 理论引理的数值验证
   quick_check.py          手工冒烟: 对运行中的模拟器跑一遍附件示例指令序列
   run_sim.py              手工调试: 启动一个会话并保持运行
 
 docs/                     文档 (见 docs/README.md 的完整索引)
   README.md               docs 索引
   **问题3论文.md**         问题3 的建模与算法（论文写法）
-  **问题4解法.md**         问题4 的机制、参数、实测与复现
-  论文_问题4_集合覆盖路线.md  问题4 的论文成稿
   模拟器设计说明.md        模拟器逐条对照题目与附件的实现口径
   模拟器使用说明.md        命令行参数、与附件2 的对应关系、测试与验收命令
   验收报告.md             自动化测试结果、计时口径勘误、已修复问题清单
-  figures/                论文插图 (11 张, 由 tools/make_paper_figures.py 生成)
+  figures/                论文插图 (7 张, 由 tools/make_paper_figures.py 生成)
   experiments/            实验存档索引（原始报告已丢失，见该目录 README.md）
 
 data/                     运行时产物与对照证据（见 data/README.md）
@@ -125,7 +117,6 @@ python -m simulator --team-id <参赛队号>
 
 # 2) 浏览器打开界面，选择测试模块并确认开始；倒计时结束后运行机器狗程序
 python -m robotdog.solver.deploy --team-id <参赛队号> --problem 3   # 问题3
-python -m robotdog.solver.deploy --team-id <参赛队号> --problem 4   # 问题4
 ```
 
 一键自检：
@@ -138,17 +129,12 @@ python tools\spec_audit.py             # 独立赛题符合性审计 (115 项断
 python tools\candidates.py  --modules robotdog.solver.sweeper --seeds 9500-11499 --jobs 6
 python tools\eval_deploy.py --module  robotdog.solver.sweeper --seeds 9500-11499 --jobs 6
 
-# 问题4: 两种口径
-python tools\eval_q4.py --planners sweeper4 --seeds 9500-9799 --jobs 8
-python tools\eval_q4.py --planners sweeper4 --seeds 9500-9799 --jobs 8 --deploy
-
 # 剖析与下界
 python tools\profile_run.py --module robotdog.solver.sweeper --seeds 9500-9529 --deploy
 python tools\move_bound.py --seeds 9500-9539 --jobs 3
 
-# 端到端 (真实进程 + HTTP), 问题3 / 问题4
+# 端到端 (真实进程 + HTTP)
 python -m robotdog.solver.e2e_test --runs 3
-python -m robotdog.solver.e2e_test --runs 3 --problem 4
 
 # 论文插图 -> docs/figures/
 python tools\make_paper_figures.py
@@ -168,8 +154,6 @@ python tools\run_batch.py --problem 3 --module formal --runs 3 --jobs 3 --countd
 > 只能靠信念判据收手，因此还要多花时间确认"真的清完了"）。
 > **被打分的是部署口径**，它天生比进程内慢。
 
-**问题3（`sweeper`）**
-
 | 口径 | 清除比例 | 全清率 | 平均定位清除 | 移动 |
 | --- | --- | --- | --- | --- |
 | **部署（正式测试口径，被打分）** | **0.9955** | 1885/2000 | **263.1 s/源** | 12024 m |
@@ -178,15 +162,6 @@ python tools\run_batch.py --problem 3 --module formal --runs 3 --jobs 3 --countd
 独立测试集（从未参与标定）：seed 8000-8999（1000 局）部署口径 **0.9957 / 262.7 s/源**。
 端到端（真实模拟器进程 + HTTP + 真值屏蔽）单局清除 **93%~100%**，
 现实程序运行时间约 **0.1 s**（上限 1200 s）。**瓶颈不是时间，而是「还能不能找到剩下的源」**。
-
-**问题4（`sweeper4`）**
-
-| 档位 | 清除比例 | 全清率 | 平均定位清除 |
-| --- | --- | --- | --- |
-| **全清档（默认）** | **1.0000** | 300/300 | 1819.8 s/源 |
-| 极速档（`boundary_ring=False`） | 0.9997 | 299/300 | 1340.2 s/源 |
-
-独立测试集与全新种子合计 **2500 局、31 000+ 个源、零遗漏**。端到端单局 100%，现实程序运行约 0.25 s。
 
 ## 关键约定
 
@@ -210,9 +185,7 @@ python tools\run_batch.py --problem 3 --module formal --runs 3 --jobs 3 --countd
 | --- | --- |
 | `docs/README.md` | **docs 索引**：目录里每份文档的现状与用途 |
 | **`docs/问题3论文.md`** | **问题3 的建模与算法**（论文写法）：问题分析、模型建立、算法设计、结果与分析 |
-| **`docs/问题4解法.md`** | **问题4 解法的唯一入口**：机制、参数档位、2500 局零遗漏实测、复现命令 |
-| `docs/论文_问题4_集合覆盖路线.md` | 问题4 的论文成稿 |
-| `robotdog/solver/README.md` | 求解器总说明：§1-§8 问题3，§9 问题4 |
+| `robotdog/solver/README.md` | 求解器总说明：参数标定、阶段剖析与工程要点 |
 | `docs/模拟器设计说明.md` | 逐条对照题目正文与附件的实现口径、需自行假设的部分 |
 | `docs/模拟器使用说明.md` | 命令行参数、与附件2 的对应关系、测试与验收命令 |
 | `docs/验收报告.md` | 自动化测试结果、计时口径勘误、已修复问题清单 |

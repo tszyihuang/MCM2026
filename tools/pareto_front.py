@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """帕累托前沿分析: 双目标 (最大化清除比例, 最小化平均定位清除时间)。
 
-做法: 构造一族**候选运行点** —— 问题3 是收尾闸门 ``hunt_mass_min`` 网格
-(0.0 表示"扫到没有残余质量为止", 1.0 等价于不作收尾); 问题4 是它的两档
-(关掉/打开贴边补扫环)。
+做法: 构造一族**候选运行点** —— 收尾闸门 ``hunt_mass_min`` 网格
+(0.0 表示"扫到没有残余质量为止", 1.0 等价于不作收尾)。
 全部在**部署口径** (``knows_total=False``, 即正式测试口径) 下跑标定集 9500-11499 (2000 局),
 再对**互不重叠**的独立测试集 8000-8999 (1000 局) 复核。区间可用 ``--calib`` / ``--test`` 改。
 
@@ -11,8 +10,7 @@
 
 用法::
 
-    python tools/pareto_front.py            # 两个问题都算
-    python tools/pareto_front.py --problem 3
+    python tools/pareto_front.py
 """
 from __future__ import annotations
 
@@ -32,19 +30,10 @@ from robotdog.solver.eval import parse_seeds  # noqa: E402
 # 收尾闸门网格: 0.0=扫到无残余; 1.0 等价于不做收尾 (时间最短、清除率最低的一端)
 GATE_GRID = [0.0, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.60, 1.0]
 
-# 候选族: (标签, 模块, base, 固定覆盖项, 是否为问题4 的"关掉摆渡"族)
-FAMILIES = {
-    3: [
-        ("问题3 策略", "robotdog.solver.sweeper", "release", {}, False),
-    ],
-    4: [
-        # 问题4 的**两档**本身就是一条有意义的时间/清除率前沿:
-        # 关掉贴边补扫环 = 极速档 (0.99962), 打开 = 全清档 (1.00000)。
-        ("极速档 (无边界环)", "robotdog.solver.sweeper4", "release",
-         {"boundary_ring": False}, True),
-        ("全清档 (默认)", "robotdog.solver.sweeper4", "release", {}, False),
-    ],
-}
+# 候选族: (标签, 模块, base, 固定覆盖项)
+CANDIDATES = [
+    ("问题3 策略", "robotdog.solver.sweeper", "release", {}),
+]
 
 
 def _build_cfg(mod, base: str, overrides: Dict[str, Any]):
@@ -53,8 +42,6 @@ def _build_cfg(mod, base: str, overrides: Dict[str, Any]):
         raise ValueError(base)
     cfg = mod.build_cfg()
     for k, v in overrides.items():
-        if k == "swing":
-            continue                      # swing 不是配置项, 单独处理 (见 _task)
         setattr(cfg, k, v)
     return cfg
 
@@ -65,34 +52,18 @@ def _task(payload: Dict[str, Any]) -> List[Dict[str, Any]]:
     from robotdog.solver.world import World
 
     overrides = dict(payload["overrides"])
-    if payload["problem"] == 3:
-        # 收尾闸门前沿只对问题3 有意义; 问题4 的求解器不读 hunt_mass_min。
-        overrides.setdefault("hunt_mass_min", payload["gate"])
+    overrides.setdefault("hunt_mass_min", payload["gate"])
     cfg = _build_cfg(mod, payload["base"], overrides)
-    fn = (getattr(mod, "run_sweeper4", None)
-          or getattr(mod, "run_candidate", None)
-          or getattr(mod, "run_sweeper"))
-    # 规划器自带世界装配 (问题4 用空信念; 问题3 用 Belief)
-    wk = mod.world_kwargs() if hasattr(mod, "world_kwargs") else {}
+    fn = getattr(mod, "run_candidate", None) or getattr(mod, "run_sweeper")
 
-    swing = overrides.get("swing", True)
-    patched = False
-    if payload["problem"] == 4 and not swing and hasattr(mod, "beam_swing_point"):
-        payload_mod_orig = mod.beam_swing_point
-        mod.beam_swing_point = lambda *a, **k: None
-        patched = True
-    try:
-        rows = []
-        for sd in payload["seeds"]:
-            w = World(seed=sd, problem=payload["problem"], **wk)
-            fn(w, cfg=cfg, knows_total=False)          # 部署口径 = 正式测试口径
-            rows.append({"seed": sd, "cleared": w.cleared_count, "total": w.n_sources,
-                         "virtual_s": w.virtual_t, "moved_m": w.moved_m,
-                         "measures": w.measures})
-        return rows
-    finally:
-        if patched:
-            mod.beam_swing_point = payload_mod_orig
+    rows = []
+    for sd in payload["seeds"]:
+        w = World(seed=sd)
+        fn(w, cfg=cfg, knows_total=False)              # 部署口径 = 正式测试口径
+        rows.append({"seed": sd, "cleared": w.cleared_count, "total": w.n_sources,
+                     "virtual_s": w.virtual_t, "moved_m": w.moved_m,
+                     "measures": w.measures})
+    return rows
 
 
 def summarize(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -148,23 +119,19 @@ def knee_point(cands: List[Dict[str, Any]], front: List[int]) -> int:
     return front[best]
 
 
-def run(problem: int, seeds: List[int], jobs: int) -> Dict[str, Any]:
+def run(seeds: List[int], jobs: int) -> Dict[str, Any]:
     import multiprocessing as mp
-
-    # 收尾闸门 hunt_mass_min 是**问题3 专有**的旋钮; 问题4 的求解器不读它,
-    # 扫它只会得到一排完全相同的行。所以问题4 只用单一闸门, 前沿由它的两档构成。
-    gates = GATE_GRID if problem == 3 else [GATE_GRID[0]]
 
     tasks = []
     meta = []
-    for label, module, base, fixed, _noswing in FAMILIES[problem]:
-        for gate in gates:
+    for label, module, base, fixed in CANDIDATES:
+        for gate in GATE_GRID:
             meta.append((label, module, base, dict(fixed), gate))
 
     chunk = 30
     for label, module, base, fixed, gate in meta:
         for i in range(0, len(seeds), chunk):
-            tasks.append(dict(problem=problem, module=module, base=base,
+            tasks.append(dict(module=module, base=base,
                               overrides=dict(fixed), gate=gate,
                               seeds=seeds[i:i + chunk], tag=(label, gate)))
     method = "fork" if "fork" in mp.get_all_start_methods() else "spawn"
@@ -184,13 +151,14 @@ def run(problem: int, seeds: List[int], jobs: int) -> Dict[str, Any]:
     cands.sort(key=lambda c: (c["label"], c["gate"]))
     front = pareto_front(cands)
     knee = knee_point(cands, front)
-    return {"problem": problem, "seeds": [seeds[0], seeds[-1]], "n": len(seeds),
+    return {"problem": 3, "seeds": [seeds[0], seeds[-1]], "n": len(seeds),
             "deploy": True, "candidates": cands, "frontier": front, "knee": knee}
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="帕累托前沿 (清除比例 vs 平均定位清除时间)")
-    ap.add_argument("--problem", type=int, default=0, help="0=两个都算")
+    ap.add_argument("--problem", type=int, default=3, choices=(3,),
+                    help="本工程只提供问题3 求解器")
     ap.add_argument("--jobs", type=int, default=0, help="0=自动")
     ap.add_argument("--calib", default="9500-11499", help="标定集种子区间")
     ap.add_argument("--test", default="8000-8999", help="独立测试集种子区间")
@@ -200,26 +168,24 @@ def main() -> int:
     jobs = args.jobs or max(2, min(cpu, 12))
     holdout = parse_seeds(args.calib)
     gen = parse_seeds(args.test)
-    problems = [3, 4] if args.problem == 0 else [args.problem]
     labels = {"": "标定集 %s" % args.calib, "_gen": "独立测试集 %s" % args.test}
 
-    for prob in problems:
-        for tag, seeds in (("", holdout), ("_gen", gen)):
-            t0 = time.time()
-            out = run(prob, seeds, jobs)
-            out["generality"] = tag == "_gen"
-            path = "data/reports/pareto_p%d%s.json" % (prob, tag)
-            os.makedirs(os.path.dirname(path), exist_ok=True)
-            with open(path, "w", encoding="utf-8") as fh:
-                json.dump(out, fh, ensure_ascii=False, indent=1)
-            print("=== 问题%d %s | %d 局 | 墙钟 %.0f s -> %s"
-                  % (prob, labels[tag], len(seeds), time.time() - t0, path))
-            print("  前沿 (%d 个非支配点, 按平均定位清除升序):" % len(out["frontier"]))
-            for i in out["frontier"]:
-                c = out["candidates"][i]
-                mark = "  <- 膝点" if i == out["knee"] else ""
-                print("    %-24s gate=%.2f  清除率 %.4f  平均定位清除 %6.1f s  移动 %5.0f m%s"
-                      % (c["label"], c["gate"], c["ratio"], c["avg_clear"], c["moved"], mark))
+    for tag, seeds in (("", holdout), ("_gen", gen)):
+        t0 = time.time()
+        out = run(seeds, jobs)
+        out["generality"] = tag == "_gen"
+        path = "data/reports/pareto_p3%s.json" % tag
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(out, fh, ensure_ascii=False, indent=1)
+        print("=== %s | %d 局 | 墙钟 %.0f s -> %s"
+              % (labels[tag], len(seeds), time.time() - t0, path))
+        print("  前沿 (%d 个非支配点, 按平均定位清除升序):" % len(out["frontier"]))
+        for i in out["frontier"]:
+            c = out["candidates"][i]
+            mark = "  <- 膝点" if i == out["knee"] else ""
+            print("    %-24s gate=%.2f  清除率 %.4f  平均定位清除 %6.1f s  移动 %5.0f m%s"
+                  % (c["label"], c["gate"], c["ratio"], c["avg_clear"], c["moved"], mark))
     return 0
 
 

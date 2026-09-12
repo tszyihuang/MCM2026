@@ -9,8 +9,8 @@
 用法:
     python tools/run_batch.py --problem 3 --module practice --runs 5 --seed 1001
     python tools/run_batch.py --problem 3 --module formal --runs 3
-    python tools/run_batch.py --problem 4 --module formal --runs 8 --jobs 8   # 多核并行
-    python tools/run_batch.py --problem 4 --module formal --runs 3 --robot-args "--reserve 10"
+    python tools/run_batch.py --problem 3 --module formal --runs 8 --jobs 8   # 多核并行
+    python tools/run_batch.py --problem 3 --module formal --runs 3 --robot-args "--reserve 10"
 """
 
 from __future__ import annotations

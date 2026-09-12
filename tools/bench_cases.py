@@ -11,7 +11,7 @@
   逐批读种子, 省掉每批 0.3 s 的启动开销; 批量 16~64 局时整批通常 0.1~0.3 s。
 
     python tools/bench_cases.py                      # 问题3, 种子 1001-1016, 全部核心
-    python tools/bench_cases.py --problem 4 --seeds 2001-2016
+    python tools/bench_cases.py --seeds 2001-2016
     python tools/bench_cases.py --seeds 3001-3024 --workers 4   # 小批量下 4 进程常常更快
     python tools/bench_cases.py --serve               # 常驻: 之后每次输入一行种子回车
 """

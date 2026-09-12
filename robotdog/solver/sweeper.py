@@ -224,20 +224,6 @@ def _pd_all(world: World, p: Vec) -> np.ndarray:
     if idx:
         G = np.stack(mats, axis=0)
         out[idx] = G @ kernel
-    # 问题4: 定向源的检测概率多一个**方向因子** Γ̄(格点方位, psi 后验)。核与格点
-    # 的矩阵乘法仍然只做一次, 这里只补一层逐格点的乘子。``ChannelTrack4`` 提供
-    # ``detect_prob_grid``; 问题3 的 ``ChannelTrack`` 没有该方法, 走原路径不变。
-    for i in idx:
-        fn = getattr(bel.tracks[i], "detect_prob_grid", None)
-        if fn is None:
-            continue
-        dx = cells[:, 0] - p[0]
-        dy = cells[:, 1] - p[1]
-        d = np.hypot(dx, dy)
-        nz = np.maximum(d, 1e-9)
-        # 口径与上面的 ``G @ kernel`` 完全一致: 只对**位置分布**求期望 (不含 π_c)
-        out[i] = float(np.dot(bel.tracks[i].grid,
-                              fn(d, dx / nz, dy / nz, kernel)))
     return out
 
 

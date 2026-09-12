@@ -29,7 +29,7 @@ from tests.harness import TEAM  # noqa: E402
 
 
 class RobotAcceptanceTest(unittest.TestCase):
-    """真实进程端到端演练测试 (问题3 / 问题4)。"""
+    """真实进程端到端演练测试 (问题3)。"""
 
     @classmethod
     def setUpClass(cls):
@@ -157,26 +157,6 @@ class RobotAcceptanceTest(unittest.TestCase):
                 self.assertIn("channel", rec["request"])
         ids = [rec["request"]["request_id"] for rec in lines]
         self.assertEqual(len(ids), len(set(ids)), "每个新动作必须使用新的 request_id")
-
-    def test_practice_q4_with_directional(self):
-        """问题4: 案例含定向源, 机器狗必须能跑通并至少在一个案例上清除成功。
-
-        不同随机案例的难度差异较大 (定向源覆盖角只有 180°), 因此跨多个案例统计,
-        只要存在成功清除即视为策略与接口协同正常。
-        """
-        results = []
-        for seed in (2001, 2002, 2003):
-            info, proc, _robot_log = self._run_robot(4, seed, "q4_practice")
-            self.assertEqual(proc.returncode, 0, "机器狗进程异常退出: %s" % proc.stderr[-800:])
-            report = self.manager.current_record
-            self.assertEqual(report["case_code"], info["case_code"])
-            self.assertEqual(report["end_reason"], "user_exit")
-            self.assertGreater(report["truth"]["directional_count"], 0, "问题4 案例应包含定向干扰源")
-            # 现实预算是真约束; 虚拟时长另有 360000 s 上限 (见 test_practice_q3_full_flow 注释)
-            self.assertLessEqual(report["stats"]["program_runtime_s"], 1200.0 + 25.0)
-            self.assertLessEqual(report["stats"]["total_duration_s"], MAX_VIRTUAL_S)
-            results.append(report["stats"]["cleared_count"])
-        self.assertGreaterEqual(max(results), 1, "问题4 多个案例中至少应清除 1 个: %s" % results)
 
     def test_formal_hides_truth_and_encrypts_log(self):
         info, proc, robot_log = self._run_robot(3, 1009, "q3_formal")

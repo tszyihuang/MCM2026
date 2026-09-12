@@ -236,7 +236,7 @@ def main() -> int:
 
     # ---------------- 3. 真实进程端到端 ----------------
     print("\n[3] 机器狗程序端到端演练 (真实进程 + HTTP)")
-    for problem, seed in ((3, 1001), (4, 2003)):
+    for problem, seed in ((3, 1001),):
         info = manager.start_test("q%d_practice" % problem, seed=seed)
         code2 = info["case_code"]
         wait_interface_open(manager)
@@ -280,12 +280,11 @@ def main() -> int:
         acts = sum(a["total_duration_s"] for a in (rep2 or {}).get("actions", []))
         check("问题%d: 动作日志累计耗时 = 虚拟总时间" % problem,
               abs(acts - stats.get("total_duration_s", 0)) < 1e-3)
-        if problem == 3:
-            # 演练测试的实时状态必须显示干扰源总数 (正式测试才隐藏, 见第 4 节)
-            practice_total = manager.ui_state()["status"]["source_total"]
-            check("演练测试实时状态显示干扰源总数",
-                  practice_total == (rep2 or {}).get("truth", {}).get("source_total"),
-                  str(practice_total))
+        # 演练测试的实时状态必须显示干扰源总数 (正式测试才隐藏, 见第 4 节)
+        practice_total = manager.ui_state()["status"]["source_total"]
+        check("演练测试实时状态显示干扰源总数",
+              practice_total == (rep2 or {}).get("truth", {}).get("source_total"),
+              str(practice_total))
 
     # ---------------- 4. 正式测试日志 ----------------
     print("\n[4] 正式测试模块与加密日志 (附件1 4.6)")

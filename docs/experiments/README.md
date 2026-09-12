@@ -11,8 +11,6 @@
 | 问题3 单点联合选择 | 把"顺路停车点"与"弦式侧移"合并为一次 `(ε, δ)` 联合优化；候选集恒含保守动作 | `sweeper.joint_measure_point` / `_joint_pred` / `_joint_rem` 的 docstring |
 | 问题3 截断核 | 部署口径 +2.0 s/源，汇率不划算 ⇒ 不采纳 | `sweeper.cover_point` 的 docstring |
 | 检测概率积分 | 远距离 `no_signal` 必须用 `1 − E[F_R(d)]`，否则 π 崩塌 | `belief.py` |
-| 问题4 定向源物理 | 单点发现概率恒为 1/2，与距离无关；保证发现的探测点间距须 ≤1000 m | `docs/问题4解法.md`；`tools/probes/verify_q4_theory4.py` 可数值验证 |
-| 问题4 贴边补扫环 | 把清除比例从 0.9996 推到 1.0000 | `sweeper4.build_cfg()` / `boundary_ring_points` |
 
 更完整的**负面结果清单**（静默失效、口径陷阱、被误判的优化）见
 `../robotdog/solver/README.md` §7「工程要点」。
@@ -22,8 +20,6 @@
 所有结论都可以用现成工具重新跑出来，不需要历史脚本：
 
 ```powershell
-python tools\pareto_front.py --problem 3        # 问题3 收尾闸门前沿 (标定集 + 独立测试集)
-python tools\pareto_front.py --problem 4        # 问题4 全清档 / 极速档
-python tools\probes\verify_q4_theory4.py        # 问题4 理论引理的数值验证
+python tools\pareto_front.py                    # 收尾闸门前沿 (标定集 + 独立测试集)
 python tools\decision_fingerprint.py            # 逐动作决策指纹 (重构安全网)
 ```

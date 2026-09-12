@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""生成问题3 / 问题4 论文用的全部插图 -> docs/figures/。
+"""生成问题3 论文用的全部插图 -> docs/figures/。
 
 图面规约: **只保留坐标轴、刻度、图例与数值标签**, 不写说明性文字、注释框或图上标题;
 所有解释一律放进论文正文与图注。数据来自 solver 的确定性评测
@@ -303,101 +303,6 @@ def fig_q3_results():
     _save(fig, "q3_results.png")
 
 
-# --------------------------------------------------------------------------- 问题4
-def fig_q4_cover():
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(10.8, 4.5))
-    s = 1000.0
-    pts = []
-    j = 0
-    y = -2 * s * math.sqrt(3) / 2
-    while y <= 2 * s * math.sqrt(3) / 2 + 1e-9:
-        off = (s / 2) if (j % 2) else 0.0
-        x = -1.6 * s
-        while x <= 1.6 * s + 1e-9:
-            pts.append((x + off, y))
-            x += s
-        y += s * math.sqrt(3) / 2
-        j += 1
-    src = (40.0, 30.0)
-    ax.add_patch(Circle(src, 1000, facecolor="#eef3fa", edgecolor=C_BLUE, lw=1.2, zorder=1))
-    inside = sorted([p for p in pts if math.dist(p, src) <= 1000],
-                    key=lambda p: math.atan2(p[1] - src[1], p[0] - src[0]))
-    for p in pts:
-        ax.scatter(*p, s=20, color="#c9ccd1", zorder=3)
-    for p in inside[:3]:
-        ax.scatter(*p, s=58, color=C_BLUE, zorder=5)
-        ax.plot([src[0], p[0]], [src[1], p[1]], color=C_BLUE, lw=1.0, ls=":", zorder=2)
-    ax.scatter([src[0]], [src[1]], s=130, marker="*", color=C_RED, zorder=6)
-    ax.annotate("$p$", src, fontsize=12, color=C_RED, xytext=(-16, -22),
-                textcoords="offset points")
-    ax.text(src[0] + 560, src[1] + 780, "1000 m", color=C_BLUE, fontsize=9)
-    ax.set_xlim(-1750, 1750), ax.set_ylim(-1200, 1200), ax.set_aspect("equal")
-    ax.set_xlabel("$x$ / m"), ax.set_ylabel("$y$ / m")
-
-    ss = np.array([1732, 1500, 1300, 1200, 1150, 1100, 1050, 1030, 1010, 1000, 990, 950, 900, 800])
-    fail = np.array([0.9970, 0.9104, 0.6364, 0.3378, 0.1562, 0.0655, 0.0169, 0.0069, 0.0015,
-                     0.0, 0.0, 0.0, 0.0, 0.0])
-    ax2.semilogy(ss[fail > 0], fail[fail > 0], "-o", color=C_ORANGE, lw=1.8, ms=5)
-    ax2.semilogy(ss[fail == 0], np.full((fail == 0).sum(), 1.2e-4), "v",
-                 color=C_GREEN, ms=7, label="0")
-    ax2.set_ylim(6e-5, 3.0)
-    ax2.axvline(1000, color=C_RED, ls="--", lw=1.4)
-    ax2.set_xlabel("格间距 $s$ / m"), ax2.set_ylabel("失败位置比例")
-    ax2.legend(fontsize=9, frameon=False, loc="upper left")
-    ax2.grid(alpha=0.25)
-    _save(fig, "q4_cover.png")
-
-
-def fig_q4_flow():
-    fig, ax = plt.subplots(figsize=(8.2, 6.6))
-    ax.set_xlim(0, 10), ax.set_ylim(0.5, 10.5), ax.axis("off")
-    box(ax, 5.0, 9.6, 5.2, 1.0, "① 24 点集合覆盖补扫", "#e8f0fb", C_BLUE, fs=10.5)
-    box(ax, 8.2, 5.9, 3.5, 1.4, "② 沿示向度射线\n一维盲清", "#e9f6ec", C_GREEN, fs=9.5)
-    box(ax, 5.0, 2.5, 4.6, 1.0, "③ 贴边补扫环", "#fdf1e3", C_ORANGE, fs=9.5)
-    box(ax, 1.8, 5.9, 3.5, 1.4, "④ 全区域复扫\n无新发现", "#eef3fa", C_BLUE, fs=9.5)
-    for a, b, rad in (((6.6, 9.3), (7.1, 6.75), -0.30),
-                      ((7.4, 5.2), (6.3, 3.2), -0.30),
-                      ((3.6, 2.9), (2.5, 5.1), -0.30),
-                      ((2.9, 6.75), (3.4, 9.2), -0.30)):
-        arrow(ax, a, b, color=C_GRAY, rad=rad, lw=1.6)
-    ax.text(5.0, 6.2, "不做贝叶斯推断", ha="center", va="center", fontsize=11)
-    ax.text(5.0, 1.15, "无新发现 → /exit", ha="center", va="center", fontsize=11, color=C_RED)
-    arrow(ax, (5.0, 3.05), (5.0, 1.5), color=C_RED, lw=1.5)
-    _save(fig, "q4_flow.png")
-
-
-def fig_q4_results():
-    with open("data/reports/q4_missed_analysis.json", encoding="utf-8") as fh:
-        d = json.load(fh)
-    rec = d["records"]
-    unseen = [r for r in rec if not r["seen"]]
-    seen = [r for r in rec if r["seen"]]
-    fig, (ax, ax2, ax3) = plt.subplots(1, 3, figsize=(12.6, 4.1))
-    ax.bar(["角向缺口", "看见未清"], [len(unseen), len(seen)],
-           color=[C_ORANGE, C_BLUE], width=0.5)
-    for i, v in enumerate([len(unseen), len(seen)]):
-        ax.text(i, v + 4, "%d" % v, ha="center", fontsize=10)
-    ax.set_ylim(0, 215), ax.set_ylabel("漏源数"), ax.set_xlabel("漏源归因")
-
-    gaps = [r["gap"] for r in rec]
-    ax2.hist(gaps, bins=np.arange(0, 370, 30), color=C_ORANGE, edgecolor="white")
-    ax2.axvline(180, color=C_RED, ls="--", lw=1.4)
-    ax2.set_xlabel("方位最大空隙 / 度"), ax2.set_ylabel("漏源数")
-
-    names = ["全清档\n(默认)", "极速档\n(无边界环)"]
-    ratio = [1.0000, 0.9997]
-    sec = [1819.8, 1340.2]
-    x = np.arange(2)
-    b = ax3.bar(x, sec, 0.5, color=[C_BLUE, C_ORANGE])
-    for bb, v, r in zip(b, sec, ratio):
-        ax3.text(bb.get_x() + bb.get_width() / 2, v + 40, "%.0f\n%.4f" % (v, r),
-                 ha="center", fontsize=9)
-    ax3.set_xticks(x), ax3.set_xticklabels(names)
-    ax3.set_ylim(0, 2150), ax3.set_ylabel("$s$ / 源")
-    ax3.tick_params(axis="x", labelsize=9)
-    _save(fig, "q4_results.png")
-
-
 # --------------------------------------------------------------------------- 帕累托前沿
 def _pareto_data(problem):
     with open("data/reports/pareto_p%d.json" % problem, encoding="utf-8") as fh:
@@ -466,11 +371,7 @@ def main():
     fig_q3_flow()
     fig_q3_phases()
     fig_q3_results()
-    fig_q4_cover()
-    fig_q4_flow()
-    fig_q4_results()
     fig_pareto(3, "q3_pareto.png")
-    fig_pareto(4, "q4_pareto.png")
 
 
 if __name__ == "__main__":
