@@ -1,4 +1,4 @@
-﻿"""模拟器命令行入口.
+"""模拟器命令行入口.
 
 用法示例:
     python -m simulator --team-id MCM2026 --port 2026 --gui-port 2027

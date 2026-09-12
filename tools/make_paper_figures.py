@@ -3,7 +3,7 @@
 
 图面规约: **只保留坐标轴、刻度、图例与数值标签**, 不写说明性文字、注释框或图上标题;
 所有解释一律放进论文正文与图注。数据来自 solver 的确定性评测
-(留出集 seed 9500-9799, 泛化集 8000-8099) 或其解析式。
+(标定集 seed 9500-9799, 独立测试集 8000-8099) 或其解析式。
 """
 from __future__ import annotations
 
@@ -432,8 +432,8 @@ def fig_pareto(problem, fname):
     ax.legend(fontsize=9, frameon=False, loc="best")
     ax.grid(alpha=0.2)
 
-    for tag, data, ls, mk, col in (("留出集", hold, "-", "o", C_BLUE),
-                                   ("泛化集", gen, "--", "s", C_ORANGE)):
+    for tag, data, ls, mk, col in (("标定集", hold, "-", "o", C_BLUE),
+                                   ("独立测试集", gen, "--", "s", C_ORANGE)):
         fr = data["frontier"]
         ax2.plot([data["candidates"][i]["avg_clear"] for i in fr],
                  [data["candidates"][i]["ratio"] for i in fr],

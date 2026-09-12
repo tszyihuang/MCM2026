@@ -1,4 +1,4 @@
-﻿# 实验与消融记录（索引）
+# 实验与消融记录（索引）
 
 本目录用于存放参数标定、消融与负面结果。**当前没有独立文件**——
 结论已并入正文文档与代码注释，避免出现重复且可能过期的数字。
@@ -22,7 +22,7 @@
 所有结论都可以用现成工具重新跑出来，不需要历史脚本：
 
 ```powershell
-python tools\pareto_front.py --problem 3        # 问题3 收尾闸门前沿 (留出集 + 泛化集)
+python tools\pareto_front.py --problem 3        # 问题3 收尾闸门前沿 (标定集 + 独立测试集)
 python tools\pareto_front.py --problem 4        # 问题4 全清档 / 极速档
 python tools\probes\verify_q4_theory4.py        # 问题4 理论引理的数值验证
 python tools\decision_fingerprint.py            # 逐动作决策指纹 (重构安全网)

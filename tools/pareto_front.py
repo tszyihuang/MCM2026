@@ -1,11 +1,11 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """帕累托前沿分析: 双目标 (最大化清除比例, 最小化平均定位清除时间)。
 
 做法: 构造一族**候选运行点** —— 问题3 是收尾闸门 ``hunt_mass_min`` 网格
 (0.0 表示"扫到没有残余质量为止", 1.0 等价于不作收尾); 问题4 是它的两档
 (关掉/打开贴边补扫环)。
-全部在**部署口径** (``knows_total=False``, 即正式测试口径) 下跑留出集 9500-9799,
-再对同一批种子跑泛化集 8000-8099 复核。
+全部在**部署口径** (``knows_total=False``, 即正式测试口径) 下跑标定集 9500-9799,
+再对同一批种子跑独立测试集 8000-8099 复核。
 
 然后计算非支配集 (Pareto 前沿) 与膝点 (knee point)。
 
@@ -208,7 +208,7 @@ def main() -> int:
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(out, fh, ensure_ascii=False, indent=1)
             print("=== 问题%d %s | %d 局 | 墙钟 %.0f s -> %s"
-                  % (prob, "泛化集 8000-8099" if tag else "留出集 9500-9799",
+                  % (prob, "独立测试集 8000-8099" if tag else "标定集 9500-9799",
                      len(seeds), time.time() - t0, path))
             print("  前沿 (%d 个非支配点, 按平均定位清除升序):" % len(out["frontier"]))
             for i in out["frontier"]:

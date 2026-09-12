@@ -1,4 +1,4 @@
-﻿# `data/` — 运行时产物与对照证据
+# `data/` — 运行时产物与对照证据
 
 本目录分两类内容：
 
@@ -36,14 +36,14 @@
 
 | 路径 | 由谁生成 | 内容 |
 | --- | --- | --- |
-| `q3_insample.json` / `q3_deploy.json` | `tools/candidates.py` / `tools/eval_deploy.py` | 问题3 留出集（seed 9500-9799）进程内 / 部署口径的逐局明细与汇总 |
-| `q4_insample.json` / `q4_deploy.json` | `tools/eval_q4.py` | 问题4 留出集双口径成绩 |
+| `q3_insample.json` / `q3_deploy.json` | `tools/candidates.py` / `tools/eval_deploy.py` | 问题3 标定集（seed 9500-9799）进程内 / 部署口径的逐局明细与汇总 |
+| `q4_insample.json` / `q4_deploy.json` | `tools/eval_q4.py` | 问题4 标定集双口径成绩 |
 | `q4_missed_analysis.json` | `tools/eval_q4.py` / 漏源归因探针 | 问题4 漏源的角向归因（论文插图取数） |
-| `pareto_p3*.json` / `pareto_p4*.json` | `tools/pareto_front.py` | 问题3（收尾闸门）/ 问题4（两档）的帕累托前沿，含留出集与泛化集 |
+| `pareto_p3*.json` / `pareto_p4*.json` | `tools/pareto_front.py` | 问题3（收尾闸门）/ 问题4（两档）的帕累托前沿，含标定集与独立测试集 |
 | `fingerprint_*.json` | `tools/decision_fingerprint.py` | 逐动作决策指纹（重构前后对照） |
 | `verify_*.json` | `tools/verify_candidate.py` | 交付验收明细（确定性 + 双口径成绩） |
 
-问题3 的留出集成绩重新生成：
+问题3 的标定集成绩重新生成：
 
 ```powershell
 python tools\candidates.py  --modules robotdog.solver.sweeper --seeds 9500-9799 --jobs 6 `

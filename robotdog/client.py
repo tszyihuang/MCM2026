@@ -1,4 +1,4 @@
-﻿"""机器狗程序的 HTTP+JSON 客户端 (纯标准库).
+"""机器狗程序的 HTTP+JSON 客户端 (纯标准库).
 
 通信严格遵循附件2: 只使用 /enter、/measure、/clear、/exit 四条指令;
 每个新动作使用新的 request_id, 逐次等待响应; 网络重试复用原 request_id 与请求内容;

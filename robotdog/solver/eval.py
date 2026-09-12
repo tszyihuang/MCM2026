@@ -5,7 +5,7 @@
 
 用法::
 
-    # 留出集上 (300 局)
+    # 标定集上 (300 局)
     python -m robotdog.solver.eval --seeds 9500-9799 --jobs 8
 
     # 打印前 N 局的逐步明细 (单进程)

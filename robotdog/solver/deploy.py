@@ -1,4 +1,4 @@
-﻿"""机器狗程序: 贝叶斯信念 + 确定性清除规划器, 走 HTTP+JSON.
+"""机器狗程序: 贝叶斯信念 + 确定性清除规划器, 走 HTTP+JSON.
 
 通信层只用 ``/enter`` ``/measure`` ``/clear`` ``/exit`` 四条指令, 逐次等待响应,
 复用 ``request_id`` 做幂等重试, 同时检查 HTTP 状态与 ``accepted`` 字段,

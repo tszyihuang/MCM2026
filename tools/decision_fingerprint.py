@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """重构安全网: 逐动作决策指纹 (behavioral fingerprint).
 
 动机
