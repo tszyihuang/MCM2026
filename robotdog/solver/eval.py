@@ -1,12 +1,12 @@
 """问题3 求解器的进程内评测入口 (批量对局 / 单局逐步明细)。
 
 同一批随机案例 (同一 seed ⇒ 同一案例), 求解器确定性执行, 一局一局铺到多个核上,
-300 局只需约 90 s。
+2000 局只需约 5 s。
 
 用法::
 
-    # 标定集上 (300 局)
-    python -m robotdog.solver.eval --seeds 9500-9799 --jobs 8
+    # 标定集上 (2000 局)
+    python -m robotdog.solver.eval --seeds 9500-11499 --jobs 8
 
     # 打印前 N 局的逐步明细 (单进程)
     python -m robotdog.solver.eval --seeds 9500 --trace 1

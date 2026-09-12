@@ -4,8 +4,8 @@
 做法: 构造一族**候选运行点** —— 问题3 是收尾闸门 ``hunt_mass_min`` 网格
 (0.0 表示"扫到没有残余质量为止", 1.0 等价于不作收尾); 问题4 是它的两档
 (关掉/打开贴边补扫环)。
-全部在**部署口径** (``knows_total=False``, 即正式测试口径) 下跑标定集 9500-9799,
-再对同一批种子跑独立测试集 8000-8099 复核。
+全部在**部署口径** (``knows_total=False``, 即正式测试口径) 下跑标定集 9500-11499 (2000 局),
+再对**互不重叠**的独立测试集 8000-8999 (1000 局) 复核。区间可用 ``--calib`` / ``--test`` 改。
 
 然后计算非支配集 (Pareto 前沿) 与膝点 (knee point)。
 
@@ -26,6 +26,8 @@ import time
 from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from robotdog.solver.eval import parse_seeds  # noqa: E402
 
 # 收尾闸门网格: 0.0=扫到无残余; 1.0 等价于不做收尾 (时间最短、清除率最低的一端)
 GATE_GRID = [0.0, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.60, 1.0]
@@ -190,13 +192,16 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="帕累托前沿 (清除比例 vs 平均定位清除时间)")
     ap.add_argument("--problem", type=int, default=0, help="0=两个都算")
     ap.add_argument("--jobs", type=int, default=0, help="0=自动")
+    ap.add_argument("--calib", default="9500-11499", help="标定集种子区间")
+    ap.add_argument("--test", default="8000-8999", help="独立测试集种子区间")
     args = ap.parse_args()
 
     cpu = os.cpu_count() or 4
     jobs = args.jobs or max(2, min(cpu, 12))
-    holdout = list(range(9500, 9800))
-    gen = list(range(8000, 8100))
+    holdout = parse_seeds(args.calib)
+    gen = parse_seeds(args.test)
     problems = [3, 4] if args.problem == 0 else [args.problem]
+    labels = {"": "标定集 %s" % args.calib, "_gen": "独立测试集 %s" % args.test}
 
     for prob in problems:
         for tag, seeds in (("", holdout), ("_gen", gen)):
@@ -208,8 +213,7 @@ def main() -> int:
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(out, fh, ensure_ascii=False, indent=1)
             print("=== 问题%d %s | %d 局 | 墙钟 %.0f s -> %s"
-                  % (prob, "独立测试集 8000-8099" if tag else "标定集 9500-9799",
-                     len(seeds), time.time() - t0, path))
+                  % (prob, labels[tag], len(seeds), time.time() - t0, path))
             print("  前沿 (%d 个非支配点, 按平均定位清除升序):" % len(out["frontier"]))
             for i in out["frontier"]:
                 c = out["candidates"][i]

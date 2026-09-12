@@ -3,7 +3,7 @@
 
 图面规约: **只保留坐标轴、刻度、图例与数值标签**, 不写说明性文字、注释框或图上标题;
 所有解释一律放进论文正文与图注。数据来自 solver 的确定性评测
-(标定集 seed 9500-9799, 独立测试集 8000-8099) 或其解析式。
+(标定集 seed 9500-11499, 独立测试集 8000-8999) 或其解析式。
 """
 from __future__ import annotations
 
@@ -156,7 +156,7 @@ def fig_q3_scene():
 
 
 def fig_q3_nn():
-    d1, d2, d3 = nn_stats(range(9500, 9800))
+    d1, d2, d3 = nn_stats(range(9500, 11500))
     fig, (ax, ax2) = plt.subplots(1, 2, figsize=(10.6, 4.2))
     bins = np.arange(0, 1900, 90)
     for arr, lab, col in ((d1, "1-NN", C_BLUE), (d2, "2-NN", C_GREEN), (d3, "3-NN", C_ORANGE)):
@@ -227,9 +227,11 @@ def fig_q3_flow():
 
 
 def fig_q3_phases():
+    # 来源: python tools\profile_run.py --module robotdog.solver.sweeper --seeds 9500-11499
+    # (进程内口径, 2000 局; 阶段与 profile_run 的划分一一对应)
     stages = ["起点盲扫", "逼近清除", "顺路停车", "原地补测", "收尾覆盖"]
-    secs = [5.0, 1678.5, 667.4, 536.6, 304.5]
-    mets = [0.0, 7714.0, 2523.0, 0.0, 1256.0]
+    secs = [119.0, 1666.8, 684.5, 418.7, 197.6]
+    mets = [0.0, 7640.0, 2589.0, 0.0, 850.0]
     fig = plt.figure(figsize=(11.4, 4.0))
     gs = fig.add_gridspec(1, 3, width_ratios=[1.1, 1.1, 1.0], wspace=0.62)
     ax = fig.add_subplot(gs[0])
@@ -246,36 +248,46 @@ def fig_q3_phases():
     ax2.set_yticks(y), ax2.set_yticklabels([])
     ax2.set_xlabel("米/局"), ax2.set_xlim(0, 9200)
     ax3 = fig.add_subplot(gs[2])
-    names = ["最优巡回", "NN+2-opt", "策略实际"]
-    vals = [8910, 9055, 11020]
-    bars = ax3.bar(names, vals, color=[C_GRAY, C_GRAY, C_BLUE], width=0.55)
+    # 巡回下界取 NN+2-opt 巡回长度在 9500-11499 上的均值 (已知真值路线, 不含定位折返)
+    names = ["巡回下界\n(NN+2-opt)", "策略实际"]
+    vals = [9033, 11080]
+    bars = ax3.bar(names, vals, color=[C_GRAY, C_BLUE], width=0.5)
     for b, v in zip(bars, vals):
         ax3.text(b.get_x() + b.get_width() / 2, v + 180, "%d" % v, ha="center", fontsize=8.5)
-    ax3.axhline(8910, color=C_RED, ls="--", lw=1.1)
+    ax3.axhline(9033, color=C_RED, ls="--", lw=1.1)
     ax3.set_ylim(0, 13500), ax3.set_ylabel("米/局")
     ax3.tick_params(axis="x", labelsize=8.5)
     _save(fig, "q3_phases.png")
 
 
 def fig_q3_results():
-    thr = [0.02, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50]
-    ratio = [0.9992, 0.9987, 0.9977, 0.9970, 0.9967, 0.9962, 0.9949, 0.9929, 0.9886]
-    sec = [310.8, 287.4, 274.8, 270.1, 265.2, 262.0, 258.7, 255.8, 251.2]
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(10.8, 4.2))
-    l1, = ax.plot(thr, sec, "-o", color=C_BLUE, lw=1.8, label="$s$ / 源")
-    ax.set_xlabel("$hunt\\_mass\\_min$"), ax.set_ylabel("$s$ / 源", color=C_BLUE)
+    # 取数自 data/reports/pareto_p3.json (标定集 9500-11499, 2000 局, 部署口径)
+    with open("data/reports/pareto_p3.json", encoding="utf-8") as fh:
+        cs = sorted(json.load(fh)["candidates"], key=lambda c: c["gate"])
+    thr = [c["gate"] for c in cs]
+    ratio = [c["ratio"] for c in cs]
+    sec = [c["avg_clear"] for c in cs]
+    xs = np.arange(len(cs))            # 等距刻度: 否则 0~0.2 这段挤在一起看不清
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.4, 4.2),
+                                  gridspec_kw={"wspace": 0.38})
+    l1, = ax.plot(xs, sec, "-o", color=C_BLUE, lw=1.8, ms=4.5, label="$s$ / 源")
+    ax.set_xlabel("收尾门限 $\\lambda$"), ax.set_ylabel("$s$ / 源", color=C_BLUE)
+    ax.set_xticks(xs), ax.set_xticklabels(["%.2f" % g for g in thr], fontsize=8.5)
     ax.tick_params(axis="y", labelcolor=C_BLUE)
-    ax.axvline(0.20, color=C_GRAY, ls=":", lw=1.1)
+    kn = thr.index(0.20)
+    ax.axvline(kn, color=C_GRAY, ls=":", lw=1.1)
+    ax.plot([kn], [sec[kn]], "o", ms=8, mfc="none", mec=C_GRAY)
     axr = ax.twinx()
-    l2, = axr.plot(thr, ratio, "-s", color=C_RED, lw=1.6, ms=4, label="清除比例")
+    l2, = axr.plot(xs, ratio, "-s", color=C_RED, lw=1.6, ms=4, label="清除比例")
     axr.axhline(0.98, color=C_RED, ls="--", lw=1.1)
     axr.set_ylabel("清除比例", color=C_RED), axr.tick_params(axis="y", labelcolor=C_RED)
-    axr.set_ylim(0.976, 1.0015)
-    ax.legend(handles=[l1, l2], fontsize=9, frameon=False, loc="lower left")
+    axr.set_ylim(0.966, 1.004)
+    ax.legend(handles=[l1, l2], fontsize=9, frameon=False, loc="upper right")
 
     vers = ["问题3 策略"]
-    dep = [259.7]
-    ins = [241.0]
+    dep = [json.load(open("data/reports/q3_deploy.json", encoding="utf-8"))["summary"]["avg_clear_mean"]]
+    ins = [json.load(open("data/reports/q3_insample.json", encoding="utf-8"))["results"]
+           ["robotdog.solver.sweeper"]["summary"]["avg_clear_mean"]]
     x = np.arange(1)
     w = 0.30
     b1 = ax2.bar(x - w / 2, dep, w, color=C_BLUE, label="部署口径")

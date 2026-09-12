@@ -98,7 +98,7 @@ tools/                    工程与验收工具（不被策略导入）
 
 docs/                     文档 (见 docs/README.md 的完整索引)
   README.md               docs 索引
-  **问题3解题思路.md**     问题3 的建模与算法（论文写法）
+  **问题3论文.md**         问题3 的建模与算法（论文写法）
   **问题4解法.md**         问题4 的机制、参数、实测与复现
   论文_问题4_集合覆盖路线.md  问题4 的论文成稿
   模拟器设计说明.md        模拟器逐条对照题目与附件的实现口径
@@ -135,8 +135,8 @@ python tools\smoke_test.py --full      # 冒烟 + 完整测试套件
 python tools\spec_audit.py             # 独立赛题符合性审计 (115 项断言, 失败时退出码非 0)
 
 # 问题3: 两种口径 (不可混比)
-python tools\candidates.py  --modules robotdog.solver.sweeper --seeds 9500-9799 --jobs 6
-python tools\eval_deploy.py --module  robotdog.solver.sweeper --seeds 9500-9799 --jobs 6
+python tools\candidates.py  --modules robotdog.solver.sweeper --seeds 9500-11499 --jobs 6
+python tools\eval_deploy.py --module  robotdog.solver.sweeper --seeds 9500-11499 --jobs 6
 
 # 问题4: 两种口径
 python tools\eval_q4.py --planners sweeper4 --seeds 9500-9799 --jobs 8
@@ -159,7 +159,7 @@ python tools\run_batch.py --problem 3 --module formal --runs 3 --jobs 3 --countd
 
 ## 策略成绩
 
-标定集 **seed 9500-9799（300 局）**，策略确定性执行。
+标定集 **seed 9500-11499（2000 局，约 2.6 万个源）**，策略确定性执行。
 
 > ### ⚠ 先看口径，再看数字：进程内与部署**不可直接比较**
 >
@@ -172,10 +172,10 @@ python tools\run_batch.py --problem 3 --module formal --runs 3 --jobs 3 --countd
 
 | 口径 | 清除比例 | 全清率 | 平均定位清除 | 移动 |
 | --- | --- | --- | --- | --- |
-| **部署（正式测试口径，被打分）** | **0.9982** | 293/300 | **259.7 s/源** | 12067 m |
-| 进程内（知道总数，清完即停） | 0.9982 | 293/300 | 241.0 s/源 | 11153 m |
+| **部署（正式测试口径，被打分）** | **0.9955** | 1885/2000 | **263.1 s/源** | 12024 m |
+| 进程内（知道总数，清完即停） | 0.9955 | 1885/2000 | 243.4 s/源 | 11080 m |
 
-独立测试集（从未参与标定）：seed 8000-8099 部署口径 **0.9953 / 261.7 s/源**。
+独立测试集（从未参与标定）：seed 8000-8999（1000 局）部署口径 **0.9957 / 262.7 s/源**。
 端到端（真实模拟器进程 + HTTP + 真值屏蔽）单局清除 **93%~100%**，
 现实程序运行时间约 **0.1 s**（上限 1200 s）。**瓶颈不是时间，而是「还能不能找到剩下的源」**。
 
@@ -209,7 +209,7 @@ python tools\run_batch.py --problem 3 --module formal --runs 3 --jobs 3 --countd
 | 文档 | 内容 |
 | --- | --- |
 | `docs/README.md` | **docs 索引**：目录里每份文档的现状与用途 |
-| **`docs/问题3解题思路.md`** | **问题3 的建模与算法**（论文写法）：问题分析、模型建立、算法设计、结果与分析 |
+| **`docs/问题3论文.md`** | **问题3 的建模与算法**（论文写法）：问题分析、模型建立、算法设计、结果与分析 |
 | **`docs/问题4解法.md`** | **问题4 解法的唯一入口**：机制、参数档位、2500 局零遗漏实测、复现命令 |
 | `docs/论文_问题4_集合覆盖路线.md` | 问题4 的论文成稿 |
 | `robotdog/solver/README.md` | 求解器总说明：§1-§8 问题3，§9 问题4 |

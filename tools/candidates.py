@@ -13,7 +13,7 @@
 用法::
 
     # 进程内口径
-    python tools/candidates.py --modules robotdog.solver.sweeper --seeds 9500-9799 --jobs 6
+    python tools/candidates.py --modules robotdog.solver.sweeper --seeds 9500-11499 --jobs 6
 
     # 打印逐步明细
     python tools/candidates.py --modules robotdog.solver.sweeper --seeds 9500 --trace

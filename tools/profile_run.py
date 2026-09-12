@@ -55,7 +55,8 @@ BY_FUNC = {
 
 # 包装只安装一次 (World 是类, 进程内共享), 因此事件接收器必须可换。
 _SINK: Dict[str, Any] = {"events": [], "state": {"n": 0}, "leg": {"active": False},
-                         "mark": {"p": ""}, "module": ""}
+                         "mark": {"p": ""}, "module": "", "first": {},
+                         "probes": []}
 
 
 def _install_leg_mark(module_name: str) -> None:
@@ -110,11 +111,11 @@ def _phase_of(names: List[str]) -> str:
     if "pursue_fast" in names or "pursue" in names:
         return "pursue"
     if direct == "sweep_here":
-        return "initial" if _SINK["state"]["n"] == 0 else "sweep_after_clear"
+        return "initial" if _is_initial_sweep() else "sweep_after_clear"
     if direct == "probe":
         up1 = names[1] if len(names) > 1 else ""
         if up1 == "sweep_here":
-            return "initial" if _SINK["state"]["n"] == 0 else "sweep_after_clear"
+            return "initial" if _is_initial_sweep() else "sweep_after_clear"
         if up1 == "probe_at":
             # ``leg_info_stop`` 选出的停车点**落在去目标的直线段上**, 因此这段移动本来
             # 就要走 (逐段对账: pursue + legstop 的移动减去到真值的直线
@@ -141,6 +142,21 @@ def classify() -> str:
     return _phase_of(_stack_names())
 
 
+def _is_initial_sweep() -> bool:
+    """区分起点盲扫与清除后补测 —— 两者都走 ``sweep_here``。
+
+    起点盲扫显式传 ``max_ch=cfg.initial_max_ch``, 清除后补测用默认 ``max_ch=None``;
+    只看"是不是本局第 1 个动作"会把起点盲扫的第 2 次及以后检测误判成补测
+    (起点盲扫会连续测多个频道), 因此改判 ``sweep_here`` 帧的实参。
+    """
+    f = sys._getframe(1)
+    while f is not None:
+        if f.f_code.co_name == "sweep_here":
+            return f.f_locals.get("max_ch") is not None
+        f = f.f_back
+    return False
+
+
 def _install_world() -> None:
     from robotdog.solver.world import World
     if getattr(World, "_profile_patched", False):
@@ -150,9 +166,16 @@ def _install_world() -> None:
     def measure(self, x, y, channel):
         px, py = self.x, self.y
         ph = classify()
+        # 探测前的残余期望源数 (与 run_sweeper 的收尾判据同一口径) 与"该频道此前是否见过"
+        er = sum(t.pi for t in self.belief.tracks if not t.cleared)
+        seen = channel in _SINK["first"]
         info = orig_m(self, x, y, channel)
         _SINK["state"]["n"] += 1
         _SINK["events"].append((ph, info.dt, math.hypot(x - px, y - py)))
+        _SINK["probes"].append((ph, er, info.result != "no_signal" and not seen))
+        # 首次发现归因: 每个源 (频道) 第一次被收到信号 (示向度或近场) 的检测属于哪个阶段
+        if info.result != "no_signal" and channel not in _SINK["first"]:
+            _SINK["first"][channel] = ph
         return info
 
     def clear(self, x, y, channel):
@@ -191,6 +214,8 @@ def profile_one(module_name: str, seed: int, trace: bool = False,
     _SINK["events"] = events
     _SINK["state"] = {"n": 0}
     _SINK["leg"] = {"active": False}
+    _SINK["first"] = {}
+    _SINK["probes"] = []
     _install_world()
     _install_leg_mark(module_name)
 
@@ -212,6 +237,8 @@ def profile_one(module_name: str, seed: int, trace: bool = False,
         "clears": w.clears, "failed_clears": w.failed_clears,
         "sum_moved": sum(m for _p, _d, m in events),
         "phases": {k: dict(v) for k, v in agg.items()},
+        "first": dict(_SINK["first"]),
+        "probes": list(_SINK["probes"]),
     }
 
 
@@ -227,6 +254,9 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     seeds = [args.seed] if args.seed else parse_seeds(args.seeds)
     tot: Dict[str, Dict[str, float]] = defaultdict(lambda: {"n": 0.0, "dt": 0.0, "moved": 0.0})
+    first: Dict[str, int] = defaultdict(int)
+    bucket: Dict[Tuple[str, int], List[int]] = defaultdict(lambda: [0, 0])
+    found = 0
     virt = mv = smv = 0.0
     for sd in seeds:
         r = profile_one(args.module, sd, trace=args.trace and len(seeds) == 1,
@@ -234,6 +264,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         virt += r["virtual_s"]
         mv += r["moved_m"]
         smv += r["sum_moved"]
+        found += len(r["first"])
+        for ph in r["first"].values():
+            first[ph] += 1
+        for ph, er, hit in r["probes"]:
+            k = (ph, _mass_bucket(er))
+            bucket[k][0] += 1
+            bucket[k][1] += 1 if hit else 0
         for k, v in r["phases"].items():
             for f in ("n", "dt", "moved"):
                 tot[k][f] += v[f]
@@ -250,7 +287,26 @@ def main(argv: Optional[List[str]] = None) -> int:
         v = tot[k]
         print("%-22s %9.1f %9.1f %9.0f %6.1f%%"
               % (k, v["n"] / n, v["dt"] / n, v["moved"] / n, 100.0 * v["dt"] / max(virt, 1e-9)))
+    print()
+    print("首次发现归因 (共 %d 个源, %.1f 个/局):" % (found, found / n))
+    for k in sorted(first, key=lambda k: -first[k]):
+        print("  %-22s %6d 个  %5.1f%%" % (k, first[k], 100.0 * first[k] / max(found, 1)))
+    print()
+    print("专程/收尾探测的命中率 (按探测前残余期望源数分档, 命中 = 该次测到此前未见过的频道):")
+    for k in sorted(bucket, key=lambda k: (k[0], k[1])):
+        if k[0] not in ("dedicated_probe", "hunt"):
+            continue
+        cnt, hits = bucket[k]
+        print("  %-16s %-14s %5d 次  命中 %4d  命中率 %5.1f%%"
+              % (k[0], _MASS_LABEL[k[1]], cnt, hits, 100.0 * hits / max(cnt, 1)))
     return 0
+
+
+_MASS_LABEL = {0: "[0, 0.02)", 1: "[0.02, 0.20)", 2: "[0.20, 1)", 3: "[1, inf)"}
+
+
+def _mass_bucket(er: float) -> int:
+    return 0 if er < 0.02 else 1 if er < 0.20 else 2 if er < 1.0 else 3
 
 
 if __name__ == "__main__":
