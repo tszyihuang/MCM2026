@@ -119,12 +119,15 @@ def knee_point(cands: List[Dict[str, Any]], front: List[int]) -> int:
     return front[best]
 
 
-def run(seeds: List[int], jobs: int) -> Dict[str, Any]:
+def run(seeds: List[int], jobs: int,
+        fixed_overrides: Dict[str, Any] | None = None) -> Dict[str, Any]:
     import multiprocessing as mp
 
     tasks = []
     meta = []
     for label, module, base, fixed in CANDIDATES:
+        fixed = dict(fixed)
+        fixed.update(fixed_overrides or {})
         for gate in GATE_GRID:
             meta.append((label, module, base, dict(fixed), gate))
 
@@ -162,6 +165,8 @@ def main() -> int:
     ap.add_argument("--jobs", type=int, default=0, help="0=自动")
     ap.add_argument("--calib", default="9500-11499", help="标定集种子区间")
     ap.add_argument("--test", default="8000-8999", help="独立测试集种子区间")
+    ap.add_argument("--coverage", choices=("on", "off"), default="on",
+                    help="on=保障模式 (1000 m 覆盖收尾); off=速度优先 (关闭覆盖收尾)")
     args = ap.parse_args()
 
     cpu = os.cpu_count() or 4
@@ -169,12 +174,15 @@ def main() -> int:
     holdout = parse_seeds(args.calib)
     gen = parse_seeds(args.test)
     labels = {"": "标定集 %s" % args.calib, "_gen": "独立测试集 %s" % args.test}
+    fixed = {"coverage_finish": args.coverage == "on"}
+    suffix = "" if args.coverage == "on" else "_speed"
 
     for tag, seeds in (("", holdout), ("_gen", gen)):
         t0 = time.time()
-        out = run(seeds, jobs)
+        out = run(seeds, jobs, fixed)
         out["generality"] = tag == "_gen"
-        path = "data/reports/pareto_p3%s.json" % tag
+        out["coverage_finish"] = args.coverage == "on"
+        path = "data/reports/pareto_p3%s%s.json" % (suffix, tag)
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(out, fh, ensure_ascii=False, indent=1)

@@ -7,6 +7,8 @@
 决策层:
   * 问题3 (全向源) —— ``sweeper``: 起点盲扫 → 就近清除已定位源 → 清除后原地补测
     → 无目标时按信息价值专程探测 → 收尾集合覆盖。**不需要任何模型权重**。
+  * 问题4 (含定向源) —— ``sweeper4``: 覆盖巡游取示向度 → 交会定位 → 直线清除。
+    同样不训练、不读真值。
 
 本地信念 (``belief.py``) 只由模拟器返回的读数驱动, 不读取任何真值 ——
 这是本地评估与真机行为一致的前提。
@@ -15,6 +17,7 @@
 
     python -m robotdog.solver.deploy --team-id <参赛队号>
     python -m robotdog.solver.deploy --url http://127.0.0.1:2026 --problem 3
+    python -m robotdog.solver.deploy --url http://127.0.0.1:2026 --problem 4
 """
 
 from __future__ import annotations
@@ -237,21 +240,27 @@ class RemoteWorld(World):
 # 主流程
 # --------------------------------------------------------------------------------------
 def run_planner_deploy(client: SimClient, reserve_s: float = 20.0, verbose: bool = True,
-                       cfg=None) -> Dict[str, Any]:
+                       cfg=None, problem: int = 3) -> Dict[str, Any]:
     """跑确定性规划器, 不需要任何模型权重。
 
     ``knows_total=False``: **正式测试时机器狗看不到总源数** (真值屏蔽), 因此不能用
-    ``all_cleared`` 作为结束条件, 只能靠 "没有可清目标 + 探测已无收益 + 残余期望质量低于
-    阈值" 收手。
+    ``all_cleared`` 作为结束条件 —— 问题3 靠"没有可清目标 + 探测已无收益 + 残余期望
+    质量低于阈值"收手, 问题4 靠"覆盖巡游 + 补基线一轮走完"收手。
     """
     from robotdog.solver import sweeper as sw
+    from robotdog.solver import sweeper4 as sw4
 
-    world = RemoteWorld(client)
+    world = RemoteWorld(client, belief_cls=sw4._NullBelief if problem == 4 else None)
     # 用 ``build_cfg()`` —— 评测工具与正式测试走**同一个**配置入口, 这样
     # "报告里的数字"与"真正上场的程序"不可能是两个策略。
-    cfg = cfg or sw.build_cfg()
-    res = sw.run_sweeper(world, cfg, trace=verbose, real_left=client.real_left,
-                         reserve_s=reserve_s, knows_total=False)
+    if problem == 4:
+        cfg = cfg or sw4.build_cfg()
+        res = sw4.run_sweeper4(world, cfg, trace=verbose, real_left=client.real_left,
+                               reserve_s=reserve_s, knows_total=False)
+    else:
+        cfg = cfg or sw.build_cfg()
+        res = sw.run_sweeper(world, cfg, trace=verbose, real_left=client.real_left,
+                             reserve_s=reserve_s, knows_total=False)
     return {"cleared_count": len(world.cleared), "cleared_channels": sorted(world.cleared),
             "virtual_time_s": world.virtual_t, "measures": world.measures,
             "clears": world.clears, "failed_clears": world.failed_clears,
@@ -261,9 +270,9 @@ def run_planner_deploy(client: SimClient, reserve_s: float = 20.0, verbose: bool
 
 def main(argv: Optional[List[str]] = None) -> int:
     ap = argparse.ArgumentParser(
-        description="机器狗程序 (问题3: sweeper)")
-    ap.add_argument("--problem", type=int, default=3, choices=(3,),
-                    help="3=全向源 (sweeper); 本工程只提供问题3 求解器")
+        description="机器狗程序 (问题3: sweeper / 问题4: sweeper4)")
+    ap.add_argument("--problem", type=int, default=3, choices=(3, 4),
+                    help="3=全向源 (sweeper); 4=含定向源 (sweeper4)")
     ap.add_argument("--url", default=os.environ.get("SIM_BASE_URL", "http://127.0.0.1:2026"))
     ap.add_argument("--team-id", default=os.environ.get("SIM_TEAM_ID", "MCM2026"))
     ap.add_argument("--log", default=os.environ.get("SIM_ROBOT_LOG", ""))
@@ -291,7 +300,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             import importlib
             cfg = importlib.import_module(args.cfg_module).build_cfg()
             fn = functools.partial(fn, cfg=cfg)
-        summary = fn(client, reserve_s=args.reserve, verbose=not args.quiet)
+        summary = fn(client, reserve_s=args.reserve, verbose=not args.quiet,
+                     problem=args.problem)
         try:
             client.exit()
         except Exception:  # noqa: BLE001

@@ -3,7 +3,7 @@
 单一来源: 机器狗程序 (``client.py`` / ``solver/deploy.py``)、求解器 (``solver/``)
 与本目录下的进程内环境 (``robotdog/solver/world.py``) 都从这里取值, 不再各自维护副本。
 模拟器 (``simulator/core.py``) 刻意**不**共享本模块 —— 它是对题目的独立复现,
-两份常量各自独立才能让逐位等价性测试 (``tests/test_solver_equiv.py``) 有意义。
+两份常量各自独立才能让逐位等价性测试 (``tools/tests/test_solver_equiv.py``) 有意义。
 """
 
 # --- 区域与运动 ---

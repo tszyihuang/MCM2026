@@ -19,7 +19,7 @@
     python tools/candidates.py --modules robotdog.solver.sweeper --seeds 9500 --trace
 
 指标口径 (与 README §4.1 一致):
-  * 清除比例 ratio        = Σ已清除 / Σ真值总数        —— 必须 >= 0.98
+  * 清除比例 ratio        = Σ已清除 / Σ真值总数        —— 越大越好, 且是前置目标
   * 全清率   full_rate    = 全清局数 / 局数
   * 平均定位清除 avg_clear_mean = 每局 (虚拟总时间 / 该局已清除数), 再对局取平均
 """

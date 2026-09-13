@@ -26,7 +26,10 @@ from ..consts import ARENA_RADIUS_M, CLEAR_RADIUS_M, N_CHANNELS, RADIUS_MAX_M, R
 SIGMA_DEG = 2.0 / math.sqrt(12.0)
 SIGMA_RAD = math.radians(SIGMA_DEG)
 GRID_STEP = 100.0
-GRID_RADIUS = 1900.0
+# 源必在半径 1800 m 的目标区域内 (题目给定), 因此占用网格的先验支撑就是该圆域:
+# 既符合模型, 又让收尾的"1000 m 覆盖"判据只在真正可能有源的范围内要求覆盖
+# (原先铺到 1900 m 会把圆域外一圈也算进覆盖要求, 白白多跑路)。
+GRID_RADIUS = 1800.0
 N_RAY = 128
 
 
@@ -93,6 +96,20 @@ class ChannelTrack:
         self.no_pts: List[Tuple[float, float]] = []
         self.last_t = -1e9
         self.meas_pts: List[Tuple[float, float]] = []
+        # --- 有效接收半径 R 的**联合**似然所需的基准量 ---
+        # R 是该源固定不变的隐变量, 多次 no_signal 观测给出的是 R < min_i d_i,
+        # 因此位置权重必须由"未观测先验 × F(min 距离)"重算, 不能把 F(d_i) 连乘
+        # (连乘等于假设每次观测都重新抽一次 R, 会过度削权)。详见 _grid_weights。
+        self.grid0 = self.grid.astype(np.float64)                 # 未观测先验 (重算基准)
+        self._dmin0 = np.full(self.grid.shape, np.inf)            # 格点到 no_signal 点的最小距离
+        self._keep0 = np.ones(self.grid.shape, dtype=np.float64)  # 清除失败给出的硬约束
+        self.ray_r: Optional[np.ndarray] = None                   # 射线样本到测点的距离
+        self._dmin1: Optional[np.ndarray] = None
+        self._keep1: Optional[np.ndarray] = None
+        self._Z = 1.0                                             # 当前位置表示的归一化常数
+        # True (问题3): no_signal / 清除失败按 R 的联合似然**重算**位置后验;
+        # False (问题4 沿用原口径): 仍按传入似然做乘性更新, 保持问题4 已标定结果不变。
+        self.r_joint = True
 
     # ---------------- 统计量 ----------------
     def std_max(self) -> float:
@@ -222,25 +239,35 @@ class ChannelTrack:
         self.no_pts.append(q)
         self.n_obs += 1
         self.n_no += 1
-        if self.mode == 0 and self.grid is not None and grid_kernel is not None:
-            self.grid = (self.grid * grid_kernel).astype(np.float32)
-            s = float(self.grid.sum())
-            if s > 1e-12:
-                self.grid /= s
-            else:
-                self.grid = None      # type: ignore
+        if self.mode == 0 and self.grid0 is not None and grid_pts is not None:
+            d = np.hypot(grid_pts[:, 0] - q[0], grid_pts[:, 1] - q[1])
+            self._dmin0 = np.minimum(self._dmin0, d)
+            if self.r_joint:
+                L = self._recompute_grid()
+            elif self.grid is not None and grid_kernel is not None:
+                # 兼容口径 (问题4): 乘性更新
+                self.grid = (self.grid * grid_kernel).astype(np.float32)
+                s = float(self.grid.sum())
+                if s > 1e-12:
+                    self.grid /= s
+                else:
+                    self.grid = None      # type: ignore
         elif self.mode == 1 and self.ray_x is not None:
             d = np.hypot(self.ray_x[:, 0] - q[0], self.ray_x[:, 1] - q[1])
-            k = np.clip((d - RADIUS_MIN_M) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
-            self.ray_w = self.ray_w * k
-            s = float(self.ray_w.sum())
-            if s > 1e-12:
-                self.ray_w /= s
-                self._resample_ray()
+            self._dmin1 = np.minimum(self._dmin1, d)
+            if self.r_joint:
+                L = self._recompute_ray()
             else:
-                self.ray_w[:] = 1.0 / len(self.ray_w)
-            self.est = self.ray_mean()
-            self.cov = self._ray_cov()
+                k = self._F(d)
+                self.ray_w = self.ray_w * k
+                s = float(self.ray_w.sum())
+                if s > 1e-12:
+                    self.ray_w /= s
+                    self._resample_ray()
+                else:
+                    self.ray_w[:] = 1.0 / len(self.ray_w)
+                self.est = self.ray_mean()
+                self.cov = self._ray_cov()
         elif self.mode == 2 and self.est is not None:
             d = math.hypot(self.est[0] - q[0], self.est[1] - q[1])
             # 收不到 ⇒ 该点超出有效接收半径, 故 R < d
@@ -250,11 +277,19 @@ class ChannelTrack:
         self.pi = float(min(max(post, 1e-12), 1.0 - 1e-12))
 
     def apply_clear_miss(self, q: Tuple[float, float]) -> None:
-        if self.mode == 2 and self.est is not None and self.cov is not None:
-            d = math.hypot(self.est[0] - q[0], self.est[1] - q[1])
-            if d < 80.0:
-                self.cov = self.cov * 2.5
-        elif self.mode == 1 and self.ray_x is not None:
+        """清除失败。题目规定清除成功与否只取决于与源的距离, 因此这是一条硬观测:
+        "源不在以 q 为心、20 m 为半径的圆内"。mode 0/1 直接把它作为约束重算位置
+        似然 (L 取真实的似然比); mode 2 的位置是高斯近似, 仍用原来的保守启发式。"""
+        if self.mode == 1 and self.ray_x is not None and self.r_joint and self._keep1 is not None:
+            d = np.hypot(self.ray_x[:, 0] - q[0], self.ray_x[:, 1] - q[1])
+            self._keep1 = self._keep1 * (d > CLEAR_RADIUS_M)
+            L = self._recompute_ray()
+            p = self.pi
+            post = p * L / (p * L + (1.0 - p)) if (p * L + 1.0 - p) > 0 else 0.0
+            self.pi = float(min(max(post, 1e-12), 1.0 - 1e-12))
+            return
+        if self.mode == 1 and self.ray_x is not None and not self.r_joint:
+            # 兼容口径 (问题4): 乘性更新
             d = np.hypot(self.ray_x[:, 0] - q[0], self.ray_x[:, 1] - q[1])
             keep = (d > CLEAR_RADIUS_M).astype(np.float64)
             L = float(np.dot(self.ray_w, keep))
@@ -266,12 +301,28 @@ class ChannelTrack:
             p = self.pi
             post = p * L / (p * L + (1.0 - p))
             self.pi = float(min(max(post, 1e-12), 1.0 - 1e-12))
-        elif self.mode == 0 and self.grid is not None and self.grid_pts is not None:
+            return
+        if (self.mode == 0 and self.grid0 is not None and self.r_joint
+                and self.grid_pts is not None):
+            d = np.hypot(self.grid_pts[:, 0] - q[0], self.grid_pts[:, 1] - q[1])
+            self._keep0 = self._keep0 * (d > CLEAR_RADIUS_M)
+            L = self._recompute_grid()
+            p = self.pi
+            post = p * L / (p * L + (1.0 - p)) if (p * L + 1.0 - p) > 0 else 0.0
+            self.pi = float(min(max(post, 1e-12), 1.0 - 1e-12))
+            return
+        if (self.mode == 0 and not self.r_joint and self.grid is not None
+                and self.grid_pts is not None):
+            # 兼容口径 (问题4): 乘性更新
             d = np.hypot(self.grid_pts[:, 0] - q[0], self.grid_pts[:, 1] - q[1])
             keep = (d > CLEAR_RADIUS_M).astype(np.float32)
             L = float(np.dot(self.grid, keep))
             if L > 1e-12:
                 self.grid = self.grid * keep / L
+        if self.mode == 2 and self.est is not None and self.cov is not None:
+            d = math.hypot(self.est[0] - q[0], self.est[1] - q[1])
+            if d < 80.0:
+                self.cov = self.cov * 2.5
         p = self.pi
         L = 0.97
         if self.est is not None:
@@ -280,6 +331,42 @@ class ChannelTrack:
                 L = 0.02
         post = p * L / (p * L + (1.0 - p))
         self.pi = float(min(max(post, 1e-12), 1.0 - 1e-12))
+
+    # ---------------- 有效接收半径 R 的联合似然 (重算型更新) ----------------
+    @staticmethod
+    def _F(d: np.ndarray) -> np.ndarray:
+        """P(R < d), R ~ U(RADIUS_MIN_M, RADIUS_MAX_M)。"""
+        return np.clip((d - RADIUS_MIN_M) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
+
+    def _recompute_grid(self) -> float:
+        """由未观测先验重算 mode 0 的权重, 返回本次观测的似然比 L = Z_new/Z_old。"""
+        w = self.grid0 * self._F(self._dmin0) * self._keep0
+        Z = float(w.sum())
+        L = (Z / self._Z) if self._Z > 1e-300 else 0.0
+        if Z > 1e-12:
+            self.grid = (w / Z).astype(np.float32)
+        else:
+            self.grid = None      # type: ignore
+        self._Z = Z
+        return L
+
+    def _recompute_ray(self) -> float:
+        """由未观测先验重算 mode 1 的权重, 返回似然比 L = Z_new/Z_old。
+
+        每个射线样本的先验质量相同 (采样半径 r = r_max*sqrt(u) 已含面积权重 ∝ r),
+        样本权重 ∝ P(r ≤ R < min_i d_i) = max(0, F(min_i d_i) - F(r))。
+        """
+        if self._dmin1 is None or self._keep1 is None or self.ray_r is None:
+            return 1.0
+        w = np.maximum(self._F(self._dmin1) - self._F(self.ray_r), 0.0) * self._keep1
+        Z = float(w.mean())
+        L = (Z / self._Z) if self._Z > 1e-300 else 0.0
+        if Z > 1e-15:
+            self.ray_w = w / float(w.sum())
+            self.est = self.ray_mean()
+            self.cov = self._ray_cov()
+        self._Z = Z
+        return L
 
     # ---------------- 射线表示 ----------------
     def _build_ray(self) -> None:
@@ -296,11 +383,18 @@ class ChannelTrack:
         # 径向先验 ∝ r·P(R>=r) ∝ r·clamp((1500-r)/500)
         u = np.linspace(0.0, 1.0, N_RAY)
         r = r_max * np.sqrt(u)                      # 面积权重 ∝ r
-        w = np.clip((RADIUS_MAX_M - r) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
-        w = np.maximum(w, 1e-6)
-        w = w / w.sum()
         self.ray_x = np.stack([mx + ux * r, my + uy * r], axis=-1).astype(np.float64)
-        self.ray_w = w
+        self.ray_r = r
+        # 把"该频道此前所有 no_signal 观测"一并作为约束: R < min_i d_i,
+        # 与"收到信号 ⇒ R >= r"合并成样本权重 ∝ max(0, F(min_i d_i) - F(r))。
+        self._dmin1 = np.full(len(r), np.inf)
+        for (qx, qy) in self.no_pts:
+            self._dmin1 = np.minimum(
+                self._dmin1, np.hypot(self.ray_x[:, 0] - qx, self.ray_x[:, 1] - qy))
+        self._keep1 = np.ones(len(r))
+        w = np.maximum(self._F(self._dmin1) - self._F(r), 1e-12)
+        self._Z = float(w.mean())
+        self.ray_w = w / float(w.sum())
 
     def _resample_ray(self) -> None:
         cum = np.cumsum(self.ray_w)
@@ -461,20 +555,12 @@ class Belief:
         if kind == "near":
             tr.add_near(mx, my, t)
             return
-        # no_signal: 所有未清除频道都获得信息 (该点收不到该频道的信号)
-        dg = np.hypot(self.pts[:, 0] - mx, self.pts[:, 1] - my)
-        F = np.clip((dg - RADIUS_MIN_M) / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)
-        kernel = F.astype(np.float32)
-        L = float(np.dot(tr.grid, kernel)) if (tr.mode == 0 and tr.grid is not None) else \
-            tr.detect_prob((mx, my), self.pts, None)
-        # 注意: P(no_signal|存在) = 1 - P(检测) , 当 mode2 时用高斯近似
-        if tr.mode == 2:
-            L = 1.0 - tr._gauss_detect_prob((mx, my))
-        elif tr.mode == 1:
-            L = 1.0 - float(np.dot(tr.ray_w, np.clip(
-                (RADIUS_MAX_M - np.hypot(tr.ray_x[:, 0] - mx, tr.ray_x[:, 1] - my))
-                / (RADIUS_MAX_M - RADIUS_MIN_M), 0.0, 1.0)))
-        tr.apply_no_signal((mx, my), L, self.pts, kernel)
+        # no_signal: 该频道在该点收不到信号 ⇒ R < d(x)。
+        # mode 0/1 由 ChannelTrack 用"未观测先验 × F(min 距离)"重算位置似然,
+        # 且似然比 L = Z_new/Z_old 由它内部给出; mode 2 的位置是高斯近似, 这里
+        # 仍给预测概率 P(no_signal) = 1 - P(检测)。
+        L = 1.0 - tr._gauss_detect_prob((mx, my)) if tr.mode == 2 else 1.0
+        tr.apply_no_signal((mx, my), L, self.pts, None)
 
     def on_clear(self, mx: float, my: float, channel: int, hit: bool) -> None:
         tr = self.tracks[channel - 1]

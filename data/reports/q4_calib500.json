@@ -1,0 +1,10024 @@
+{
+ "seeds": [
+  9500,
+  9999
+ ],
+ "summary": {
+  "ratio": 0.999539241283981,
+  "full": 497,
+  "n": 500,
+  "persrc": 725.7292614991603,
+  "virtual": 9284.429448381661,
+  "moved": 32512.4372419083,
+  "measures": 451.066,
+  "clears": 17.902,
+  "failed": 4.886,
+  "ndir": 3224,
+  "ndir_cleared": 3221,
+  "scan_s": 7185.8822,
+  "fix_s": 1625.0092,
+  "tail_s": 473.5402
+ },
+ "rows": [
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8949.276668076285,
+   "moved_m": 30811.383340381428,
+   "measures": 454,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7709.5,
+    "fix_s": 1239.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8871.473297010925,
+   "moved_m": 30657.366485054645,
+   "measures": 449,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7224.5,
+    "fix_s": 1646.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10451.802711323244,
+   "moved_m": 38264.013556616235,
+   "measures": 454,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7861.2,
+    "fix_s": 1604.7,
+    "tail_s": 985.9,
+    "points": 21,
+    "actions": 470,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7876.078168152791,
+   "moved_m": 25700.390840763965,
+   "measures": 448,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6514.4,
+    "fix_s": 1361.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7744.352375920949,
+   "moved_m": 24991.76187960476,
+   "measures": 449,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6530.3,
+    "fix_s": 1214.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9089.842722932055,
+   "moved_m": 31614.213614660293,
+   "measures": 449,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6736.8,
+    "fix_s": 1823.0,
+    "tail_s": 530.1,
+    "points": 21,
+    "actions": 464,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 11828.863393052974,
+   "moved_m": 44774.316965264894,
+   "measures": 463,
+   "clears": 25,
+   "failed": 9,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8180.3,
+    "fix_s": 1632.3,
+    "tail_s": 2016.2,
+    "points": 21,
+    "actions": 488,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 11189.301527824242,
+   "moved_m": 41806.50763912125,
+   "measures": 460,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8496.6,
+    "fix_s": 1835.6,
+    "tail_s": 857.1,
+    "points": 21,
+    "actions": 475,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9390.08753805965,
+   "moved_m": 33015.43769029828,
+   "measures": 452,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7958.2,
+    "fix_s": 1431.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8036.817981606125,
+   "moved_m": 26449.089908030623,
+   "measures": 448,
+   "clears": 14,
+   "failed": 4,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6810.2,
+    "fix_s": 1226.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10006.527305645088,
+   "moved_m": 35827.63652822537,
+   "measures": 452,
+   "clears": 35,
+   "failed": 21,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7550.1,
+    "fix_s": 1720.7,
+    "tail_s": 735.7,
+    "points": 21,
+    "actions": 487,
+    "clears": 35,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 11499.78220650349,
+   "moved_m": 43233.91103251741,
+   "measures": 458,
+   "clears": 27,
+   "failed": 11,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 8701.3,
+    "fix_s": 2033.5,
+    "tail_s": 764.9,
+    "points": 21,
+    "actions": 485,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8032.330147841016,
+   "moved_m": 26541.65073920508,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6587.9,
+    "fix_s": 1444.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7897.194277361334,
+   "moved_m": 25865.97138680667,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6691.2,
+    "fix_s": 1206.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8463.950232721583,
+   "moved_m": 28614.75116360793,
+   "measures": 448,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6481.4,
+    "fix_s": 1423.2,
+    "tail_s": 559.4,
+    "points": 21,
+    "actions": 459,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9120.41413138224,
+   "moved_m": 31792.070656911215,
+   "measures": 452,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7574.1,
+    "fix_s": 1546.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8650.539531451468,
+   "moved_m": 29502.697657257333,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7624.9,
+    "fix_s": 1025.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8709.97502102695,
+   "moved_m": 29724.875105134764,
+   "measures": 448,
+   "clears": 18,
+   "failed": 5,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6961.0,
+    "fix_s": 1749.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 13108.750863607416,
+   "moved_m": 51328.754318037085,
+   "measures": 463,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 10532.3,
+    "fix_s": 1574.0,
+    "tail_s": 1002.5,
+    "points": 21,
+    "actions": 478,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9305.73827239432,
+   "moved_m": 32643.691361971592,
+   "measures": 450,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7365.1,
+    "fix_s": 1940.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9029.793971672787,
+   "moved_m": 31273.96985836392,
+   "measures": 454,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6452.2,
+    "fix_s": 1845.1,
+    "tail_s": 732.5,
+    "points": 21,
+    "actions": 465,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7981.00404880802,
+   "moved_m": 26205.0202440401,
+   "measures": 446,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 2158.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9306.844461307946,
+   "moved_m": 32779.22230653973,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6828.9,
+    "fix_s": 1321.9,
+    "tail_s": 1156.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10064.041684708445,
+   "moved_m": 35950.20842354221,
+   "measures": 450,
+   "clears": 50,
+   "failed": 36,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7779.7,
+    "fix_s": 1513.6,
+    "tail_s": 770.7,
+    "points": 21,
+    "actions": 500,
+    "clears": 50,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8350.08946485214,
+   "moved_m": 27990.447324260724,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 6820.2,
+    "fix_s": 1529.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10137.862649141593,
+   "moved_m": 36644.31324570791,
+   "measures": 453,
+   "clears": 24,
+   "failed": 12,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7838.1,
+    "fix_s": 1731.5,
+    "tail_s": 568.3,
+    "points": 21,
+    "actions": 477,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8277.306971170457,
+   "moved_m": 27601.534855852293,
+   "measures": 449,
+   "clears": 15,
+   "failed": 4,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6946.6,
+    "fix_s": 1010.8,
+    "tail_s": 319.9,
+    "points": 21,
+    "actions": 464,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 10177.0088212305,
+   "moved_m": 36750.04410615244,
+   "measures": 456,
+   "clears": 26,
+   "failed": 16,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7905.9,
+    "fix_s": 1205.0,
+    "tail_s": 1066.0,
+    "points": 21,
+    "actions": 482,
+    "clears": 26,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9475.122371635636,
+   "moved_m": 33475.61185817821,
+   "measures": 448,
+   "clears": 25,
+   "failed": 15,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7080.7,
+    "fix_s": 1616.1,
+    "tail_s": 778.3,
+    "points": 21,
+    "actions": 473,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8170.90287484765,
+   "moved_m": 27179.514374238257,
+   "measures": 447,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 5936.2,
+    "fix_s": 1606.4,
+    "tail_s": 628.3,
+    "points": 21,
+    "actions": 458,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8862.49558231987,
+   "moved_m": 30517.477911599366,
+   "measures": 447,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6712.6,
+    "fix_s": 2149.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 11548.838826531697,
+   "moved_m": 43589.19413265844,
+   "measures": 457,
+   "clears": 23,
+   "failed": 9,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8698.6,
+    "fix_s": 1255.7,
+    "tail_s": 1594.5,
+    "points": 21,
+    "actions": 480,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9425.736032623372,
+   "moved_m": 33293.68016311685,
+   "measures": 454,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7525.1,
+    "fix_s": 1283.7,
+    "tail_s": 617.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9200.201607325778,
+   "moved_m": 32161.008036628886,
+   "measures": 452,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7658.2,
+    "fix_s": 1542.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8753.937998079073,
+   "moved_m": 29979.68999039537,
+   "measures": 450,
+   "clears": 13,
+   "failed": 2,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 5858.5,
+    "fix_s": 1716.4,
+    "tail_s": 1179.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9373.411417764584,
+   "moved_m": 33027.057088822934,
+   "measures": 454,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8130.7,
+    "fix_s": 1242.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 7848.654870266732,
+   "moved_m": 25473.274351333683,
+   "measures": 447,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6252.9,
+    "fix_s": 1595.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10304.082925570288,
+   "moved_m": 37590.41462785148,
+   "measures": 454,
+   "clears": 15,
+   "failed": 4,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7645.4,
+    "fix_s": 1304.9,
+    "tail_s": 1353.8,
+    "points": 21,
+    "actions": 469,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9752.368235101052,
+   "moved_m": 34931.84117550526,
+   "measures": 453,
+   "clears": 11,
+   "failed": 1,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7462.8,
+    "fix_s": 1540.3,
+    "tail_s": 749.2,
+    "points": 21,
+    "actions": 464,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 7770.196311618423,
+   "moved_m": 25160.98155809212,
+   "measures": 445,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 6295.5,
+    "fix_s": 1474.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10677.819918818665,
+   "moved_m": 38789.09959409324,
+   "measures": 456,
+   "clears": 55,
+   "failed": 42,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7807.5,
+    "fix_s": 1507.1,
+    "tail_s": 1363.2,
+    "points": 21,
+    "actions": 511,
+    "clears": 55,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10704.165290605848,
+   "moved_m": 39465.826453029265,
+   "measures": 460,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8596.0,
+    "fix_s": 1512.5,
+    "tail_s": 595.6,
+    "points": 21,
+    "actions": 472,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10404.925511578951,
+   "moved_m": 38054.62755789477,
+   "measures": 454,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7082.0,
+    "fix_s": 2149.1,
+    "tail_s": 1173.8,
+    "points": 21,
+    "actions": 469,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10208.136270060026,
+   "moved_m": 36895.68135030008,
+   "measures": 454,
+   "clears": 27,
+   "failed": 12,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8429.1,
+    "fix_s": 1322.6,
+    "tail_s": 456.4,
+    "points": 21,
+    "actions": 481,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9118.458457778404,
+   "moved_m": 31817.292288892022,
+   "measures": 449,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7437.5,
+    "fix_s": 1311.2,
+    "tail_s": 369.8,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9833.786499336897,
+   "moved_m": 35198.93249668448,
+   "measures": 455,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7338.1,
+    "fix_s": 1823.8,
+    "tail_s": 672.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8772.353931596623,
+   "moved_m": 30051.769657983106,
+   "measures": 449,
+   "clears": 17,
+   "failed": 7,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6526.1,
+    "fix_s": 1504.7,
+    "tail_s": 741.6,
+    "points": 21,
+    "actions": 466,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8277.973965296103,
+   "moved_m": 27609.869826480524,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6847.2,
+    "fix_s": 1430.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9330.627504559043,
+   "moved_m": 32558.137522795252,
+   "measures": 450,
+   "clears": 32,
+   "failed": 19,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7452.8,
+    "fix_s": 1877.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 482,
+    "clears": 32,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8292.729225633148,
+   "moved_m": 27688.646128165754,
+   "measures": 447,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6465.6,
+    "fix_s": 1827.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8242.806150605044,
+   "moved_m": 27564.030753025203,
+   "measures": 446,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 5912.9,
+    "fix_s": 1686.6,
+    "tail_s": 643.3,
+    "points": 21,
+    "actions": 457,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10202.345996077753,
+   "moved_m": 36946.72998038877,
+   "measures": 456,
+   "clears": 18,
+   "failed": 3,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8737.8,
+    "fix_s": 1464.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 474,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7973.452837786356,
+   "moved_m": 26222.26418893179,
+   "measures": 447,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6828.0,
+    "fix_s": 1145.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 457,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10339.389648558767,
+   "moved_m": 37756.948242793835,
+   "measures": 453,
+   "clears": 16,
+   "failed": 3,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7131.4,
+    "fix_s": 2013.3,
+    "tail_s": 1194.7,
+    "points": 21,
+    "actions": 469,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10835.363591011132,
+   "moved_m": 39691.81795505564,
+   "measures": 455,
+   "clears": 48,
+   "failed": 34,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8080.5,
+    "fix_s": 2240.0,
+    "tail_s": 514.8,
+    "points": 21,
+    "actions": 503,
+    "clears": 48,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8777.15553045266,
+   "moved_m": 30100.777652263303,
+   "measures": 451,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7265.0,
+    "fix_s": 1512.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 11651.857190794188,
+   "moved_m": 44149.28595397096,
+   "measures": 454,
+   "clears": 25,
+   "failed": 11,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7744.8,
+    "fix_s": 1803.4,
+    "tail_s": 2103.7,
+    "points": 21,
+    "actions": 479,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8859.883136123763,
+   "moved_m": 30174.415680618768,
+   "measures": 449,
+   "clears": 35,
+   "failed": 21,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6342.1,
+    "fix_s": 1739.9,
+    "tail_s": 777.9,
+    "points": 21,
+    "actions": 484,
+    "clears": 35,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9668.894386671389,
+   "moved_m": 34389.47193335697,
+   "measures": 449,
+   "clears": 24,
+   "failed": 10,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7192.6,
+    "fix_s": 1403.5,
+    "tail_s": 1072.9,
+    "points": 21,
+    "actions": 473,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8804.68292666767,
+   "moved_m": 30153.41463333839,
+   "measures": 447,
+   "clears": 21,
+   "failed": 5,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 6879.5,
+    "fix_s": 1925.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10165.733587939805,
+   "moved_m": 36888.66793969902,
+   "measures": 454,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7354.4,
+    "fix_s": 1746.1,
+    "tail_s": 1065.3,
+    "points": 21,
+    "actions": 468,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9059.93603481946,
+   "moved_m": 31374.680174097342,
+   "measures": 451,
+   "clears": 19,
+   "failed": 6,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7368.3,
+    "fix_s": 1691.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 470,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8723.48069586242,
+   "moved_m": 29782.40347931213,
+   "measures": 446,
+   "clears": 23,
+   "failed": 11,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7044.2,
+    "fix_s": 1054.3,
+    "tail_s": 625.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9135.716255044103,
+   "moved_m": 31833.581275220542,
+   "measures": 451,
+   "clears": 14,
+   "failed": 1,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7744.8,
+    "fix_s": 1390.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10728.009590114465,
+   "moved_m": 39010.04795057228,
+   "measures": 453,
+   "clears": 62,
+   "failed": 48,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7060.2,
+    "fix_s": 1939.1,
+    "tail_s": 1728.8,
+    "points": 21,
+    "actions": 515,
+    "clears": 62,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9851.574044988614,
+   "moved_m": 35367.87022494308,
+   "measures": 451,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7190.5,
+    "fix_s": 1861.2,
+    "tail_s": 799.9,
+    "points": 21,
+    "actions": 466,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9721.960607040457,
+   "moved_m": 34654.8030352023,
+   "measures": 454,
+   "clears": 15,
+   "failed": 1,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7986.0,
+    "fix_s": 1735.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8381.293887869675,
+   "moved_m": 28206.46943934838,
+   "measures": 447,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6448.1,
+    "fix_s": 1933.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9892.01676206971,
+   "moved_m": 35035.083810348464,
+   "measures": 452,
+   "clears": 49,
+   "failed": 34,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7498.7,
+    "fix_s": 1798.6,
+    "tail_s": 594.7,
+    "points": 21,
+    "actions": 501,
+    "clears": 49,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8150.424915580025,
+   "moved_m": 26972.12457790012,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6360.5,
+    "fix_s": 1789.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9441.17974399913,
+   "moved_m": 33400.89871999567,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8005.2,
+    "fix_s": 1435.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9615.996986458897,
+   "moved_m": 34264.984932294494,
+   "measures": 453,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6941.0,
+    "fix_s": 1564.3,
+    "tail_s": 1110.7,
+    "points": 21,
+    "actions": 463,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9344.948684227938,
+   "moved_m": 32974.743421139705,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7596.9,
+    "fix_s": 997.7,
+    "tail_s": 750.3,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9476.313347206054,
+   "moved_m": 33621.56673603026,
+   "measures": 449,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7156.6,
+    "fix_s": 1831.6,
+    "tail_s": 488.1,
+    "points": 21,
+    "actions": 461,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9269.617771705738,
+   "moved_m": 32288.0888585287,
+   "measures": 451,
+   "clears": 30,
+   "failed": 20,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6607.8,
+    "fix_s": 1925.4,
+    "tail_s": 736.5,
+    "points": 21,
+    "actions": 481,
+    "clears": 30,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10546.72196348358,
+   "moved_m": 38713.609817417855,
+   "measures": 453,
+   "clears": 23,
+   "failed": 12,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7357.2,
+    "fix_s": 1683.5,
+    "tail_s": 1506.1,
+    "points": 21,
+    "actions": 476,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9110.381381914909,
+   "moved_m": 31471.90690957455,
+   "measures": 449,
+   "clears": 34,
+   "failed": 23,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6829.5,
+    "fix_s": 1996.6,
+    "tail_s": 284.3,
+    "points": 21,
+    "actions": 483,
+    "clears": 34,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9259.882149658575,
+   "moved_m": 32429.410748292874,
+   "measures": 454,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7654.3,
+    "fix_s": 1605.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 11261.87209013647,
+   "moved_m": 41669.36045068223,
+   "measures": 454,
+   "clears": 63,
+   "failed": 53,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8087.3,
+    "fix_s": 1488.5,
+    "tail_s": 1686.1,
+    "points": 21,
+    "actions": 517,
+    "clears": 63,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8079.067436187282,
+   "moved_m": 26695.3371809364,
+   "measures": 448,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6663.1,
+    "fix_s": 1013.9,
+    "tail_s": 402.1,
+    "points": 21,
+    "actions": 459,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10345.25632102176,
+   "moved_m": 37916.2816051088,
+   "measures": 452,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8620.8,
+    "fix_s": 1103.7,
+    "tail_s": 620.8,
+    "points": 21,
+    "actions": 463,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8088.56688410481,
+   "moved_m": 26642.834420524065,
+   "measures": 447,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6126.4,
+    "fix_s": 1962.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 11242.397408278379,
+   "moved_m": 41951.98704139193,
+   "measures": 461,
+   "clears": 23,
+   "failed": 10,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8562.5,
+    "fix_s": 1444.4,
+    "tail_s": 1235.5,
+    "points": 21,
+    "actions": 484,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10311.084542505008,
+   "moved_m": 37235.422712525055,
+   "measures": 454,
+   "clears": 38,
+   "failed": 22,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7880.4,
+    "fix_s": 1746.4,
+    "tail_s": 684.3,
+    "points": 21,
+    "actions": 492,
+    "clears": 38,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8525.274935614852,
+   "moved_m": 28881.37467807426,
+   "measures": 448,
+   "clears": 13,
+   "failed": 1,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6313.1,
+    "fix_s": 1544.0,
+    "tail_s": 668.2,
+    "points": 21,
+    "actions": 461,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10878.635730240505,
+   "moved_m": 39893.17865120242,
+   "measures": 456,
+   "clears": 47,
+   "failed": 32,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7696.6,
+    "fix_s": 1311.0,
+    "tail_s": 1871.0,
+    "points": 21,
+    "actions": 503,
+    "clears": 47,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10231.85606228054,
+   "moved_m": 37109.280311402705,
+   "measures": 457,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8099.7,
+    "fix_s": 1609.7,
+    "tail_s": 522.4,
+    "points": 21,
+    "actions": 472,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8081.740161708476,
+   "moved_m": 26678.700808542388,
+   "measures": 448,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6474.8,
+    "fix_s": 1606.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10654.822655026035,
+   "moved_m": 39464.11327513019,
+   "measures": 451,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 8027.5,
+    "fix_s": 1392.9,
+    "tail_s": 1234.5,
+    "points": 21,
+    "actions": 463,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8938.513636193848,
+   "moved_m": 30737.568180969254,
+   "measures": 451,
+   "clears": 21,
+   "failed": 8,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7143.1,
+    "fix_s": 1795.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 472,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8519.258048758214,
+   "moved_m": 28576.290243791027,
+   "measures": 449,
+   "clears": 28,
+   "failed": 14,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6374.2,
+    "fix_s": 1720.1,
+    "tail_s": 424.9,
+    "points": 21,
+    "actions": 477,
+    "clears": 28,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9220.985487283013,
+   "moved_m": 32194.927436415062,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7626.7,
+    "fix_s": 1594.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8173.239574555364,
+   "moved_m": 27191.197872776822,
+   "measures": 448,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6630.2,
+    "fix_s": 1543.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7967.517600441057,
+   "moved_m": 26017.5880022053,
+   "measures": 449,
+   "clears": 17,
+   "failed": 6,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6514.3,
+    "fix_s": 1453.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8330.85385211705,
+   "moved_m": 28064.269260585264,
+   "measures": 444,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6422.6,
+    "fix_s": 1396.1,
+    "tail_s": 512.2,
+    "points": 21,
+    "actions": 455,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9109.64212556015,
+   "moved_m": 31788.210627800767,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6939.7,
+    "fix_s": 1489.4,
+    "tail_s": 680.5,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10329.341917829659,
+   "moved_m": 37606.709589148304,
+   "measures": 456,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 12,
+   "ndir_cleared": 12,
+   "stages": {
+    "scan_s": 8265.2,
+    "fix_s": 1584.6,
+    "tail_s": 479.6,
+    "points": 21,
+    "actions": 472,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8056.345698523184,
+   "moved_m": 26396.728492615926,
+   "measures": 448,
+   "clears": 22,
+   "failed": 9,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6470.1,
+    "fix_s": 1586.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 470,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8196.675013181084,
+   "moved_m": 27223.37506590542,
+   "measures": 448,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 2374.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8893.11216258349,
+   "moved_m": 30445.5608129174,
+   "measures": 450,
+   "clears": 27,
+   "failed": 14,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6962.9,
+    "fix_s": 1330.1,
+    "tail_s": 600.1,
+    "points": 21,
+    "actions": 477,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8148.488546838544,
+   "moved_m": 27007.44273419271,
+   "measures": 450,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6585.7,
+    "fix_s": 1562.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9372.495942460322,
+   "moved_m": 33082.47971230162,
+   "measures": 451,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 8081.2,
+    "fix_s": 1291.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8242.316929175142,
+   "moved_m": 27326.584645875737,
+   "measures": 446,
+   "clears": 25,
+   "failed": 11,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6238.8,
+    "fix_s": 2003.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 471,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8717.315431166326,
+   "moved_m": 29791.577155831623,
+   "measures": 447,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 7039.0,
+    "fix_s": 1678.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9114.355047423463,
+   "moved_m": 31641.775237117326,
+   "measures": 448,
+   "clears": 25,
+   "failed": 12,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7108.2,
+    "fix_s": 1379.1,
+    "tail_s": 627.1,
+    "points": 21,
+    "actions": 473,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9429.056541805208,
+   "moved_m": 33135.28270902607,
+   "measures": 450,
+   "clears": 27,
+   "failed": 14,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6807.0,
+    "fix_s": 1579.7,
+    "tail_s": 1042.4,
+    "points": 21,
+    "actions": 477,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8719.946797696433,
+   "moved_m": 29809.733988482163,
+   "measures": 451,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 5867.8,
+    "fix_s": 1791.7,
+    "tail_s": 1060.5,
+    "points": 21,
+    "actions": 462,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10404.93793373415,
+   "moved_m": 37444.68966867071,
+   "measures": 452,
+   "clears": 61,
+   "failed": 48,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6866.2,
+    "fix_s": 1604.4,
+    "tail_s": 1934.3,
+    "points": 21,
+    "actions": 513,
+    "clears": 61,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10016.394794397806,
+   "moved_m": 36126.97397198901,
+   "measures": 449,
+   "clears": 23,
+   "failed": 7,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7514.2,
+    "fix_s": 1731.4,
+    "tail_s": 770.8,
+    "points": 21,
+    "actions": 472,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9489.815631909158,
+   "moved_m": 33494.07815954581,
+   "measures": 450,
+   "clears": 22,
+   "failed": 8,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7146.3,
+    "fix_s": 1767.5,
+    "tail_s": 575.9,
+    "points": 21,
+    "actions": 472,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8732.382667906926,
+   "moved_m": 29881.913339534636,
+   "measures": 449,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6879.3,
+    "fix_s": 1853.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9087.71351912433,
+   "moved_m": 31588.567595621636,
+   "measures": 451,
+   "clears": 14,
+   "failed": 1,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7272.4,
+    "fix_s": 1815.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8389.464266880674,
+   "moved_m": 28322.321334403372,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6174.4,
+    "fix_s": 1617.2,
+    "tail_s": 597.9,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10922.616265898152,
+   "moved_m": 40588.08132949077,
+   "measures": 457,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7394.6,
+    "fix_s": 1648.2,
+    "tail_s": 1879.8,
+    "points": 21,
+    "actions": 471,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8825.395283736634,
+   "moved_m": 30351.976418683185,
+   "measures": 449,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7233.0,
+    "fix_s": 1592.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9948.354122502067,
+   "moved_m": 35846.770612510336,
+   "measures": 454,
+   "clears": 14,
+   "failed": 4,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 8544.8,
+    "fix_s": 1403.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8698.955527602075,
+   "moved_m": 29609.77763801038,
+   "measures": 450,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6367.3,
+    "fix_s": 1794.3,
+    "tail_s": 537.4,
+    "points": 21,
+    "actions": 466,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8059.962131534352,
+   "moved_m": 26604.81065767176,
+   "measures": 446,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6196.0,
+    "fix_s": 1864.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9875.553819964654,
+   "moved_m": 35517.76909982328,
+   "measures": 451,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7770.3,
+    "fix_s": 1689.9,
+    "tail_s": 415.3,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8523.74711449211,
+   "moved_m": 28838.735572460548,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7143.1,
+    "fix_s": 1380.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7425.026079657278,
+   "moved_m": 23340.13039828641,
+   "measures": 445,
+   "clears": 22,
+   "failed": 11,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1602.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10196.024219355882,
+   "moved_m": 36965.121096779454,
+   "measures": 452,
+   "clears": 21,
+   "failed": 5,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7718.9,
+    "fix_s": 1956.8,
+    "tail_s": 520.3,
+    "points": 21,
+    "actions": 473,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9054.724511541635,
+   "moved_m": 31423.622557708226,
+   "measures": 449,
+   "clears": 19,
+   "failed": 8,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7113.1,
+    "fix_s": 1565.1,
+    "tail_s": 376.5,
+    "points": 21,
+    "actions": 468,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10385.025299198216,
+   "moved_m": 37710.12649599105,
+   "measures": 454,
+   "clears": 31,
+   "failed": 15,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8489.1,
+    "fix_s": 1528.1,
+    "tail_s": 367.8,
+    "points": 21,
+    "actions": 485,
+    "clears": 31,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7552.740666497648,
+   "moved_m": 24043.703332488236,
+   "measures": 447,
+   "clears": 14,
+   "failed": 3,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6070.2,
+    "fix_s": 1482.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 11929.49452891592,
+   "moved_m": 45552.47264457962,
+   "measures": 458,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 9889.2,
+    "fix_s": 1406.3,
+    "tail_s": 634.0,
+    "points": 21,
+    "actions": 474,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10905.277624678749,
+   "moved_m": 40461.388123393765,
+   "measures": 457,
+   "clears": 19,
+   "failed": 8,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 8573.8,
+    "fix_s": 1330.0,
+    "tail_s": 1001.5,
+    "points": 21,
+    "actions": 476,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10301.313258481678,
+   "moved_m": 37491.56629240839,
+   "measures": 456,
+   "clears": 16,
+   "failed": 3,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 8474.2,
+    "fix_s": 1466.4,
+    "tail_s": 360.7,
+    "points": 21,
+    "actions": 472,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8204.02030807609,
+   "moved_m": 27090.101540380456,
+   "measures": 448,
+   "clears": 23,
+   "failed": 7,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6628.0,
+    "fix_s": 1576.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 471,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 16,
+   "virtual_s": 10433.470028975851,
+   "moved_m": 38182.35014487923,
+   "measures": 452,
+   "clears": 20,
+   "failed": 5,
+   "ndir": 9,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8373.9,
+    "fix_s": 1444.0,
+    "tail_s": 615.6,
+    "points": 21,
+    "actions": 472,
+    "clears": 20,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8926.061915021484,
+   "moved_m": 30850.309575107436,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6631.0,
+    "fix_s": 1642.8,
+    "tail_s": 652.3,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7997.621047669884,
+   "moved_m": 26188.10523834943,
+   "measures": 451,
+   "clears": 13,
+   "failed": 3,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6761.3,
+    "fix_s": 1236.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9456.028655039765,
+   "moved_m": 33345.14327519883,
+   "measures": 452,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6930.8,
+    "fix_s": 1642.4,
+    "tail_s": 882.9,
+    "points": 21,
+    "actions": 468,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10555.591491796042,
+   "moved_m": 38672.95745898021,
+   "measures": 459,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8144.0,
+    "fix_s": 1919.3,
+    "tail_s": 492.3,
+    "points": 21,
+    "actions": 474,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8973.893598244767,
+   "moved_m": 31064.46799122384,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6871.2,
+    "fix_s": 1558.9,
+    "tail_s": 543.7,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9294.363084504324,
+   "moved_m": 32531.815422521617,
+   "measures": 453,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7087.9,
+    "fix_s": 1514.1,
+    "tail_s": 692.4,
+    "points": 21,
+    "actions": 468,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9532.241881178137,
+   "moved_m": 33511.20940589072,
+   "measures": 457,
+   "clears": 24,
+   "failed": 12,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8144.1,
+    "fix_s": 1388.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 481,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8561.71890746115,
+   "moved_m": 29078.594537305762,
+   "measures": 450,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7223.7,
+    "fix_s": 1338.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8098.042168974363,
+   "moved_m": 26765.21084487182,
+   "measures": 447,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6226.8,
+    "fix_s": 1871.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8960.713900815927,
+   "moved_m": 30953.569504079638,
+   "measures": 449,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 1,
+   "ndir_cleared": 1,
+   "stages": {
+    "scan_s": 7043.5,
+    "fix_s": 1917.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9783.71792301969,
+   "moved_m": 34773.58961509843,
+   "measures": 454,
+   "clears": 27,
+   "failed": 13,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7093.1,
+    "fix_s": 1901.1,
+    "tail_s": 789.5,
+    "points": 21,
+    "actions": 481,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8545.737172145582,
+   "moved_m": 29033.68586072792,
+   "measures": 446,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6620.7,
+    "fix_s": 1925.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9480.157161472423,
+   "moved_m": 33405.785807362154,
+   "measures": 449,
+   "clears": 27,
+   "failed": 13,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7754.9,
+    "fix_s": 1725.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 476,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7467.373520278292,
+   "moved_m": 23666.867601391466,
+   "measures": 445,
+   "clears": 15,
+   "failed": 5,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1645.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9257.368888661202,
+   "moved_m": 32481.84444330601,
+   "measures": 452,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8216.6,
+    "fix_s": 1040.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10007.594317374078,
+   "moved_m": 36087.971586870364,
+   "measures": 451,
+   "clears": 21,
+   "failed": 9,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6492.5,
+    "fix_s": 1712.1,
+    "tail_s": 1803.0,
+    "points": 21,
+    "actions": 472,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9305.457257857504,
+   "moved_m": 32532.28628928753,
+   "measures": 453,
+   "clears": 18,
+   "failed": 2,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7696.8,
+    "fix_s": 1608.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 471,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8972.34526309879,
+   "moved_m": 30796.726315493906,
+   "measures": 450,
+   "clears": 29,
+   "failed": 15,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6823.2,
+    "fix_s": 1726.5,
+    "tail_s": 422.7,
+    "points": 21,
+    "actions": 479,
+    "clears": 29,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8408.507810418447,
+   "moved_m": 28232.539052092226,
+   "measures": 449,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6139.4,
+    "fix_s": 2269.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9117.02789722269,
+   "moved_m": 31610.139486113483,
+   "measures": 453,
+   "clears": 19,
+   "failed": 7,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7500.2,
+    "fix_s": 1616.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 472,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10846.309122166631,
+   "moved_m": 40026.54561083318,
+   "measures": 458,
+   "clears": 23,
+   "failed": 7,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 9402.2,
+    "fix_s": 1444.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 481,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8493.826472497332,
+   "moved_m": 28739.132362486678,
+   "measures": 449,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 7025.4,
+    "fix_s": 1468.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7968.346148480486,
+   "moved_m": 26086.730742402444,
+   "measures": 446,
+   "clears": 17,
+   "failed": 4,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6206.8,
+    "fix_s": 1761.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 7864.237883289063,
+   "moved_m": 25551.18941644531,
+   "measures": 446,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6077.6,
+    "fix_s": 1786.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10389.43753850245,
+   "moved_m": 37947.18769251224,
+   "measures": 456,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8828.6,
+    "fix_s": 1560.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 470,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 7409.94204602538,
+   "moved_m": 23439.710230126893,
+   "measures": 444,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1587.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8252.404540880134,
+   "moved_m": 27412.022704400686,
+   "measures": 449,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6577.7,
+    "fix_s": 1674.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9263.344888580237,
+   "moved_m": 32451.72444290119,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7651.3,
+    "fix_s": 1612.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8398.072812330978,
+   "moved_m": 28055.36406165488,
+   "measures": 451,
+   "clears": 19,
+   "failed": 6,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6125.5,
+    "fix_s": 1910.6,
+    "tail_s": 361.9,
+    "points": 21,
+    "actions": 470,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9857.047304759582,
+   "moved_m": 35455.23652379792,
+   "measures": 452,
+   "clears": 12,
+   "failed": 1,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7918.6,
+    "fix_s": 1366.7,
+    "tail_s": 571.7,
+    "points": 21,
+    "actions": 464,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9793.384139892893,
+   "moved_m": 35076.92069946446,
+   "measures": 455,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7428.0,
+    "fix_s": 1764.2,
+    "tail_s": 601.2,
+    "points": 21,
+    "actions": 466,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8103.42029815466,
+   "moved_m": 26722.10149077331,
+   "measures": 448,
+   "clears": 15,
+   "failed": 1,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 6301.2,
+    "fix_s": 1802.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10849.899418462644,
+   "moved_m": 40154.49709231319,
+   "measures": 452,
+   "clears": 27,
+   "failed": 11,
+   "ndir": 13,
+   "ndir_cleared": 13,
+   "stages": {
+    "scan_s": 7723.2,
+    "fix_s": 1324.9,
+    "tail_s": 1801.8,
+    "points": 21,
+    "actions": 479,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9879.959713077253,
+   "moved_m": 35394.798565386256,
+   "measures": 452,
+   "clears": 20,
+   "failed": 4,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7462.6,
+    "fix_s": 2005.0,
+    "tail_s": 412.3,
+    "points": 21,
+    "actions": 472,
+    "clears": 20,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9625.508863553523,
+   "moved_m": 34237.54431776761,
+   "measures": 452,
+   "clears": 15,
+   "failed": 2,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7673.5,
+    "fix_s": 1670.4,
+    "tail_s": 281.7,
+    "points": 21,
+    "actions": 467,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 12134.403253108469,
+   "moved_m": 46102.01626554227,
+   "measures": 459,
+   "clears": 46,
+   "failed": 30,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 9394.9,
+    "fix_s": 1313.4,
+    "tail_s": 1426.1,
+    "points": 21,
+    "actions": 505,
+    "clears": 46,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10462.464831674255,
+   "moved_m": 38272.32415837126,
+   "measures": 450,
+   "clears": 27,
+   "failed": 12,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7115.8,
+    "fix_s": 2032.6,
+    "tail_s": 1314.0,
+    "points": 21,
+    "actions": 477,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9248.623775182527,
+   "moved_m": 32458.11887591262,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6441.0,
+    "fix_s": 1784.5,
+    "tail_s": 1023.1,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8575.598381155301,
+   "moved_m": 29127.991905776515,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6999.9,
+    "fix_s": 1273.8,
+    "tail_s": 301.8,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 11793.180019946956,
+   "moved_m": 44480.90009973482,
+   "measures": 463,
+   "clears": 33,
+   "failed": 18,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7366.0,
+    "fix_s": 1620.7,
+    "tail_s": 2806.5,
+    "points": 21,
+    "actions": 496,
+    "clears": 33,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9176.95634707704,
+   "moved_m": 32019.78173538519,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7555.7,
+    "fix_s": 1621.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10832.040258604322,
+   "moved_m": 40040.20129302158,
+   "measures": 459,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 8226.3,
+    "fix_s": 1433.0,
+    "tail_s": 1172.7,
+    "points": 21,
+    "actions": 475,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8339.086459400163,
+   "moved_m": 27785.432297000774,
+   "measures": 448,
+   "clears": 23,
+   "failed": 10,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6149.5,
+    "fix_s": 1614.9,
+    "tail_s": 574.7,
+    "points": 21,
+    "actions": 471,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7854.0286889230765,
+   "moved_m": 25680.143444615387,
+   "measures": 445,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6501.4,
+    "fix_s": 1352.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 455,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 12,
+   "virtual_s": 9304.627498647797,
+   "moved_m": 32628.137493238995,
+   "measures": 455,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7658.6,
+    "fix_s": 1646.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8849.314903945282,
+   "moved_m": 29836.57451972635,
+   "measures": 446,
+   "clears": 61,
+   "failed": 49,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6085.4,
+    "fix_s": 1459.2,
+    "tail_s": 1304.7,
+    "points": 21,
+    "actions": 507,
+    "clears": 61,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9923.84191893125,
+   "moved_m": 35779.20959465626,
+   "measures": 453,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 8644.1,
+    "fix_s": 1279.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8465.648703348097,
+   "moved_m": 28463.243516740476,
+   "measures": 451,
+   "clears": 17,
+   "failed": 7,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7022.8,
+    "fix_s": 1442.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9421.514651149382,
+   "moved_m": 33167.57325574692,
+   "measures": 455,
+   "clears": 14,
+   "failed": 3,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6577.9,
+    "fix_s": 1743.8,
+    "tail_s": 1099.8,
+    "points": 21,
+    "actions": 469,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8516.968544487356,
+   "moved_m": 28864.842722436784,
+   "measures": 449,
+   "clears": 11,
+   "failed": 1,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7234.6,
+    "fix_s": 1282.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8921.172148933247,
+   "moved_m": 30760.860744666243,
+   "measures": 453,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7312.8,
+    "fix_s": 1608.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 11384.263606390698,
+   "moved_m": 42896.31803195349,
+   "measures": 454,
+   "clears": 21,
+   "failed": 9,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 9407.7,
+    "fix_s": 926.2,
+    "tail_s": 1050.4,
+    "points": 21,
+    "actions": 475,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10811.154516160006,
+   "moved_m": 39605.77258079991,
+   "measures": 454,
+   "clears": 47,
+   "failed": 31,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7744.1,
+    "fix_s": 1346.6,
+    "tail_s": 1720.4,
+    "points": 21,
+    "actions": 501,
+    "clears": 47,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8562.955100626752,
+   "moved_m": 29089.775503133773,
+   "measures": 447,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6514.7,
+    "fix_s": 2048.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10368.813689990006,
+   "moved_m": 37484.068449949984,
+   "measures": 459,
+   "clears": 31,
+   "failed": 15,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 8117.0,
+    "fix_s": 1646.8,
+    "tail_s": 605.0,
+    "points": 21,
+    "actions": 490,
+    "clears": 31,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7664.935467134195,
+   "moved_m": 24664.677335670985,
+   "measures": 445,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6144.6,
+    "fix_s": 1520.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9341.308793927226,
+   "moved_m": 32761.543969636154,
+   "measures": 455,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7557.8,
+    "fix_s": 1783.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9128.120398486324,
+   "moved_m": 31735.601992431628,
+   "measures": 451,
+   "clears": 16,
+   "failed": 1,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7188.2,
+    "fix_s": 1939.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8649.486805107246,
+   "moved_m": 29487.434025536244,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6713.2,
+    "fix_s": 1686.1,
+    "tail_s": 250.1,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9556.40101905943,
+   "moved_m": 33822.00509529718,
+   "measures": 453,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8182.0,
+    "fix_s": 1374.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9275.091471654494,
+   "moved_m": 32485.45735827248,
+   "measures": 454,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7745.9,
+    "fix_s": 1529.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10728.967656898669,
+   "moved_m": 39479.838284493395,
+   "measures": 457,
+   "clears": 22,
+   "failed": 6,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7861.0,
+    "fix_s": 2164.6,
+    "tail_s": 703.3,
+    "points": 21,
+    "actions": 479,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9703.886642146945,
+   "moved_m": 34599.433210734715,
+   "measures": 456,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8201.4,
+    "fix_s": 1502.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 11391.324256700575,
+   "moved_m": 42726.62128350283,
+   "measures": 457,
+   "clears": 28,
+   "failed": 15,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7397.0,
+    "fix_s": 1724.5,
+    "tail_s": 2269.8,
+    "points": 21,
+    "actions": 485,
+    "clears": 28,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9726.13045942071,
+   "moved_m": 34610.65229710354,
+   "measures": 453,
+   "clears": 21,
+   "failed": 8,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6909.5,
+    "fix_s": 1470.5,
+    "tail_s": 1346.1,
+    "points": 21,
+    "actions": 474,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10994.520181125166,
+   "moved_m": 41062.60090562583,
+   "measures": 456,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 8237.9,
+    "fix_s": 1205.6,
+    "tail_s": 1551.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9023.282943910752,
+   "moved_m": 31281.414719553773,
+   "measures": 451,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7142.7,
+    "fix_s": 1880.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9186.924435761144,
+   "moved_m": 32159.622178805737,
+   "measures": 447,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6643.4,
+    "fix_s": 1989.3,
+    "tail_s": 554.2,
+    "points": 21,
+    "actions": 462,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9281.572919506918,
+   "moved_m": 32512.864597534583,
+   "measures": 451,
+   "clears": 17,
+   "failed": 4,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6524.8,
+    "fix_s": 2134.0,
+    "tail_s": 622.8,
+    "points": 21,
+    "actions": 468,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8880.1414390847,
+   "moved_m": 30600.707195423496,
+   "measures": 451,
+   "clears": 12,
+   "failed": 1,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7357.0,
+    "fix_s": 1523.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9411.696467875414,
+   "moved_m": 33173.4823393771,
+   "measures": 452,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7484.9,
+    "fix_s": 1926.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10321.376889824263,
+   "moved_m": 37691.884449121324,
+   "measures": 455,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7668.9,
+    "fix_s": 1598.3,
+    "tail_s": 1054.2,
+    "points": 21,
+    "actions": 467,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8988.28166966539,
+   "moved_m": 31186.40834832695,
+   "measures": 447,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6506.5,
+    "fix_s": 1958.6,
+    "tail_s": 523.2,
+    "points": 21,
+    "actions": 461,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7367.172005606786,
+   "moved_m": 23240.860028033934,
+   "measures": 445,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1545.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 455,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9451.586673185957,
+   "moved_m": 33282.93336592973,
+   "measures": 452,
+   "clears": 22,
+   "failed": 11,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7247.9,
+    "fix_s": 1536.3,
+    "tail_s": 667.4,
+    "points": 21,
+    "actions": 474,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7913.328140564069,
+   "moved_m": 25951.640702820358,
+   "measures": 445,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6530.5,
+    "fix_s": 1382.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7967.560919405148,
+   "moved_m": 26227.80459702573,
+   "measures": 445,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6695.8,
+    "fix_s": 1271.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8172.268568173658,
+   "moved_m": 26996.34284086829,
+   "measures": 447,
+   "clears": 21,
+   "failed": 6,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6283.2,
+    "fix_s": 1889.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9124.15576393703,
+   "moved_m": 31835.77881968515,
+   "measures": 450,
+   "clears": 13,
+   "failed": 2,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7639.5,
+    "fix_s": 1484.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8001.015566700954,
+   "moved_m": 26300.077833504787,
+   "measures": 449,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6446.4,
+    "fix_s": 1095.3,
+    "tail_s": 459.3,
+    "points": 21,
+    "actions": 459,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10053.284272669633,
+   "moved_m": 36316.42136334816,
+   "measures": 455,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7433.5,
+    "fix_s": 2007.0,
+    "tail_s": 612.8,
+    "points": 21,
+    "actions": 468,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8175.345100656739,
+   "moved_m": 27206.7255032837,
+   "measures": 446,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6562.1,
+    "fix_s": 1613.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9073.14656997955,
+   "moved_m": 31370.732849897766,
+   "measures": 451,
+   "clears": 22,
+   "failed": 6,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7353.8,
+    "fix_s": 1719.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 473,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9579.467555391231,
+   "moved_m": 33847.33777695611,
+   "measures": 451,
+   "clears": 27,
+   "failed": 13,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7410.3,
+    "fix_s": 1411.8,
+    "tail_s": 757.4,
+    "points": 21,
+    "actions": 478,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9742.231909064443,
+   "moved_m": 34451.15954532214,
+   "measures": 454,
+   "clears": 35,
+   "failed": 21,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7402.6,
+    "fix_s": 1638.9,
+    "tail_s": 700.7,
+    "points": 21,
+    "actions": 489,
+    "clears": 35,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8180.85631829586,
+   "moved_m": 27094.281591479306,
+   "measures": 448,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 5940.2,
+    "fix_s": 1935.2,
+    "tail_s": 305.4,
+    "points": 21,
+    "actions": 463,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9852.147500677293,
+   "moved_m": 35350.73750338646,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7916.9,
+    "fix_s": 1935.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8900.14607224418,
+   "moved_m": 30285.73036122092,
+   "measures": 451,
+   "clears": 36,
+   "failed": 20,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 6427.9,
+    "fix_s": 2472.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 487,
+    "clears": 36,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8885.713180192997,
+   "moved_m": 30603.565900965004,
+   "measures": 450,
+   "clears": 15,
+   "failed": 3,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6129.8,
+    "fix_s": 1607.9,
+    "tail_s": 1148.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9101.717760890911,
+   "moved_m": 31593.588804454575,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7599.0,
+    "fix_s": 1502.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9215.798195888166,
+   "moved_m": 32253.99097944086,
+   "measures": 448,
+   "clears": 18,
+   "failed": 5,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7292.8,
+    "fix_s": 1391.5,
+    "tail_s": 531.5,
+    "points": 21,
+    "actions": 466,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9554.906512298907,
+   "moved_m": 33889.53256149452,
+   "measures": 450,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7434.4,
+    "fix_s": 2120.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10034.650837167877,
+   "moved_m": 36118.25418583939,
+   "measures": 459,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7561.1,
+    "fix_s": 1864.7,
+    "tail_s": 608.9,
+    "points": 21,
+    "actions": 472,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10304.748290498877,
+   "moved_m": 37683.74145249438,
+   "measures": 453,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 8116.3,
+    "fix_s": 1544.9,
+    "tail_s": 643.6,
+    "points": 21,
+    "actions": 464,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9314.180669028343,
+   "moved_m": 32660.903345141724,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6589.9,
+    "fix_s": 1775.5,
+    "tail_s": 948.8,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9395.550056461505,
+   "moved_m": 33062.75028230752,
+   "measures": 454,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6602.4,
+    "fix_s": 1866.4,
+    "tail_s": 926.7,
+    "points": 21,
+    "actions": 467,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9704.453497963765,
+   "moved_m": 34572.26748981881,
+   "measures": 455,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7499.0,
+    "fix_s": 1684.9,
+    "tail_s": 520.6,
+    "points": 21,
+    "actions": 468,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9955.115879901143,
+   "moved_m": 35970.57939950571,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7430.8,
+    "fix_s": 1390.9,
+    "tail_s": 1133.4,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9568.937334406908,
+   "moved_m": 34014.68667203455,
+   "measures": 449,
+   "clears": 16,
+   "failed": 2,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7985.4,
+    "fix_s": 1583.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7830.135424952451,
+   "moved_m": 25530.677124762264,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6341.7,
+    "fix_s": 1488.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8716.816721052966,
+   "moved_m": 29669.083605264856,
+   "measures": 450,
+   "clears": 19,
+   "failed": 4,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6813.6,
+    "fix_s": 1903.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10057.243453350156,
+   "moved_m": 36426.217266750784,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6716.7,
+    "fix_s": 1348.3,
+    "tail_s": 1992.3,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8156.17911509003,
+   "moved_m": 27000.89557545017,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6423.4,
+    "fix_s": 1732.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9320.07164178723,
+   "moved_m": 32585.35820893614,
+   "measures": 450,
+   "clears": 27,
+   "failed": 14,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7933.8,
+    "fix_s": 1386.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 477,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9184.562420579678,
+   "moved_m": 32112.812102898384,
+   "measures": 449,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7034.8,
+    "fix_s": 1814.6,
+    "tail_s": 335.2,
+    "points": 21,
+    "actions": 463,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9244.281662499456,
+   "moved_m": 32276.408312497275,
+   "measures": 453,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7018.3,
+    "fix_s": 2226.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8040.143830770047,
+   "moved_m": 26435.719153850245,
+   "measures": 448,
+   "clears": 15,
+   "failed": 4,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6445.7,
+    "fix_s": 1594.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8031.506736810058,
+   "moved_m": 26437.53368405029,
+   "measures": 448,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6511.3,
+    "fix_s": 1520.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9649.517772087556,
+   "moved_m": 34367.58886043775,
+   "measures": 449,
+   "clears": 22,
+   "failed": 12,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7434.3,
+    "fix_s": 1535.4,
+    "tail_s": 679.9,
+    "points": 21,
+    "actions": 471,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8134.885827035461,
+   "moved_m": 26944.429135177306,
+   "measures": 448,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6084.2,
+    "fix_s": 2050.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9094.546807591643,
+   "moved_m": 31612.73403795823,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7137.3,
+    "fix_s": 1759.8,
+    "tail_s": 197.4,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8143.173727740096,
+   "moved_m": 26965.868638700493,
+   "measures": 447,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 6624.3,
+    "fix_s": 1518.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8157.663979915298,
+   "moved_m": 27073.31989957649,
+   "measures": 444,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 5913.5,
+    "fix_s": 1663.6,
+    "tail_s": 580.6,
+    "points": 21,
+    "actions": 460,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10347.072556053034,
+   "moved_m": 37790.36278026517,
+   "measures": 455,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7826.4,
+    "fix_s": 1485.3,
+    "tail_s": 1035.5,
+    "points": 21,
+    "actions": 468,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10005.528024199419,
+   "moved_m": 35802.64012099708,
+   "measures": 451,
+   "clears": 37,
+   "failed": 21,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7206.6,
+    "fix_s": 2099.0,
+    "tail_s": 699.9,
+    "points": 21,
+    "actions": 488,
+    "clears": 37,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8323.456230067091,
+   "moved_m": 27872.281150335457,
+   "measures": 446,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6583.4,
+    "fix_s": 1740.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10425.542661325455,
+   "moved_m": 38262.7133066273,
+   "measures": 454,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8596.3,
+    "fix_s": 1450.9,
+    "tail_s": 378.3,
+    "points": 21,
+    "actions": 465,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8977.56961866528,
+   "moved_m": 31112.848093326407,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6887.9,
+    "fix_s": 1442.6,
+    "tail_s": 647.1,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10566.721038488211,
+   "moved_m": 38753.60519244105,
+   "measures": 457,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7304.0,
+    "fix_s": 1969.3,
+    "tail_s": 1293.5,
+    "points": 21,
+    "actions": 473,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8480.542043013435,
+   "moved_m": 28602.71021506717,
+   "measures": 448,
+   "clears": 16,
+   "failed": 3,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6605.6,
+    "fix_s": 1874.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10865.541429250281,
+   "moved_m": 40227.70714625137,
+   "measures": 457,
+   "clears": 19,
+   "failed": 4,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8126.7,
+    "fix_s": 1590.9,
+    "tail_s": 1147.9,
+    "points": 21,
+    "actions": 476,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10172.685319429802,
+   "moved_m": 36843.42659714899,
+   "measures": 451,
+   "clears": 25,
+   "failed": 12,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7838.5,
+    "fix_s": 1566.4,
+    "tail_s": 767.8,
+    "points": 21,
+    "actions": 476,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10517.145535906902,
+   "moved_m": 38610.72767953451,
+   "measures": 458,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 8414.4,
+    "fix_s": 1250.5,
+    "tail_s": 852.3,
+    "points": 21,
+    "actions": 469,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8002.67788441576,
+   "moved_m": 26343.38942207881,
+   "measures": 446,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6536.5,
+    "fix_s": 1466.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 11055.648344305171,
+   "moved_m": 41408.24172152585,
+   "measures": 453,
+   "clears": 14,
+   "failed": 4,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8105.3,
+    "fix_s": 1075.3,
+    "tail_s": 1875.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9194.134037852675,
+   "moved_m": 31915.670189263426,
+   "measures": 451,
+   "clears": 27,
+   "failed": 13,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6270.8,
+    "fix_s": 1405.5,
+    "tail_s": 1517.9,
+    "points": 21,
+    "actions": 478,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 11,
+   "virtual_s": 8446.115566877359,
+   "moved_m": 28415.57783438678,
+   "measures": 453,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7100.1,
+    "fix_s": 1346.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8620.78468537768,
+   "moved_m": 29188.923426888352,
+   "measures": 447,
+   "clears": 25,
+   "failed": 11,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6383.3,
+    "fix_s": 1778.4,
+    "tail_s": 459.1,
+    "points": 21,
+    "actions": 472,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10486.765695205757,
+   "moved_m": 38518.8284760288,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7446.8,
+    "fix_s": 1473.7,
+    "tail_s": 1566.3,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9862.311119155724,
+   "moved_m": 35336.55559577864,
+   "measures": 455,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8020.6,
+    "fix_s": 1841.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10599.977852945702,
+   "moved_m": 38934.8892647285,
+   "measures": 456,
+   "clears": 17,
+   "failed": 1,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7022.3,
+    "fix_s": 1898.9,
+    "tail_s": 1678.7,
+    "points": 21,
+    "actions": 473,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8949.183180653448,
+   "moved_m": 30855.91590326724,
+   "measures": 451,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6898.1,
+    "fix_s": 2051.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10096.503003098596,
+   "moved_m": 36352.515015492965,
+   "measures": 456,
+   "clears": 22,
+   "failed": 7,
+   "ndir": 13,
+   "ndir_cleared": 13,
+   "stages": {
+    "scan_s": 8041.2,
+    "fix_s": 1608.3,
+    "tail_s": 447.0,
+    "points": 21,
+    "actions": 478,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 7571.373204916266,
+   "moved_m": 24186.866024581337,
+   "measures": 446,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6130.4,
+    "fix_s": 1441.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9621.92784150895,
+   "moved_m": 33929.63920754478,
+   "measures": 454,
+   "clears": 29,
+   "failed": 14,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7885.1,
+    "fix_s": 1736.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 483,
+    "clears": 29,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8856.247612358438,
+   "moved_m": 30526.238061792184,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7203.9,
+    "fix_s": 1652.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10276.61557479424,
+   "moved_m": 37413.0778739712,
+   "measures": 454,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7310.0,
+    "fix_s": 1725.9,
+    "tail_s": 1240.7,
+    "points": 21,
+    "actions": 469,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10906.008261669711,
+   "moved_m": 40530.04130834857,
+   "measures": 456,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7833.1,
+    "fix_s": 1913.0,
+    "tail_s": 1159.9,
+    "points": 21,
+    "actions": 470,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9294.779689524566,
+   "moved_m": 32608.898447622843,
+   "measures": 453,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6623.6,
+    "fix_s": 1876.6,
+    "tail_s": 794.6,
+    "points": 21,
+    "actions": 465,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9178.779959277428,
+   "moved_m": 31903.899796387203,
+   "measures": 452,
+   "clears": 22,
+   "failed": 10,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7243.8,
+    "fix_s": 1677.9,
+    "tail_s": 257.1,
+    "points": 21,
+    "actions": 474,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9914.809324387907,
+   "moved_m": 35144.046621939415,
+   "measures": 452,
+   "clears": 50,
+   "failed": 36,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6224.4,
+    "fix_s": 1986.8,
+    "tail_s": 1703.6,
+    "points": 21,
+    "actions": 502,
+    "clears": 50,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9237.402144060105,
+   "moved_m": 32282.0107203005,
+   "measures": 452,
+   "clears": 17,
+   "failed": 6,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7160.0,
+    "fix_s": 1420.1,
+    "tail_s": 657.3,
+    "points": 21,
+    "actions": 469,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 11506.724321614476,
+   "moved_m": 43448.621608072346,
+   "measures": 454,
+   "clears": 24,
+   "failed": 11,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8026.6,
+    "fix_s": 1609.9,
+    "tail_s": 1870.3,
+    "points": 21,
+    "actions": 478,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10279.57157037701,
+   "moved_m": 37402.85785188508,
+   "measures": 454,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8239.2,
+    "fix_s": 1544.9,
+    "tail_s": 495.4,
+    "points": 21,
+    "actions": 470,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8325.857640014628,
+   "moved_m": 27764.288200073137,
+   "measures": 450,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5923.1,
+    "fix_s": 2002.3,
+    "tail_s": 400.5,
+    "points": 21,
+    "actions": 465,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9622.522095809509,
+   "moved_m": 34207.61047904758,
+   "measures": 453,
+   "clears": 15,
+   "failed": 4,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6901.2,
+    "fix_s": 2078.8,
+    "tail_s": 642.5,
+    "points": 21,
+    "actions": 468,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 10420.038103315062,
+   "moved_m": 38205.19051657533,
+   "measures": 456,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 8299.1,
+    "fix_s": 1633.6,
+    "tail_s": 487.4,
+    "points": 21,
+    "actions": 466,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9678.367246353466,
+   "moved_m": 34581.83623176733,
+   "measures": 450,
+   "clears": 15,
+   "failed": 4,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7387.7,
+    "fix_s": 957.7,
+    "tail_s": 1332.9,
+    "points": 21,
+    "actions": 465,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8161.088700050423,
+   "moved_m": 27030.44350025212,
+   "measures": 446,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 5929.2,
+    "fix_s": 2004.7,
+    "tail_s": 227.2,
+    "points": 21,
+    "actions": 462,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9091.470711723927,
+   "moved_m": 31572.353558619623,
+   "measures": 451,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6828.6,
+    "fix_s": 2262.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8931.349634717513,
+   "moved_m": 30846.748173587614,
+   "measures": 452,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7556.2,
+    "fix_s": 1375.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8051.893142835367,
+   "moved_m": 26564.465714176844,
+   "measures": 446,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6438.5,
+    "fix_s": 1613.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9312.894584126985,
+   "moved_m": 32674.472920634933,
+   "measures": 453,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7062.3,
+    "fix_s": 1572.6,
+    "tail_s": 677.9,
+    "points": 21,
+    "actions": 466,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9550.83326559939,
+   "moved_m": 33894.16632799694,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7938.5,
+    "fix_s": 1612.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10584.288632522888,
+   "moved_m": 38696.4431626144,
+   "measures": 455,
+   "clears": 29,
+   "failed": 13,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7797.3,
+    "fix_s": 2051.8,
+    "tail_s": 735.2,
+    "points": 21,
+    "actions": 484,
+    "clears": 29,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8194.88777985724,
+   "moved_m": 27199.438899286204,
+   "measures": 447,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6176.1,
+    "fix_s": 2018.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10051.835145099818,
+   "moved_m": 36449.17572549909,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7326.4,
+    "fix_s": 1568.2,
+    "tail_s": 1157.2,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8097.131524162741,
+   "moved_m": 26840.65762081371,
+   "measures": 445,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5892.8,
+    "fix_s": 1749.9,
+    "tail_s": 454.4,
+    "points": 21,
+    "actions": 457,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8371.440311748274,
+   "moved_m": 28102.20155874138,
+   "measures": 449,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6673.6,
+    "fix_s": 1697.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10009.516866299467,
+   "moved_m": 35932.58433149735,
+   "measures": 456,
+   "clears": 24,
+   "failed": 13,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 9052.7,
+    "fix_s": 956.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 480,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10807.109703997336,
+   "moved_m": 39405.5485199866,
+   "measures": 454,
+   "clears": 59,
+   "failed": 43,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7943.0,
+    "fix_s": 1527.0,
+    "tail_s": 1337.2,
+    "points": 21,
+    "actions": 513,
+    "clears": 59,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8782.8202163603,
+   "moved_m": 30144.10108180151,
+   "measures": 450,
+   "clears": 12,
+   "failed": 1,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7448.4,
+    "fix_s": 1334.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7565.643509598023,
+   "moved_m": 24128.21754799012,
+   "measures": 446,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1743.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8905.635335542833,
+   "moved_m": 30613.17667771418,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7006.4,
+    "fix_s": 1899.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10896.462334042573,
+   "moved_m": 40342.31167021283,
+   "measures": 453,
+   "clears": 28,
+   "failed": 13,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7315.6,
+    "fix_s": 1865.9,
+    "tail_s": 1715.0,
+    "points": 21,
+    "actions": 481,
+    "clears": 28,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 7690.822521370927,
+   "moved_m": 24704.11260685463,
+   "measures": 446,
+   "clears": 17,
+   "failed": 5,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1868.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8309.081755947462,
+   "moved_m": 27685.40877973731,
+   "measures": 449,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6226.4,
+    "fix_s": 2082.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8987.680236275617,
+   "moved_m": 31083.401181378074,
+   "measures": 450,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 7285.7,
+    "fix_s": 1702.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8599.64789607665,
+   "moved_m": 29223.239480383243,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6484.9,
+    "fix_s": 2114.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7605.565241499141,
+   "moved_m": 24407.826207495702,
+   "measures": 445,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1783.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9149.956847655238,
+   "moved_m": 31934.78423827621,
+   "measures": 452,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7102.1,
+    "fix_s": 1533.9,
+    "tail_s": 513.9,
+    "points": 21,
+    "actions": 463,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8217.696131284267,
+   "moved_m": 27313.480656421354,
+   "measures": 449,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6864.5,
+    "fix_s": 1353.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8596.682203124377,
+   "moved_m": 29263.411015621892,
+   "measures": 446,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6445.4,
+    "fix_s": 1583.1,
+    "tail_s": 568.1,
+    "points": 21,
+    "actions": 460,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10402.915420669207,
+   "moved_m": 37689.577103346026,
+   "measures": 457,
+   "clears": 33,
+   "failed": 18,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7176.4,
+    "fix_s": 1355.9,
+    "tail_s": 1870.7,
+    "points": 21,
+    "actions": 490,
+    "clears": 33,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8750.423907651726,
+   "moved_m": 30007.119538258623,
+   "measures": 446,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6591.6,
+    "fix_s": 1872.5,
+    "tail_s": 286.3,
+    "points": 21,
+    "actions": 461,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10437.680653773648,
+   "moved_m": 38143.40326886826,
+   "measures": 456,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 8922.9,
+    "fix_s": 1514.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 472,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8946.370674030151,
+   "moved_m": 31006.85337015077,
+   "measures": 448,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6250.5,
+    "fix_s": 1590.5,
+    "tail_s": 1105.4,
+    "points": 21,
+    "actions": 460,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9754.941557010336,
+   "moved_m": 34644.707785051694,
+   "measures": 454,
+   "clears": 28,
+   "failed": 16,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8126.5,
+    "fix_s": 1628.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 482,
+    "clears": 28,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9264.165479572375,
+   "moved_m": 32395.827397861904,
+   "measures": 451,
+   "clears": 18,
+   "failed": 3,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7667.4,
+    "fix_s": 1596.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9778.132284756133,
+   "moved_m": 34950.66142378067,
+   "measures": 452,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7736.3,
+    "fix_s": 2041.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9042.672027315804,
+   "moved_m": 31133.360136579064,
+   "measures": 452,
+   "clears": 29,
+   "failed": 18,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6825.8,
+    "fix_s": 1405.8,
+    "tail_s": 811.1,
+    "points": 21,
+    "actions": 481,
+    "clears": 29,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10624.180106849211,
+   "moved_m": 38525.90053424596,
+   "measures": 453,
+   "clears": 59,
+   "failed": 44,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 8063.7,
+    "fix_s": 1711.8,
+    "tail_s": 848.7,
+    "points": 21,
+    "actions": 512,
+    "clears": 59,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8818.10491587283,
+   "moved_m": 30210.52457936415,
+   "measures": 450,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6940.3,
+    "fix_s": 1877.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8741.766885306517,
+   "moved_m": 29448.834426532598,
+   "measures": 447,
+   "clears": 47,
+   "failed": 31,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6860.1,
+    "fix_s": 1881.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 494,
+    "clears": 47,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8888.014855118065,
+   "moved_m": 30600.074275590337,
+   "measures": 452,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6947.8,
+    "fix_s": 1455.4,
+    "tail_s": 484.8,
+    "points": 21,
+    "actions": 464,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 7934.599605411815,
+   "moved_m": 25947.998027059075,
+   "measures": 446,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 2112.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7863.7752268108925,
+   "moved_m": 25728.87613405448,
+   "measures": 445,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6466.6,
+    "fix_s": 1397.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 455,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8684.397375838753,
+   "moved_m": 29551.98687919377,
+   "measures": 451,
+   "clears": 15,
+   "failed": 2,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6870.4,
+    "fix_s": 1814.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8743.403000592292,
+   "moved_m": 29797.015002961492,
+   "measures": 450,
+   "clears": 19,
+   "failed": 4,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 6869.3,
+    "fix_s": 1874.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8271.132835636017,
+   "moved_m": 27700.664178180083,
+   "measures": 447,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 1,
+   "ndir_cleared": 1,
+   "stages": {
+    "scan_s": 5901.7,
+    "fix_s": 1860.9,
+    "tail_s": 508.5,
+    "points": 21,
+    "actions": 457,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10766.042168184116,
+   "moved_m": 39705.21084092059,
+   "measures": 455,
+   "clears": 24,
+   "failed": 9,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8198.8,
+    "fix_s": 1621.7,
+    "tail_s": 945.5,
+    "points": 21,
+    "actions": 479,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8024.09080543249,
+   "moved_m": 26445.454027162465,
+   "measures": 447,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6517.1,
+    "fix_s": 1507.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9516.97735888518,
+   "moved_m": 33779.886794425925,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7367.6,
+    "fix_s": 1564.9,
+    "tail_s": 584.5,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9178.49404014195,
+   "moved_m": 32132.47020070974,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 6964.2,
+    "fix_s": 1629.8,
+    "tail_s": 584.5,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8456.509977491223,
+   "moved_m": 28642.549887456124,
+   "measures": 445,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6551.6,
+    "fix_s": 1263.4,
+    "tail_s": 641.5,
+    "points": 21,
+    "actions": 457,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 11750.052449435185,
+   "moved_m": 44620.26224717592,
+   "measures": 461,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 9806.5,
+    "fix_s": 1283.4,
+    "tail_s": 660.2,
+    "points": 21,
+    "actions": 475,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9168.817637093001,
+   "moved_m": 31909.08818546497,
+   "measures": 448,
+   "clears": 25,
+   "failed": 12,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6671.6,
+    "fix_s": 1685.5,
+    "tail_s": 811.7,
+    "points": 21,
+    "actions": 473,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9611.431455917385,
+   "moved_m": 34302.157279586914,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6475.8,
+    "fix_s": 1920.1,
+    "tail_s": 1215.5,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8955.026114492464,
+   "moved_m": 30845.130572462334,
+   "measures": 453,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7575.6,
+    "fix_s": 1379.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8950.055974098159,
+   "moved_m": 30995.27987049079,
+   "measures": 448,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6668.9,
+    "fix_s": 2281.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8940.726795261264,
+   "moved_m": 30968.633976306315,
+   "measures": 450,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7357.4,
+    "fix_s": 1583.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 11578.493195039691,
+   "moved_m": 43737.46597519841,
+   "measures": 455,
+   "clears": 28,
+   "failed": 16,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8025.4,
+    "fix_s": 1395.6,
+    "tail_s": 2157.5,
+    "points": 21,
+    "actions": 483,
+    "clears": 28,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9272.300210680201,
+   "moved_m": 32221.501053400956,
+   "measures": 452,
+   "clears": 29,
+   "failed": 13,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6267.3,
+    "fix_s": 2009.9,
+    "tail_s": 995.2,
+    "points": 21,
+    "actions": 481,
+    "clears": 29,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9027.737242377525,
+   "moved_m": 31303.686211887634,
+   "measures": 450,
+   "clears": 15,
+   "failed": 1,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7591.6,
+    "fix_s": 1436.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 13157.181110193827,
+   "moved_m": 50785.90555096899,
+   "measures": 463,
+   "clears": 67,
+   "failed": 51,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 8657.0,
+    "fix_s": 1554.3,
+    "tail_s": 2945.9,
+    "points": 21,
+    "actions": 530,
+    "clears": 67,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10425.797915239913,
+   "moved_m": 38193.989576199565,
+   "measures": 454,
+   "clears": 14,
+   "failed": 1,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7327.0,
+    "fix_s": 1471.8,
+    "tail_s": 1627.0,
+    "points": 21,
+    "actions": 468,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8726.291508319882,
+   "moved_m": 29881.4575415994,
+   "measures": 449,
+   "clears": 13,
+   "failed": 3,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7282.1,
+    "fix_s": 1444.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9556.17646368556,
+   "moved_m": 33650.882318427844,
+   "measures": 455,
+   "clears": 25,
+   "failed": 11,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7809.5,
+    "fix_s": 1746.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 480,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9823.294116335832,
+   "moved_m": 34921.470581679154,
+   "measures": 456,
+   "clears": 26,
+   "failed": 10,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8191.3,
+    "fix_s": 1632.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 482,
+    "clears": 26,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10233.468836995526,
+   "moved_m": 36637.34418497754,
+   "measures": 451,
+   "clears": 60,
+   "failed": 48,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7677.3,
+    "fix_s": 1632.3,
+    "tail_s": 923.9,
+    "points": 21,
+    "actions": 511,
+    "clears": 60,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 12536.295694264703,
+   "moved_m": 47926.478471323404,
+   "measures": 460,
+   "clears": 58,
+   "failed": 45,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 9180.3,
+    "fix_s": 1631.3,
+    "tail_s": 1724.7,
+    "points": 21,
+    "actions": 518,
+    "clears": 58,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9003.086009103235,
+   "moved_m": 31185.430045516187,
+   "measures": 450,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7400.6,
+    "fix_s": 1602.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7628.2714204684335,
+   "moved_m": 24516.357102342175,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1806.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8582.588779955202,
+   "moved_m": 29257.943899776015,
+   "measures": 447,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6431.9,
+    "fix_s": 1673.6,
+    "tail_s": 477.1,
+    "points": 21,
+    "actions": 457,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 11371.007536578152,
+   "moved_m": 42805.03768289074,
+   "measures": 459,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8753.7,
+    "fix_s": 1254.4,
+    "tail_s": 1362.9,
+    "points": 21,
+    "actions": 472,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8261.212157394863,
+   "moved_m": 27596.060786974333,
+   "measures": 444,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6391.7,
+    "fix_s": 1869.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9005.010809853311,
+   "moved_m": 31105.054049266542,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6516.7,
+    "fix_s": 1796.7,
+    "tail_s": 691.6,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8563.181293032929,
+   "moved_m": 29005.90646516466,
+   "measures": 451,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7023.0,
+    "fix_s": 1540.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9352.622019221304,
+   "moved_m": 32623.110096106582,
+   "measures": 450,
+   "clears": 33,
+   "failed": 17,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6222.5,
+    "fix_s": 1677.2,
+    "tail_s": 1452.9,
+    "points": 21,
+    "actions": 483,
+    "clears": 33,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9292.874170596138,
+   "moved_m": 32599.3708529807,
+   "measures": 451,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6892.9,
+    "fix_s": 1425.1,
+    "tail_s": 974.9,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9014.49812271489,
+   "moved_m": 31212.490613574457,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7125.1,
+    "fix_s": 1581.9,
+    "tail_s": 307.5,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9098.68658540192,
+   "moved_m": 31768.432927009606,
+   "measures": 447,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6948.4,
+    "fix_s": 1725.3,
+    "tail_s": 425.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10916.635001431476,
+   "moved_m": 40613.17500715739,
+   "measures": 455,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7981.9,
+    "fix_s": 1528.5,
+    "tail_s": 1406.3,
+    "points": 21,
+    "actions": 469,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8970.934031349,
+   "moved_m": 31029.67015674502,
+   "measures": 451,
+   "clears": 14,
+   "failed": 3,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6372.7,
+    "fix_s": 1481.1,
+    "tail_s": 1117.2,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8148.90434487101,
+   "moved_m": 26969.52172435505,
+   "measures": 449,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6652.7,
+    "fix_s": 1496.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9474.785175218823,
+   "moved_m": 33538.925876094094,
+   "measures": 448,
+   "clears": 20,
+   "failed": 9,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7044.2,
+    "fix_s": 1800.5,
+    "tail_s": 630.1,
+    "points": 21,
+    "actions": 468,
+    "clears": 20,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 11185.331306062983,
+   "moved_m": 41791.65653031492,
+   "measures": 461,
+   "clears": 15,
+   "failed": 2,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8616.8,
+    "fix_s": 1403.1,
+    "tail_s": 1165.4,
+    "points": 21,
+    "actions": 476,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8874.702872170585,
+   "moved_m": 30458.514360852936,
+   "measures": 452,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6949.6,
+    "fix_s": 1925.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7923.348427648734,
+   "moved_m": 25896.742138243695,
+   "measures": 447,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6093.5,
+    "fix_s": 1829.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 10055.300967867111,
+   "moved_m": 36286.50483933554,
+   "measures": 455,
+   "clears": 18,
+   "failed": 8,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7848.9,
+    "fix_s": 1336.9,
+    "tail_s": 869.6,
+    "points": 21,
+    "actions": 473,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9775.445667783362,
+   "moved_m": 34942.228338916815,
+   "measures": 453,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7357.4,
+    "fix_s": 1352.2,
+    "tail_s": 1065.9,
+    "points": 21,
+    "actions": 468,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8775.66158145457,
+   "moved_m": 29968.30790727284,
+   "measures": 452,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7152.4,
+    "fix_s": 1372.7,
+    "tail_s": 250.6,
+    "points": 21,
+    "actions": 467,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9943.58081836739,
+   "moved_m": 35727.904091836965,
+   "measures": 454,
+   "clears": 16,
+   "failed": 1,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6300.3,
+    "fix_s": 2146.5,
+    "tail_s": 1496.7,
+    "points": 21,
+    "actions": 470,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8339.047585595874,
+   "moved_m": 28045.23792797938,
+   "measures": 446,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6316.4,
+    "fix_s": 1765.8,
+    "tail_s": 256.8,
+    "points": 21,
+    "actions": 457,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 12145.64600566737,
+   "moved_m": 46333.23002833683,
+   "measures": 466,
+   "clears": 22,
+   "failed": 7,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8870.4,
+    "fix_s": 2064.4,
+    "tail_s": 1210.8,
+    "points": 21,
+    "actions": 488,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9552.502332740622,
+   "moved_m": 33957.51166370313,
+   "measures": 449,
+   "clears": 15,
+   "failed": 2,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7767.5,
+    "fix_s": 1459.5,
+    "tail_s": 325.5,
+    "points": 21,
+    "actions": 464,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8976.264374588494,
+   "moved_m": 31021.32187294248,
+   "measures": 451,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6894.7,
+    "fix_s": 1774.3,
+    "tail_s": 307.3,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8586.177777857843,
+   "moved_m": 29070.888889289243,
+   "measures": 451,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6744.6,
+    "fix_s": 1841.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8370.927162561966,
+   "moved_m": 27999.635812809847,
+   "measures": 451,
+   "clears": 14,
+   "failed": 1,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6140.5,
+    "fix_s": 1801.9,
+    "tail_s": 428.5,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8039.169108795926,
+   "moved_m": 26575.84554397964,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6578.0,
+    "fix_s": 1461.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10206.70301477621,
+   "moved_m": 37143.51507388104,
+   "measures": 453,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8686.9,
+    "fix_s": 1519.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8644.885970852818,
+   "moved_m": 29549.429854264105,
+   "measures": 447,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6725.8,
+    "fix_s": 1523.9,
+    "tail_s": 395.2,
+    "points": 21,
+    "actions": 458,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9538.351492321859,
+   "moved_m": 33861.75746160928,
+   "measures": 450,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6464.0,
+    "fix_s": 1791.3,
+    "tail_s": 1283.1,
+    "points": 21,
+    "actions": 464,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10499.564886334936,
+   "moved_m": 38477.82443167471,
+   "measures": 455,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8105.8,
+    "fix_s": 2393.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 471,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7806.00660397928,
+   "moved_m": 25300.033019896404,
+   "measures": 447,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1983.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 11370.113512429074,
+   "moved_m": 42510.56756214534,
+   "measures": 457,
+   "clears": 34,
+   "failed": 19,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8659.0,
+    "fix_s": 1877.7,
+    "tail_s": 833.3,
+    "points": 21,
+    "actions": 491,
+    "clears": 34,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8552.59616520381,
+   "moved_m": 28992.98082601905,
+   "measures": 447,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6957.7,
+    "fix_s": 1594.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 11316.923912248496,
+   "moved_m": 42534.619561242485,
+   "measures": 458,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 9489.7,
+    "fix_s": 1522.5,
+    "tail_s": 304.7,
+    "points": 21,
+    "actions": 472,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7555.953429886041,
+   "moved_m": 24169.767149430227,
+   "measures": 445,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6379.1,
+    "fix_s": 1176.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9437.671439376132,
+   "moved_m": 33368.357196880694,
+   "measures": 448,
+   "clears": 18,
+   "failed": 6,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7117.5,
+    "fix_s": 1831.9,
+    "tail_s": 488.4,
+    "points": 21,
+    "actions": 466,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8903.451979599029,
+   "moved_m": 30657.25989799517,
+   "measures": 451,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7091.0,
+    "fix_s": 1812.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8239.325620247886,
+   "moved_m": 27506.628101239432,
+   "measures": 444,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 5936.1,
+    "fix_s": 1680.9,
+    "tail_s": 622.3,
+    "points": 21,
+    "actions": 459,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9312.753564159928,
+   "moved_m": 32478.767820799687,
+   "measures": 452,
+   "clears": 27,
+   "failed": 12,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7051.0,
+    "fix_s": 1536.1,
+    "tail_s": 725.7,
+    "points": 21,
+    "actions": 479,
+    "clears": 27,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8981.49280671928,
+   "moved_m": 31017.464033596425,
+   "measures": 453,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6908.1,
+    "fix_s": 1461.5,
+    "tail_s": 611.9,
+    "points": 21,
+    "actions": 466,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9459.531359884186,
+   "moved_m": 33137.656799420874,
+   "measures": 452,
+   "clears": 33,
+   "failed": 20,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6786.9,
+    "fix_s": 1797.6,
+    "tail_s": 875.0,
+    "points": 21,
+    "actions": 485,
+    "clears": 33,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10277.095935588412,
+   "moved_m": 37440.47967794207,
+   "measures": 452,
+   "clears": 17,
+   "failed": 1,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 8090.2,
+    "fix_s": 1437.9,
+    "tail_s": 749.0,
+    "points": 21,
+    "actions": 469,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8663.700362584275,
+   "moved_m": 29488.501812921397,
+   "measures": 449,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6609.2,
+    "fix_s": 2054.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8266.010360074317,
+   "moved_m": 27525.05180037159,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6602.7,
+    "fix_s": 1663.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8931.990734527884,
+   "moved_m": 30884.953672639418,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7375.6,
+    "fix_s": 1556.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8354.8882746177,
+   "moved_m": 27894.44137308848,
+   "measures": 446,
+   "clears": 25,
+   "failed": 12,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5995.8,
+    "fix_s": 1828.5,
+    "tail_s": 530.6,
+    "points": 21,
+    "actions": 471,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7869.246589905897,
+   "moved_m": 25671.232949529494,
+   "measures": 446,
+   "clears": 14,
+   "failed": 4,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6285.1,
+    "fix_s": 1584.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 460,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8457.645236097324,
+   "moved_m": 28543.22618048663,
+   "measures": 448,
+   "clears": 14,
+   "failed": 3,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6961.6,
+    "fix_s": 1496.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8854.129625065776,
+   "moved_m": 30430.64812532889,
+   "measures": 451,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6758.9,
+    "fix_s": 1510.0,
+    "tail_s": 585.2,
+    "points": 21,
+    "actions": 464,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8221.868546241887,
+   "moved_m": 27359.342731209454,
+   "measures": 447,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 6301.6,
+    "fix_s": 1920.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9309.384523772442,
+   "moved_m": 32546.922618862223,
+   "measures": 454,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7170.6,
+    "fix_s": 2138.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 470,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 10245.363015696365,
+   "moved_m": 37181.81507848176,
+   "measures": 454,
+   "clears": 23,
+   "failed": 12,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8471.3,
+    "fix_s": 1350.1,
+    "tail_s": 423.9,
+    "points": 21,
+    "actions": 477,
+    "clears": 23,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8216.547727535171,
+   "moved_m": 27307.738637675866,
+   "measures": 449,
+   "clears": 13,
+   "failed": 1,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 5888.1,
+    "fix_s": 1908.8,
+    "tail_s": 419.7,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8348.596976468178,
+   "moved_m": 27957.984882340894,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6775.0,
+    "fix_s": 1573.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9410.429294959178,
+   "moved_m": 33182.14647479592,
+   "measures": 453,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7181.5,
+    "fix_s": 1539.7,
+    "tail_s": 689.2,
+    "points": 21,
+    "actions": 465,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7984.422066892383,
+   "moved_m": 26272.110334461933,
+   "measures": 447,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6482.0,
+    "fix_s": 1502.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 457,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 11008.60048779318,
+   "moved_m": 40238.00243896572,
+   "measures": 452,
+   "clears": 75,
+   "failed": 61,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7785.9,
+    "fix_s": 1610.6,
+    "tail_s": 1612.1,
+    "points": 21,
+    "actions": 527,
+    "clears": 75,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9005.04983390622,
+   "moved_m": 31015.249169531147,
+   "measures": 448,
+   "clears": 30,
+   "failed": 17,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6899.4,
+    "fix_s": 1517.4,
+    "tail_s": 588.2,
+    "points": 21,
+    "actions": 478,
+    "clears": 30,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8342.436429338823,
+   "moved_m": 28017.18214669411,
+   "measures": 448,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7223.5,
+    "fix_s": 1118.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7945.566134701902,
+   "moved_m": 26082.83067350952,
+   "measures": 446,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6533.3,
+    "fix_s": 1412.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 457,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 11905.593639189969,
+   "moved_m": 45562.96819594983,
+   "measures": 454,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 9293.2,
+    "fix_s": 1340.0,
+    "tail_s": 1272.4,
+    "points": 21,
+    "actions": 469,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10941.938593809495,
+   "moved_m": 40594.69296904745,
+   "measures": 456,
+   "clears": 22,
+   "failed": 9,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7797.5,
+    "fix_s": 1664.6,
+    "tail_s": 1479.8,
+    "points": 21,
+    "actions": 478,
+    "clears": 22,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10515.083490499863,
+   "moved_m": 38610.41745249933,
+   "measures": 453,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8097.2,
+    "fix_s": 1825.6,
+    "tail_s": 592.3,
+    "points": 21,
+    "actions": 469,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 8641.50544473479,
+   "moved_m": 29377.527223673984,
+   "measures": 448,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6474.1,
+    "fix_s": 2167.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 10211.790375919614,
+   "moved_m": 37083.95187959812,
+   "measures": 455,
+   "clears": 17,
+   "failed": 7,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8003.4,
+    "fix_s": 919.3,
+    "tail_s": 1289.1,
+    "points": 21,
+    "actions": 472,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8478.566387929264,
+   "moved_m": 28707.831939646316,
+   "measures": 445,
+   "clears": 15,
+   "failed": 3,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6565.0,
+    "fix_s": 1524.3,
+    "tail_s": 389.3,
+    "points": 21,
+    "actions": 460,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8601.517556823803,
+   "moved_m": 29007.587784118958,
+   "measures": 447,
+   "clears": 31,
+   "failed": 18,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6173.4,
+    "fix_s": 1936.8,
+    "tail_s": 491.3,
+    "points": 21,
+    "actions": 478,
+    "clears": 31,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10003.456342795993,
+   "moved_m": 36027.28171397996,
+   "measures": 454,
+   "clears": 19,
+   "failed": 7,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7853.8,
+    "fix_s": 1210.4,
+    "tail_s": 939.3,
+    "points": 21,
+    "actions": 473,
+    "clears": 19,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8147.72917315673,
+   "moved_m": 26873.64586578366,
+   "measures": 449,
+   "clears": 17,
+   "failed": 2,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6149.0,
+    "fix_s": 1998.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 11055.610891475762,
+   "moved_m": 41188.05445737881,
+   "measures": 458,
+   "clears": 16,
+   "failed": 1,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 8949.1,
+    "fix_s": 1498.5,
+    "tail_s": 608.0,
+    "points": 21,
+    "actions": 474,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10585.974766070152,
+   "moved_m": 38209.87383035063,
+   "measures": 457,
+   "clears": 61,
+   "failed": 48,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8360.2,
+    "fix_s": 1442.6,
+    "tail_s": 783.2,
+    "points": 21,
+    "actions": 518,
+    "clears": 61,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9077.911814599474,
+   "moved_m": 31544.559072997385,
+   "measures": 453,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7109.9,
+    "fix_s": 1574.2,
+    "tail_s": 393.9,
+    "points": 21,
+    "actions": 464,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9267.579834466022,
+   "moved_m": 32447.899172330122,
+   "measures": 452,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7520.6,
+    "fix_s": 1747.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8692.73637821467,
+   "moved_m": 29718.681891073356,
+   "measures": 447,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7379.4,
+    "fix_s": 1313.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9061.771042447459,
+   "moved_m": 31473.855212237293,
+   "measures": 454,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 8051.1,
+    "fix_s": 1010.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10029.806522903886,
+   "moved_m": 36074.03261451945,
+   "measures": 457,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8081.0,
+    "fix_s": 1948.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 473,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9501.2392994313,
+   "moved_m": 33671.1964971565,
+   "measures": 451,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7787.1,
+    "fix_s": 1714.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9318.109394083227,
+   "moved_m": 32765.546970416108,
+   "measures": 449,
+   "clears": 18,
+   "failed": 8,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6957.6,
+    "fix_s": 1674.5,
+    "tail_s": 686.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8137.885381180616,
+   "moved_m": 26909.42690590309,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6292.8,
+    "fix_s": 1845.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9253.954744311692,
+   "moved_m": 32404.773721558457,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7733.0,
+    "fix_s": 1521.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9317.23549265268,
+   "moved_m": 32501.177463263448,
+   "measures": 453,
+   "clears": 25,
+   "failed": 10,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7514.3,
+    "fix_s": 1802.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 478,
+    "clears": 25,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9199.95615449403,
+   "moved_m": 32094.78077247014,
+   "measures": 452,
+   "clears": 15,
+   "failed": 1,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6834.9,
+    "fix_s": 1785.9,
+    "tail_s": 579.2,
+    "points": 21,
+    "actions": 467,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9432.424820646216,
+   "moved_m": 33117.12410323103,
+   "measures": 450,
+   "clears": 28,
+   "failed": 14,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6849.7,
+    "fix_s": 2015.8,
+    "tail_s": 566.8,
+    "points": 21,
+    "actions": 478,
+    "clears": 28,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9063.503330163927,
+   "moved_m": 31342.516650819645,
+   "measures": 451,
+   "clears": 21,
+   "failed": 6,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6578.7,
+    "fix_s": 1889.2,
+    "tail_s": 595.6,
+    "points": 21,
+    "actions": 472,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8540.139539538137,
+   "moved_m": 29005.69769769066,
+   "measures": 445,
+   "clears": 17,
+   "failed": 7,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6625.9,
+    "fix_s": 1254.3,
+    "tail_s": 659.9,
+    "points": 21,
+    "actions": 462,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7900.9398724262,
+   "moved_m": 25879.699362131003,
+   "measures": 446,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5883.4,
+    "fix_s": 1539.3,
+    "tail_s": 478.2,
+    "points": 21,
+    "actions": 456,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9185.294542540832,
+   "moved_m": 32006.47271270418,
+   "measures": 454,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7543.6,
+    "fix_s": 1641.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7440.52055103506,
+   "moved_m": 23522.602755175296,
+   "measures": 446,
+   "clears": 13,
+   "failed": 2,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1618.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10970.862298025382,
+   "moved_m": 40939.31149012693,
+   "measures": 453,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7930.6,
+    "fix_s": 1465.4,
+    "tail_s": 1574.8,
+    "points": 21,
+    "actions": 467,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9717.913239760499,
+   "moved_m": 34694.5661988025,
+   "measures": 456,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6860.5,
+    "fix_s": 1323.2,
+    "tail_s": 1534.2,
+    "points": 21,
+    "actions": 466,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9062.639804917688,
+   "moved_m": 31423.199024588477,
+   "measures": 451,
+   "clears": 18,
+   "failed": 7,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 7396.0,
+    "fix_s": 1099.1,
+    "tail_s": 567.5,
+    "points": 21,
+    "actions": 469,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9616.085535715993,
+   "moved_m": 34005.42767858001,
+   "measures": 455,
+   "clears": 20,
+   "failed": 5,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7804.9,
+    "fix_s": 1811.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 475,
+    "clears": 20,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9332.99010826079,
+   "moved_m": 32809.950541303944,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7981.6,
+    "fix_s": 1351.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9753.94887544122,
+   "moved_m": 34774.74437720611,
+   "measures": 458,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7044.8,
+    "fix_s": 1488.1,
+    "tail_s": 1221.1,
+    "points": 21,
+    "actions": 470,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 11516.272175898277,
+   "moved_m": 43556.36087949135,
+   "measures": 451,
+   "clears": 24,
+   "failed": 8,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8610.1,
+    "fix_s": 1922.2,
+    "tail_s": 984.0,
+    "points": 21,
+    "actions": 475,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8437.923263855811,
+   "moved_m": 28439.616319279066,
+   "measures": 448,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6919.3,
+    "fix_s": 1518.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9612.924827452938,
+   "moved_m": 34329.62413726469,
+   "measures": 450,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7768.3,
+    "fix_s": 1502.3,
+    "tail_s": 342.3,
+    "points": 21,
+    "actions": 460,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9226.390415085394,
+   "moved_m": 32261.952075426987,
+   "measures": 450,
+   "clears": 16,
+   "failed": 1,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7558.5,
+    "fix_s": 1667.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 7741.820392381557,
+   "moved_m": 25039.101961907785,
+   "measures": 445,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1919.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9005.277382115628,
+   "moved_m": 31166.386910578156,
+   "measures": 452,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7306.6,
+    "fix_s": 1698.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10100.676134294576,
+   "moved_m": 35923.380671472754,
+   "measures": 451,
+   "clears": 62,
+   "failed": 48,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6257.8,
+    "fix_s": 1829.2,
+    "tail_s": 2013.6,
+    "points": 21,
+    "actions": 513,
+    "clears": 62,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8508.876377898894,
+   "moved_m": 28674.381889494492,
+   "measures": 451,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6467.7,
+    "fix_s": 2041.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8704.891958256378,
+   "moved_m": 29584.459791281926,
+   "measures": 453,
+   "clears": 18,
+   "failed": 7,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 7518.9,
+    "fix_s": 1186.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 471,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8452.354836157885,
+   "moved_m": 28481.774180789427,
+   "measures": 449,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6824.7,
+    "fix_s": 1627.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8912.765961260817,
+   "moved_m": 30793.829806304057,
+   "measures": 447,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7267.2,
+    "fix_s": 1645.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 7853.590054909743,
+   "moved_m": 25502.950274548723,
+   "measures": 446,
+   "clears": 18,
+   "failed": 6,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 2031.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8609.62896340092,
+   "moved_m": 29218.144817004613,
+   "measures": 449,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6973.0,
+    "fix_s": 1636.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9169.765641829657,
+   "moved_m": 32073.828209148298,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7241.4,
+    "fix_s": 1382.5,
+    "tail_s": 545.9,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 8238.78540039795,
+   "moved_m": 27398.927001989756,
+   "measures": 451,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6277.0,
+    "fix_s": 1961.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9970.996045426742,
+   "moved_m": 35944.9802271337,
+   "measures": 452,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7591.9,
+    "fix_s": 1748.0,
+    "tail_s": 631.1,
+    "points": 21,
+    "actions": 467,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9326.97149446578,
+   "moved_m": 32854.85747232892,
+   "measures": 449,
+   "clears": 15,
+   "failed": 5,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7444.2,
+    "fix_s": 1264.4,
+    "tail_s": 618.4,
+    "points": 21,
+    "actions": 464,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7897.102474822027,
+   "moved_m": 25870.51237411014,
+   "measures": 445,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6503.7,
+    "fix_s": 1393.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9048.143452497037,
+   "moved_m": 31465.717262485192,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 6711.7,
+    "fix_s": 1383.1,
+    "tail_s": 953.4,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8240.091090160431,
+   "moved_m": 27525.45545080217,
+   "measures": 448,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7043.7,
+    "fix_s": 1196.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 7802.482804429443,
+   "moved_m": 25347.414022147233,
+   "measures": 446,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6622.0,
+    "fix_s": 1180.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 458,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9736.349461816106,
+   "moved_m": 34376.747309080514,
+   "measures": 453,
+   "clears": 39,
+   "failed": 23,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7148.3,
+    "fix_s": 1465.1,
+    "tail_s": 1122.9,
+    "points": 21,
+    "actions": 492,
+    "clears": 39,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8519.961806493282,
+   "moved_m": 28804.809032466423,
+   "measures": 448,
+   "clears": 15,
+   "failed": 1,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6643.6,
+    "fix_s": 1876.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7446.441631875428,
+   "moved_m": 23667.208159377155,
+   "measures": 444,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1624.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 454,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9366.032633444845,
+   "moved_m": 32950.16316722424,
+   "measures": 452,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7979.5,
+    "fix_s": 1386.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8112.075134037443,
+   "moved_m": 26870.375670187226,
+   "measures": 445,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6463.1,
+    "fix_s": 1648.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 459,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8679.222838866292,
+   "moved_m": 29541.11419433148,
+   "measures": 450,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7012.0,
+    "fix_s": 1667.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 465,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 11773.95719038695,
+   "moved_m": 44924.78595193472,
+   "measures": 458,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 8910.7,
+    "fix_s": 1394.0,
+    "tail_s": 1469.3,
+    "points": 21,
+    "actions": 468,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 7444.870640771827,
+   "moved_m": 23609.353203859155,
+   "measures": 444,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1622.8,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9467.538010297263,
+   "moved_m": 33502.69005148634,
+   "measures": 450,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7095.1,
+    "fix_s": 1726.4,
+    "tail_s": 646.0,
+    "points": 21,
+    "actions": 464,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 9328.038133116486,
+   "moved_m": 32860.19066558246,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8004.7,
+    "fix_s": 1323.4,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 8424.248164172788,
+   "moved_m": 28341.24082086394,
+   "measures": 448,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 6426.1,
+    "fix_s": 1998.2,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 10462.948751466613,
+   "moved_m": 37754.743757332944,
+   "measures": 453,
+   "clears": 59,
+   "failed": 47,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7300.3,
+    "fix_s": 1197.9,
+    "tail_s": 1964.8,
+    "points": 21,
+    "actions": 512,
+    "clears": 59,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 9061.423427810782,
+   "moved_m": 31452.11713905393,
+   "measures": 449,
+   "clears": 18,
+   "failed": 5,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7135.4,
+    "fix_s": 1642.1,
+    "tail_s": 284.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9844.329853896648,
+   "moved_m": 34931.649269483205,
+   "measures": 455,
+   "clears": 34,
+   "failed": 18,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 7434.3,
+    "fix_s": 1878.7,
+    "tail_s": 531.3,
+    "points": 21,
+    "actions": 489,
+    "clears": 34,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 7846.2595859180665,
+   "moved_m": 25481.297929590342,
+   "measures": 447,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6183.8,
+    "fix_s": 1662.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 10144.940048086237,
+   "moved_m": 36834.70024043119,
+   "measures": 453,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6931.3,
+    "fix_s": 2022.6,
+    "tail_s": 1191.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 13,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8072.689189882364,
+   "moved_m": 26548.445949411824,
+   "measures": 453,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6927.4,
+    "fix_s": 1145.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 463,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9218.818714724881,
+   "moved_m": 32284.09357362443,
+   "measures": 452,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 7296.1,
+    "fix_s": 1328.4,
+    "tail_s": 594.3,
+    "points": 21,
+    "actions": 463,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 8520.85373625557,
+   "moved_m": 28824.26868127785,
+   "measures": 450,
+   "clears": 12,
+   "failed": 0,
+   "ndir": 2,
+   "ndir_cleared": 2,
+   "stages": {
+    "scan_s": 7060.7,
+    "fix_s": 1460.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 462,
+    "clears": 12,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8881.21758315327,
+   "moved_m": 30656.087915766344,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 7890.2,
+    "fix_s": 991.1,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9763.710745433742,
+   "moved_m": 34908.553727168706,
+   "measures": 452,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 7362.1,
+    "fix_s": 1863.5,
+    "tail_s": 538.1,
+    "points": 21,
+    "actions": 467,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 9978.453743750775,
+   "moved_m": 35872.26871875389,
+   "measures": 456,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8345.9,
+    "fix_s": 1632.5,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 471,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9544.94637499683,
+   "moved_m": 33839.73187498418,
+   "measures": 452,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 8001.2,
+    "fix_s": 1543.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 466,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 7367.715875815033,
+   "moved_m": 23218.57937907517,
+   "measures": 445,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1545.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 456,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10382.662823759792,
+   "moved_m": 37863.314118798924,
+   "measures": 456,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 11,
+   "ndir_cleared": 11,
+   "stages": {
+    "scan_s": 8496.6,
+    "fix_s": 1886.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 472,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 7404.998252323095,
+   "moved_m": 23429.991261615487,
+   "measures": 445,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 5822.1,
+    "fix_s": 1582.9,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 455,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 9689.044020979454,
+   "moved_m": 34505.220104897264,
+   "measures": 452,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7317.0,
+    "fix_s": 1486.1,
+    "tail_s": 885.9,
+    "points": 21,
+    "actions": 468,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9851.099629923085,
+   "moved_m": 35505.498149615436,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7192.4,
+    "fix_s": 1060.0,
+    "tail_s": 1598.7,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8417.034482407193,
+   "moved_m": 28370.17241203597,
+   "measures": 449,
+   "clears": 11,
+   "failed": 1,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 6462.6,
+    "fix_s": 1287.2,
+    "tail_s": 667.2,
+    "points": 21,
+    "actions": 460,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9849.675270444186,
+   "moved_m": 35278.37635222096,
+   "measures": 455,
+   "clears": 14,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 6853.4,
+    "fix_s": 1867.6,
+    "tail_s": 1128.7,
+    "points": 21,
+    "actions": 469,
+    "clears": 14,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 8889.934338205741,
+   "moved_m": 30544.6716910287,
+   "measures": 451,
+   "clears": 16,
+   "failed": 1,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 6859.4,
+    "fix_s": 2030.6,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 467,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 10690.979051979612,
+   "moved_m": 39354.89525989804,
+   "measures": 456,
+   "clears": 21,
+   "failed": 7,
+   "ndir": 9,
+   "ndir_cleared": 9,
+   "stages": {
+    "scan_s": 8286.3,
+    "fix_s": 1470.4,
+    "tail_s": 934.3,
+    "points": 21,
+    "actions": 477,
+    "clears": 21,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10899.474311889046,
+   "moved_m": 40472.37155944523,
+   "measures": 455,
+   "clears": 17,
+   "failed": 2,
+   "ndir": 10,
+   "ndir_cleared": 10,
+   "stages": {
+    "scan_s": 7969.6,
+    "fix_s": 1833.3,
+    "tail_s": 1096.6,
+    "points": 21,
+    "actions": 472,
+    "clears": 17,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 15,
+   "total": 15,
+   "virtual_s": 10739.331381767974,
+   "moved_m": 39736.65690883988,
+   "measures": 454,
+   "clears": 15,
+   "failed": 0,
+   "ndir": 8,
+   "ndir_cleared": 8,
+   "stages": {
+    "scan_s": 8492.2,
+    "fix_s": 1371.6,
+    "tail_s": 875.5,
+    "points": 21,
+    "actions": 469,
+    "clears": 15,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 16,
+   "total": 16,
+   "virtual_s": 10689.786165770865,
+   "moved_m": 39403.930828854296,
+   "measures": 456,
+   "clears": 16,
+   "failed": 0,
+   "ndir": 12,
+   "ndir_cleared": 12,
+   "stages": {
+    "scan_s": 9385.1,
+    "fix_s": 1304.7,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 472,
+    "clears": 16,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 11,
+   "total": 11,
+   "virtual_s": 9582.225106225389,
+   "moved_m": 34156.12553112695,
+   "measures": 450,
+   "clears": 11,
+   "failed": 0,
+   "ndir": 6,
+   "ndir_cleared": 6,
+   "stages": {
+    "scan_s": 8095.9,
+    "fix_s": 1486.3,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 11,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 8616.083493024942,
+   "moved_m": 29270.417465124723,
+   "measures": 453,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 7,
+   "ndir_cleared": 7,
+   "stages": {
+    "scan_s": 6426.7,
+    "fix_s": 1566.7,
+    "tail_s": 622.7,
+    "points": 21,
+    "actions": 463,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 14,
+   "total": 14,
+   "virtual_s": 9808.809375966588,
+   "moved_m": 34954.0468798329,
+   "measures": 454,
+   "clears": 24,
+   "failed": 10,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 7542.4,
+    "fix_s": 1673.6,
+    "tail_s": 592.8,
+    "points": 21,
+    "actions": 478,
+    "clears": 24,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 12,
+   "total": 12,
+   "virtual_s": 11698.801480781392,
+   "moved_m": 44474.00740390698,
+   "measures": 455,
+   "clears": 18,
+   "failed": 6,
+   "ndir": 3,
+   "ndir_cleared": 3,
+   "stages": {
+    "scan_s": 8539.5,
+    "fix_s": 1534.7,
+    "tail_s": 1624.6,
+    "points": 21,
+    "actions": 473,
+    "clears": 18,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 10,
+   "total": 10,
+   "virtual_s": 9059.674933921891,
+   "moved_m": 31543.37466960947,
+   "measures": 451,
+   "clears": 10,
+   "failed": 0,
+   "ndir": 4,
+   "ndir_cleared": 4,
+   "stages": {
+    "scan_s": 7627.7,
+    "fix_s": 1432.0,
+    "tail_s": 0.0,
+    "points": 21,
+    "actions": 461,
+    "clears": 10,
+    "budget_hit": false
+   }
+  },
+  {
+   "cleared": 13,
+   "total": 13,
+   "virtual_s": 8343.64991200488,
+   "moved_m": 27903.24956002439,
+   "measures": 450,
+   "clears": 13,
+   "failed": 0,
+   "ndir": 5,
+   "ndir_cleared": 5,
+   "stages": {
+    "scan_s": 5929.7,
+    "fix_s": 1898.8,
+    "tail_s": 515.1,
+    "points": 21,
+    "actions": 463,
+    "clears": 13,
+    "budget_hit": false
+   }
+  }
+ ]
+}

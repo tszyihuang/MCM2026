@@ -29,3 +29,10 @@ Thumbs.db
 # ---- 临时输出 ----
 output/
 tmp/
+
+# ---- LaTeX 编译中间产物（paper/ 下的 main.pdf 保留作预览）----
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/preview/

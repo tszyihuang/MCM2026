@@ -4,7 +4,7 @@
     python tools/quick_check.py [base_url] [team_id]
 
 退出码 0 表示示例序列全部按预期被接受。这里**不是**完整测试套件
-(完整套件见 ``python -m unittest discover -s tests -t .``, 一键自检见
+(完整套件见 ``python -m unittest discover -s tools/tests -t .``, 一键自检见
 ``python tools/smoke_test.py``), 它的价值是在现场排障时用一条命令取证。
 """
 import json

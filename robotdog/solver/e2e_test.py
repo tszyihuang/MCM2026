@@ -1,4 +1,4 @@
-"""端到端验证: 真实进程 + 真实 HTTP + 真实模拟器, 跑完整一局问题3.
+"""端到端验证: 真实进程 + 真实 HTTP + 真实模拟器, 跑完整一局问题3 / 问题4.
 
 与 ``solver/eval.py`` 的区别: 那里是进程内直接调用引擎 (快, 用于批量评测);
 这里启动**真正的模拟器进程**, 机器狗程序通过 HTTP+JSON 通信, 用于验证:
@@ -11,6 +11,7 @@
 
     python -m robotdog.solver.e2e_test --runs 3
     python -m robotdog.solver.e2e_test --runs 3 --seed 9500
+    python -m robotdog.solver.e2e_test --runs 3 --problem 4
 
 端到端与进程内口径必须一致 —— 这是"成绩可迁移"的必要条件。
 """
@@ -114,7 +115,7 @@ def run_one(seed: Optional[int], timeout: float = 300.0, countdown: float = 1.0,
 def main(argv: Optional[List[str]] = None) -> int:
     ap = argparse.ArgumentParser(description="端到端验证 (真实进程 + HTTP)")
     ap.add_argument("--runs", type=int, default=3)
-    ap.add_argument("--problem", type=int, default=3, choices=(3,))
+    ap.add_argument("--problem", type=int, default=3, choices=(3, 4))
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--json-out", default="")
     args = ap.parse_args(argv)

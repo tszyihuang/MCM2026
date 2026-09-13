@@ -236,7 +236,7 @@ def main() -> int:
 
     # ---------------- 3. 真实进程端到端 ----------------
     print("\n[3] 机器狗程序端到端演练 (真实进程 + HTTP)")
-    for problem, seed in ((3, 1001),):
+    for problem, seed in ((3, 1001), (4, 1001)):
         info = manager.start_test("q%d_practice" % problem, seed=seed)
         code2 = info["case_code"]
         wait_interface_open(manager)
@@ -330,7 +330,7 @@ def main() -> int:
     if args.full:
         print("\n[5] 完整测试套件 (unittest)")
         result = subprocess.run(
-            [sys.executable, "-W", "ignore::ResourceWarning", "-m", "unittest", "discover", "-s", "tests", "-t", "."],
+            [sys.executable, "-W", "ignore::ResourceWarning", "-m", "unittest", "discover", "-s", "tools/tests", "-t", "."],
             cwd=ROOT, capture_output=True, text=True, encoding="utf-8",
         )
         tail = (result.stderr or "")[-1500:]

@@ -25,11 +25,21 @@ import numpy as np
 
 from . import ops
 from .belief import SIGMA_RAD, ChannelTrack, max_eig
+from .belief import GRID_STEP
 from ..consts import N_CHANNELS, RADIUS_MAX_M, RADIUS_MIN_M, SPEED_MPS
 from .world import World
 
 Vec = Tuple[float, float]
 LATTICE = ops.build_lattice()
+# 覆盖收尾的候选点: 允许站到圆域外(题目只限制坐标绝对值, 不限制活动范围),
+# 用同一六角格点铺到 2800 m = 1800 m(圆域) + 1000 m(有效接收半径)。
+COVER_LATTICE = ops.build_lattice(ops.LATTICE_SPACING, 2800.0)
+# 覆盖判据里的"有效覆盖半径": 占用网格的格点代表 100 m×100 m 的区域, 格心被覆盖
+# 不等于圆域内任一点都被覆盖。把圆域按 25 m 采样, 测出"任一点到最近格心"的最大
+# 距离 δ_max = 106 m (边界处格心被 r<=1800 裁掉, 所以比格内半对角 71 m 更大)。
+# 取 1000 - 106 - 4 = 890 m, 则"格心被 890 m 覆盖 ⇒ 圆域内任一点到该测点距离
+# ≤ 996 m ≤ R (题目给定 R>=1000)" —— 这才让"覆盖完成 ⇒ 必被发现"成为严格结论。
+COVER_RADIUS_M = RADIUS_MIN_M - 110.0
 # 信息点搜索用的粗格点: 全格点约 1000 个, 每点要做 20 次"格点核积分",
 # 逐步全算会让单局慢一个数量级; 每 4 个取 1 个 (间距 3.2 km / 4 ≈ 800 m → 2.2 km)
 # 对"去哪儿测一轮"这种粗决策完全够用。
@@ -92,14 +102,22 @@ class SweepConfig:
     # --- 收尾覆盖 (见 cover_point 的 docstring) ---
     hunt_max_ch: int = 20             # 一趟收尾探测测满全部频道 (旅行成本不变)
     hunt_here: bool = True            # 当前位置参与收尾探测点竞争 (零移动选项)
+    # 覆盖收尾: 题目给定有效接收半径 R>=1000 m, 所以在任一点测过的频道, 只要该点
+    # 到源的距离不超过 1000 m 就**必然**收到信号。于是"每个未清除频道都被一组
+    # 1000 m 覆盖的测点覆盖"是"源必被找到"的充分条件 —— 这条判据只用题目给的
+    # 下界, 不依赖 R~U(1000,1500) 的分布假设, 是"确保全部清除"的真正保障。
+    coverage_finish: bool = True      # 信念质量吃完后, 仍按 1000 m 覆盖补齐
+    coverage_max_steps: int = 20      # 覆盖收尾的最大补测趟数 (安全网)
+    min_sources: int = 10             # 题目给定的源数下界 (10~16), 清不到 10 个不能停
     max_actions: int = 200
     max_virtual: float = 90000.0
     ch_cost_s: float = 6.0            # 单频道检测耗时 (5 s 检测 + 1 s 切换)
     hunt: bool = True                 # 没有"划算"的信息点时, 仍按集合覆盖把残余质量扫掉
-    hunt_mass_min: float = 0.20       # 残余期望源数低于该值即收手 (验收判据 = 清除比例 >= 0.98)
-                                      # 首批 300 局标定记录: 残余期望源数落在 [0.02, 0.20) 时
-                                      # 每次专程探测的命中率只有 0.9%~3.2%, 代价却是
-                                      # 166~203 s 的往返 (该探针脚本已不在仓库内)
+    hunt_mass_min: float = 0.00       # 残余期望源数低于该值即停止"信念驱动"的补扫。
+                                      # 启用覆盖收尾 (coverage_finish) 之后, 清除比例由覆盖
+                                      # 判据保证 (恒为 1), 该门限只影响信念补扫的早晚:
+                                      # 9 个取值的平均时间差异 < 3%, 0.00 (扫到信念质量
+                                      # 吃完再交给覆盖收尾) 在标定集/独立集上都最快。
     hunt_fail_max: int = 12           # 连续多少次专程探测"什么也没测到"就收手
     # --- 单点联合选择: 一条 leg 上同时决定推进多远与侧移多少 ---------------
     # 把"顺路停车点 (leg_info_stop 的 3 个固定比例) + 弦式侧移 (pursue_fast 的 bow)"
@@ -156,8 +174,9 @@ class SweepResult:
 def build_cfg() -> "SweepConfig":
     """发布配置: 评测与部署**共用的唯一一份**参数 (两处不一致会导致行为不一致)。
 
-    题目第一目标是不漏源、第二目标才是总时间最短, 因此参数按"清除比例 >= 0.98 后
-    最小化平均定位清除时间"标定。首批 300 局 (seed 9500-9799) 上的关键取值与理由如下
+    题面的目标不是标量: 清除比例越大越好、平均定位清除时间越小越好, 且前者是前置目标。
+    因此参数按这两个目标的取舍标定, 选点取前沿上边际代价开始陡增处。首批 300 局
+    (seed 9500-9799) 上的关键取值与理由如下
     (发布配置随后在扩展标定集 seed 9500-11499 / 2000 局上复核):
 
       * ``sweep_max_ch=18, sweep_pd_min=0.10``: 清除后原地补测的频道预算 ——
@@ -169,26 +188,46 @@ def build_cfg() -> "SweepConfig":
       * ``bow=True``: 弦式纵深定向检测, 在剩余路段中点按 delta 侧移测一次,
         消掉"走到估计点旁固定侧移再折返"的来回;
       * ``fix_step_m=30``: 清除失败后的修正步长 (每次失败省约 2x 步长的移动);
-      * ``probe_v_source=1500`` + ``hunt_max_ch=20``: 收尾覆盖的"质量→秒"汇率与
+      * ``probe_v_source=1000`` + ``hunt_max_ch=20``: 收尾覆盖的"质量→秒"汇率与
         单趟频道预算, 两者互补 —— 前者把收尾点选在真正覆盖最多残余质量处, 后者让
         一趟就把该处的残余质量吃干净;
       * ``hunt_here=True``: 当前位置参与收尾探测点竞争, 提供零移动选项;
-      * **收尾闸门 ``hunt_mass_min=0.20``** (唯一重要的旋钮): 残余期望源数低于该值
-        即收手。首批 300 局标定时, 残余期望源数落在 [0.02, 0.20) 的专程探测命中率
-        只有 0.9%~3.2%, 代价却是 166~203 s 的往返, 因此按 0.98 判据把它放到 0.20
-        (该探针脚本已不在仓库内; 门限现用 ``tools/pareto_front.py`` 复核, 见 §5.2);
+      * **``sweep_pi_min=0.05`` + ``leg_stop=False``**: 2026-09-13 现场复核后收紧的
+        两项 —— 降低"顺路补测"的存在概率门限(原来 0.10 漏掉了不少真正该测的频道,
+        导致后面要专程跑一趟), 并取消 3 个固定比例的顺路信息停车点(它们与
+        ``joint_choice`` 的联合优化重复, 且实测多走 291 m/局、多测 11.5 次/局)。
+        见 ``tools/tune_p3.py``: 标定 500 局 394.4 → **375.3 s/源**, 标定 2000 局
+        396.4 → **377.5 s/源**, 独立 1000 局 → **375.4 s/源**, 全新 1000 局
+        (21000-21999, 调参未用) 396.4 → **378.4 s/源**, 四处清除比例均 1.0000;
+      * **收尾口径: ``coverage_finish=False`` + ``hunt_mass_min=0.05``**
+        (2026-09-13 现场定为速度优先 λ=0.05)。信念质量扫完之后按 λ 门限收尾
+        (**不**再按 1000 m 覆盖判据补齐), 因此**没有"停机即不漏源"的保证**:
+
+        | 口径 | λ | 清除比例 | 全清率 | s/源 | 3 局跌破 98% 的概率 |
+        | --- | --- | --- | --- | --- | --- |
+        | **速度优先 (当前发布, λ=0.05)** | **0.05** | **0.9988** | **0.985** | **281.6** | **4.6%** |
+        | 速度优先 (更快) | 0.10 | 0.9968 | 0.960 | 268.6 | 11.6% |
+        | 速度优先 (更快) | 0.30 | 0.9907 | 0.892 | 250.4 | 29.2% |
+        | 保障模式 (必不漏源) | 0.00 | 1.0000 | 1.000 | 377.5 | 0% |
+
+        标定集 2000 局实测 (``tools/tune_p3.py --stage speed``)。**注意**: 速度优先
+        没有"停机即不漏源"的保证 —— 3 局正式测试只有约 39 个源, 漏 1 个就把清除比例
+        压到 0.974 < 0.98, 上表最后一列就是按 2000 局重抽样估出的失败概率。
+        现场按速度优先取 λ=0.05; 要换回"必不漏源", 把 ``coverage_finish`` 改回
+        True、``hunt_mass_min`` 调到 0.00 即可 (代价是约 34% 的虚拟时间);
       * ``joint_choice=True``: 把"顺路停车点"与"弦式侧移"两个手挑决定合并成一次
         ``(eps, delta)`` 联合优化 (见 :func:`joint_measure_point`);
       * ``max_actions`` 与 ``max_virtual`` 是**纯安全阀**: 实测每局只走约 15 个宏动作、
         约 3300 虚拟秒, 两者都远离上限, 调它们对成绩没有任何影响。
     """
-    return SweepConfig(sweep_max_ch=18, sweep_pd_min=0.10, sweep_skip_std=120,
-                       lateral_m=30, require_localized=False, hunt=True,
-                       hunt_mass_min=0.20, hunt_fail_max=12, probe_max=40,
+    return SweepConfig(sweep_max_ch=18, sweep_pd_min=0.10, sweep_pi_min=0.05,
+                       sweep_skip_std=120, lateral_m=30, leg_stop=False,
+                       require_localized=False, hunt=True,
+                       hunt_mass_min=0.05, hunt_fail_max=12, probe_max=40,
                        max_virtual=90000.0,
-                       bow=True, fix_step_m=30.0, probe_v_source=1500.0,
+                       bow=True, fix_step_m=30.0, probe_v_source=1000.0,
                        hunt_max_ch=20, hunt_here=True,
-                       joint_choice=True)
+                       joint_choice=True, coverage_finish=False, min_sources=10)
 
 
 def _pd_all(world: World, p: Vec) -> np.ndarray:
@@ -487,9 +526,9 @@ def cover_point(world: World, cfg: SweepConfig, force: bool = False) -> Optional
     被吃完时, 格点上的赢家就退化成"离我一步远的格点", 即固定 800 m 的往返。
     **数字更正 (T5 复核)**: 早期记录的"5.50 趟/局、4134 m/局, 其中 40.5% 落在 700~900 m,
     220 趟里只有 22 趟测到示向度"是 `hunt_here` 加入**之前**的工况; 当前发布版在
-    9500-9539 只有 **1.38 趟/局、1617 m/局**。收尾命中的汇率也值得记住: 每命中一个源
-    实际要花约 **865 s** (远高于 `probe_v_source=1500` 隐含的汇率) —— 这解释了为什么
-    "再收尾一趟"通常是亏的, 而 `hunt_mass_min=0.20` 这个闸门是对的。
+    9500-9539 只有 **1.38 趟/局、1617 m/局**。注意本函数是按**信念残余质量**选点,
+    它不能证明"没有漏源": 质量被信念削小不等于圆域真被看过。因此发布版在它之后还接
+    一层 :func:`coverage_point` 的 1000 m 覆盖收尾 (题目给定 R>=1000 m, 覆盖即必被发现)。
     """
     bel = world.belief
     cells = bel.pts
@@ -530,6 +569,58 @@ def cover_point(world: World, cfg: SweepConfig, force: bool = False) -> Optional
     if not force and best[0] <= 0.0:
         return None
     return best[1], best[2]
+
+
+def coverage_point(world: World, cfg: SweepConfig) -> Optional[Tuple[Vec, float]]:
+    """收尾补测点: 按**1000 m 覆盖**判据选点, 而不是按信念残余质量。
+
+    题目给定有效接收半径 R >= 1000 m。因此在点 p 测过频道 c 之后, 只要 c 的真实源
+    与 p 的距离不超过 1000 m, 就**必然**收到信号。于是
+
+        "每个未清除频道都被一组测过它的点以 1000 m 覆盖"
+
+    是该频道一定被发现过的**充分条件**; 收尾一直做到这条成立, 就得到"确保全部清除"
+    的保障。这条判据只用题目给出的下界 R>=1000, 不依赖 R~U(1000,1500) 的分布假设。
+
+    返回 (补测点, 残余未覆盖量); 已无残余时返回 None。每个频道的覆盖掩码按
+    "新增测点增量更新"缓存, 因此单次调用只与新增测点有关。
+    """
+    bel = world.belief
+    cells = bel.pts
+    n = cells.shape[0]
+    unc = np.zeros(n, dtype=np.float64)
+    for i in range(N_CHANNELS):
+        tr = bel.tracks[i]
+        if tr.cleared or tr.pi <= 0.0:
+            continue
+        mask = getattr(tr, "_cov_mask", None)
+        if mask is None:
+            mask = np.zeros(n, dtype=bool)
+        done = int(getattr(tr, "_cov_done", 0))
+        fresh = tr.meas_pts[done:]
+        for (px, py) in fresh:
+            mask |= (np.hypot(cells[:, 0] - px, cells[:, 1] - py) <= COVER_RADIUS_M)
+        if fresh:
+            tr._cov_done = len(tr.meas_pts)     # type: ignore[attr-defined]
+            tr._cov_mask = mask                 # type: ignore[attr-defined]
+        unc += (~mask)
+    total = float(unc.sum())
+    if total <= 0.0:
+        return None
+    pos = (world.x, world.y)
+    best: Optional[Tuple[float, Vec, float]] = None
+    for p in COVER_LATTICE:
+        m = np.hypot(cells[:, 0] - p[0], cells[:, 1] - p[1]) <= COVER_RADIUS_M
+        g = float(unc[m].sum())
+        if g <= 0.0:
+            continue
+        travel = ops.dist(pos, (float(p[0]), float(p[1]))) / SPEED_MPS
+        val = g / max(travel + cfg.ch_cost_s * min(cfg.hunt_max_ch, N_CHANNELS), 1.0)
+        if best is None or val > best[0]:
+            best = (val, (float(p[0]), float(p[1])), g)
+    if best is None:
+        return None
+    return best[1], total
 
 
 def _radial_std(tr, ux: float, uy: float) -> float:
@@ -876,6 +967,7 @@ def run_sweeper(world: World, cfg: Optional[SweepConfig] = None, trace: bool = F
     mv_probe = 0.0
     blocked: set = set()
     no_gain = 0
+    cover_steps = 0
     started = False
     while True:
         if knows_total and world.all_cleared:
@@ -943,7 +1035,9 @@ def run_sweeper(world: World, cfg: Optional[SweepConfig] = None, trace: bool = F
                           % (world.measures - m0, world.virtual_t), flush=True)
             continue
         # 4) 没有已定位目标: 去信息量最大的点测一轮
-        if probes >= cfg.probe_max:
+        # 覆盖收尾允许突破"专程探测"的次数上限 (它自带 coverage_max_steps 安全网);
+        # 其余情况仍按 probe_max 收手。
+        if probes >= cfg.probe_max and not cfg.coverage_finish:
             break
         ip = best_info_point(world, cfg)
         if (ip is None or ip[3] <= 0.0) and cfg.hunt:
@@ -951,36 +1045,54 @@ def run_sweeper(world: World, cfg: Optional[SweepConfig] = None, trace: bool = F
             # 这时按**集合覆盖**把残余质量扫掉 (只要还有可能有源没找到, 就值得走一趟),
             # 否则漏掉的源会直接压低清除比例 (实测 500 局只有 96.3% 清除)。
             er = sum(t.pi for t in world.belief.tracks if not t.cleared)
-            if er > cfg.hunt_mass_min:
+            need = max(0, cfg.min_sources - world.cleared_count)
+            cp = None
+            is_cover = False
+            if er > cfg.hunt_mass_min or need > 0:
                 cp = cover_point(world, cfg, force=True)
+            if cp is None and cfg.coverage_finish and cover_steps < cfg.coverage_max_steps:
+                # 信念质量已经吃完, 但还有频道没被"1000 m 覆盖" ⇒ 仍可能有源没被发现。
+                # 按覆盖判据补一趟: 只要该频道的残余空洞被这次测点以 1000 m 覆盖,
+                # 那里若真有源就必然收到信号 (R>=1000 是题目给定的硬下界)。
+                cp = coverage_point(world, cfg)
                 if cp is not None:
-                    p, gain = cp
-                    mv0 = world.moved_m
-                    t0 = world.virtual_t
-                    obs0 = sum(t.n_dir for t in world.belief.tracks)
-                    c0 = world.cleared_count
+                    cover_steps += 1
+                    is_cover = True
+            if cp is not None:
+                p, gain = cp
+                mv0 = world.moved_m
+                t0 = world.virtual_t
+                obs0 = sum(t.n_dir for t in world.belief.tracks)
+                c0 = world.cleared_count
+                if is_cover:
+                    # 覆盖收尾必须把**每个未清除频道**在本站测掉, 不能像常规探测那样
+                    # 按 pi/pd/标准差过滤 (被过滤掉的频道会留下永久空洞)。
+                    chans = [c for c in range(1, N_CHANNELS + 1)
+                             if not world.belief.tracks[c - 1].cleared
+                             and not world.belief.tracks[c - 1].is_measured(p)]
+                else:
                     chans = pick_channels(world, p, cfg,
                                           cfg.hunt_max_ch or cfg.probe_max_ch,
                                           0.0, pi_min=0.0)
-                    if chans:
-                        ops.probe(world, p, channels=chans)
-                    mv_probe += world.moved_m - mv0
-                    probes += 1
-                    blocked.clear()
-                    if (world.cleared_count == c0
-                            and sum(t.n_dir for t in world.belief.tracks) == obs0):
-                        no_gain += 1
-                    else:
-                        no_gain = 0
-                    if no_gain >= cfg.hunt_fail_max:
-                        break
-                    if trace:
-                        print("  HUNT (%.0f,%.0f) gain=%.3f er=%.2f -> %.0fs cleared=%d/%d"
-                              % (p[0], p[1], gain, er, world.virtual_t - t0,
-                                 world.cleared_count, world.n_sources), flush=True)
-                    if world.virtual_t - t0 < 0.5:
-                        break
-                    continue
+                if chans:
+                    ops.probe(world, p, channels=chans)
+                mv_probe += world.moved_m - mv0
+                probes += 1
+                blocked.clear()
+                if (world.cleared_count == c0
+                        and sum(t.n_dir for t in world.belief.tracks) == obs0):
+                    no_gain += 1
+                else:
+                    no_gain = 0
+                if no_gain >= cfg.hunt_fail_max and need <= 0 and not cfg.coverage_finish:
+                    break
+                if trace:
+                    print("  HUNT (%.0f,%.0f) gain=%.3f er=%.2f -> %.0fs cleared=%d/%d"
+                          % (p[0], p[1], gain, er, world.virtual_t - t0,
+                             world.cleared_count, world.n_sources), flush=True)
+                if world.virtual_t - t0 < 0.5:
+                    break
+                continue
             if trace:
                 print("  stop: no info point", flush=True)
             break
